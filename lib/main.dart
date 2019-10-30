@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//有状态的组件（Stateful widget） 和无状态的组件（Stateless widget）
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
@@ -49,10 +50,9 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
-//有状态的组件（Stateful widget） 和无状态的组件（Stateless widget）
+
 //_MyHomePageState类是MyHomePage类对应的状态类
 class _MyHomePageState extends State<MyHomePage> {
-
 //  该组件的状态，
   int _counter = 0;
 //  该函数的作用是先自增_counter，然后调用setState 方法
@@ -115,6 +115,16 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display2,
             ),
+            FlatButton(
+              child: Text("Open new route"),
+              textColor: Colors.blue,
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return NewRoute();
+                }));
+              },
+
+            ),
           ],
         ),
       ),
@@ -166,6 +176,20 @@ class _MyHomePageState extends State<MyHomePage> {
 //    return result;
 //  }
 
+}
 
 
+//创建一个没有状态的widget
+class NewRoute extends StatelessWidget {
+
+  Widget build(BuildContext centext){
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("New route"),
+      ),
+      body: Center(
+        child: Text("this is new route"),
+      ),
+    );
+  }
 }
