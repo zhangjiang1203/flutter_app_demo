@@ -1,5 +1,9 @@
 //导入包
+import 'package:english_words/english_words.dart' as prefix0;
 import 'package:flutter/material.dart';
+import 'WidgetTest/StatelessWidgeTest.dart';
+
+
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
 
@@ -10,24 +14,45 @@ class MyApp extends StatelessWidget {
   //方法来描述如何构建UI界面（通常是通过组合、拼装其它基础widget）。
   @override
   Widget build(BuildContext context) {
+//    return MaterialApp(
+//      // 应用名称
+//      title: 'Flutter Demo',
+//      // APP的主题色
+//      theme: ThemeData(
+//        // This is the theme of your application.
+//        //
+//        // Try running your application with "flutter run". You'll see the
+//        // application has a blue toolbar. Then, without quitting the app, try
+//        // changing the primarySwatch below to Colors.green and then invoke
+//        // "hot reload" (press "r" in the console where you ran "flutter run",
+//        // or simply save your changes to "hot reload" in a Flutter IDE).
+//        // Notice that the counter didn't reset back to zero; the application
+//        // is not restarted.
+//        primarySwatch: Colors.blue,
+//      ),
+//      //注册路由表
+//      routes: {
+//        "new_page":(context)=>NewRoute(),
+//      },
+//      //应用首页的路由设
+//      home: MyHomePage(title: 'Flutter Demo Home Page'),
+//    );
+
+
+    // 使用命名路由来跳转
     return MaterialApp(
-      // 应用名称
       title: 'Flutter Demo',
-      // APP的主题色
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      //应用首页的路由设
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: "/",//名为‘/’的路由作为应用的home首页
+      routes: {
+        "new_page":(context)=>NewRoute(),
+        //TipRoute组件初始化的时候必须加参数，ModalRoute获取传参
+        "info_page":(context)=>TipRoute(text: ModalRoute.of(context).settings.arguments),
+        "/":(context) => MyHomePage(title: "Flutter Demo Home Page"),
+        "counter_page":(context) => ZJCounterWidget(),
+      },
     );
   }
 }
@@ -119,11 +144,35 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("Open new route"),
               textColor: Colors.blue,
               onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return NewRoute();
-                }));
+//                Navigator.push(context, MaterialPageRoute(builder: (context){
+//                  return NewRoute();
+//                }));
+                  Navigator.pushNamed(context, "new_page");
               },
-
+            ),
+            RaisedButton(
+              onPressed: () async {
+//                修改为命名路由展示
+//                var result = await Navigator.push(
+//                  context,
+//                  MaterialPageRoute(
+//                    builder: (context) {
+//                      return TipRoute(text: "我是提示,你好啊 ",);
+//                    }
+//                  ),
+//                );
+              var result = await Navigator.of(context).pushNamed("info_page",arguments:"你好");
+                //点击按钮返回的result会有一个返回值，点击左上角的按钮result没有返回值
+                print("输出路由返回值===$result");
+              },
+              child: Text("打开提示页"),
+            ),
+            RandomWordsWidget(),
+            Echo(text:"我就是我,不一样的烟火"),
+            FlatButton(
+              padding: EdgeInsets.all(10),
+              child: Text("加法器"),
+              onPressed: () => Navigator.pushNamed(context, "counter_page"),
             ),
           ],
         ),
@@ -192,4 +241,54 @@ class NewRoute extends StatelessWidget {
       ),
     );
   }
+}
+
+class TipRoute extends StatelessWidget {
+  TipRoute({
+    Key key,
+    @required this.text,//接收一个text参数
+  }) : super(key:key);
+
+  final String text;
+
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("提示"),
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(18),
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Text(text),
+              RaisedButton(
+                onPressed: () => Navigator.pop(context,"我是返回值"),
+                child: Text("我是返回"),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+class RandomWordsWidget extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context){
+    //生成随机字符串
+    final wordPair = new prefix0.WordPair.random();
+
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: new Text(
+        wordPair.toString(),
+      ),
+    );
+  }
+
+
 }

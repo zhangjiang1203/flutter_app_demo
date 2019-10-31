@@ -29,6 +29,7 @@ class _TestModelState extends State<TestModel> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
@@ -43,6 +44,7 @@ class _TestModelState extends State<TestModel> {
         ),
       ),
     );
-
   }
+
+
 }
