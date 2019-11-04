@@ -63,24 +63,46 @@ class _ZJCounterWidgetState extends State<ZJCounterWidget> {
   Widget build(BuildContext context){
     print('build');
     return Scaffold(
+      appBar: AppBar(
+        title: Text("开始测试"),
+        backgroundColor: Colors.deepOrange,
+      ),
       body: Center(
-        child: FlatButton(
-          child: Text("$_counter"),
-          onPressed: ()=>setState(()=> ++_counter),
-        ),
+        child: Builder(builder: (context) {
+          return RaisedButton(
+            onPressed: (){
+              //查找父级最近的scaffold对应的scaffoldstate对象
+              ScaffoldState _state = context.ancestorStateOfType(TypeMatcher<ScaffoldState>());
+              //调用scaffstate和showSnackBar来弹出来snackBar
+              _state.showSnackBar(
+                SnackBar(
+                  content: Text("我是snackbar"),
+                ),
+              );
+            },
+            child: Text("显示SnackBar"),
+          );
+        }),
+
+
+//        child: FlatButton(
+//          child: Text("$_counter"),
+//          onPressed: ()=>setState(()=> ++_counter),
+//        ),
       ),
     );
   }
 
   @override
   void didUpdateWidget(ZJCounterWidget oldWidget) {
-    // TODO: implement didUpdateWidget
+    //widget重新构建的时候回调用此方法
     super.didUpdateWidget(oldWidget);
     print("update widget");
   }
 
   @override
   void deactivate() {
+    //state对象从树中被移除的时候
     // TODO: implement deactivate
     super.deactivate();
     print("deactive");
@@ -88,6 +110,7 @@ class _ZJCounterWidgetState extends State<ZJCounterWidget> {
 
   @override
   void reassemble() {
+    //测试环境才会有用
     // TODO: implement reassemble
     super.reassemble();
     print("reassemble");
@@ -95,8 +118,17 @@ class _ZJCounterWidgetState extends State<ZJCounterWidget> {
 
   @override
   void didChangeDependencies() {
+
+    //“当State对象的依赖发生变化时会被调用
     // TODO: implement didChangeDependencies
     super.didChangeDependencies();
     print("didchangeDependencies");
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    // 当state对象从树中被永久移除时调用
+    super.dispose();
   }
 }

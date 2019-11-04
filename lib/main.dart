@@ -2,6 +2,7 @@
 import 'package:english_words/english_words.dart' as prefix0;
 import 'package:flutter/material.dart';
 import 'WidgetTest/StatelessWidgeTest.dart';
+import 'WidgetTest/CupertinoStyle.dart';
 
 
 //应用程序的入口，使用=> 这是单行函数的简写
@@ -52,6 +53,7 @@ class MyApp extends StatelessWidget {
         "info_page":(context)=>TipRoute(text: ModalRoute.of(context).settings.arguments),
         "/":(context) => MyHomePage(title: "Flutter Demo Home Page"),
         "counter_page":(context) => ZJCounterWidget(),
+        "cupertino_page":(context) => CupertinoRoute(),
       },
     );
   }
@@ -173,6 +175,11 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: EdgeInsets.all(10),
               child: Text("加法器"),
               onPressed: () => Navigator.pushNamed(context, "counter_page"),
+            ),
+            FlatButton(
+              padding: EdgeInsets.all(10),
+              child: Text("Cupertino Demo"),
+              onPressed: () => Navigator.pushNamed(context, "cupertino_page"),
             ),
           ],
         ),
