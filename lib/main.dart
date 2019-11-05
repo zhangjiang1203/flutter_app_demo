@@ -3,7 +3,7 @@ import 'package:english_words/english_words.dart' as prefix0;
 import 'package:flutter/material.dart';
 import 'WidgetTest/StatelessWidgeTest.dart';
 import 'WidgetTest/CupertinoStyle.dart';
-
+import 'WidgetTest/WidgetStateTest.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -54,6 +54,7 @@ class MyApp extends StatelessWidget {
         "/":(context) => MyHomePage(title: "Flutter Demo Home Page"),
         "counter_page":(context) => ZJCounterWidget(),
         "cupertino_page":(context) => CupertinoRoute(),
+        "widget_self":(context) => WidgetSelfBoxA(),
       },
     );
   }
@@ -169,17 +170,20 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text("打开提示页"),
             ),
+            //添加随机字符串
             RandomWordsWidget(),
             Echo(text:"我就是我,不一样的烟火"),
             FlatButton(
-              padding: EdgeInsets.all(10),
               child: Text("加法器"),
               onPressed: () => Navigator.pushNamed(context, "counter_page"),
             ),
             FlatButton(
-              padding: EdgeInsets.all(10),
               child: Text("Cupertino Demo"),
               onPressed: () => Navigator.pushNamed(context, "cupertino_page"),
+            ),
+            FlatButton(
+              child: Text("WidgetStateTest"),
+              onPressed: () => Navigator.pushNamed(context, "widget_self"),
             ),
           ],
         ),
@@ -264,7 +268,6 @@ class TipRoute extends StatelessWidget {
         title: Text("提示"),
       ),
       body: Padding(
-        padding: EdgeInsets.all(18),
         child: Center(
           child: Column(
             children: <Widget>[
