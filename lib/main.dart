@@ -267,7 +267,8 @@ class TipRoute extends StatelessWidget {
       appBar: AppBar(
         title: Text("提示"),
       ),
-      body: Padding(
+      body: Container(
+        padding: EdgeInsets.all(10),
         child: Center(
           child: Column(
             children: <Widget>[
