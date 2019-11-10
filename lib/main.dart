@@ -55,6 +55,7 @@ class MyApp extends StatelessWidget {
         "counter_page":(context) => ZJCounterWidget(),
         "cupertino_page":(context) => CupertinoRoute(),
         "widget_self":(context) => WidgetSelfBoxA(),
+        "parent_widget":(context) => ParentStateWidget(),
       },
     );
   }
@@ -184,6 +185,10 @@ class _MyHomePageState extends State<MyHomePage> {
             FlatButton(
               child: Text("WidgetStateTest"),
               onPressed: () => Navigator.pushNamed(context, "widget_self"),
+            ),
+            FlatButton(
+              child: Text("ParentWidgetState"),
+              onPressed: () => Navigator.pushNamed(context, "parent_widget"),
             ),
           ],
         ),
