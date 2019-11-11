@@ -142,3 +142,110 @@ class TapBoxB extends StatelessWidget {
     );
   }
 }
+
+
+//混合管理widget的状态
+class MixControlState extends StatefulWidget {
+  @override
+  _MixWidgetState createState() => new _MixWidgetState();
+}
+
+class _MixWidgetState extends State<MixControlState> {
+
+  var active = false;
+
+  void handleTap(bool newValue){
+    setState(() {
+      active = newValue;
+    });
+  }
+
+  Widget build(BuildContext context) {
+    return new Container(
+      child: TapBoxC(onChanged: handleTap,active: active,),
+    );
+  }
+
+}
+
+
+class TapBoxC extends StatefulWidget {
+  TapBoxC({
+    Key key,
+    this.active:false,
+    @required
+    this.onChanged
+  }) : super(key:key);
+
+  final bool active;
+  final ValueChanged<bool> onChanged;
+
+  @override
+  _TapBoxCState createState() => new _TapBoxCState();
+
+}
+
+class _TapBoxCState extends State<TapBoxC> {
+
+  bool _highLight = false;
+
+  void _handleTapDown(TapDownDetails details){
+    setState(() {
+      _highLight = true;
+    });
+  }
+
+
+  void _handleTapUp(TapUpDetails details){
+    setState(() {
+      _highLight = false;
+    });
+  }
+
+  void _handleTapCancel(){
+    setState(() {
+      _highLight = false;
+    });
+  }
+
+  void _handleTap() {
+    widget.onChanged(!widget.active);
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("mixwidge"),
+        backgroundColor: Colors.blue,
+      ),
+      body: new GestureDetector(
+        onTap: _handleTap,
+        onTapDown: _handleTapDown,
+        onTapUp: _handleTapUp,
+        onTapCancel: _handleTapCancel,
+        child: new Container(
+          child: new Center(
+            child: new Text(
+              widget.active ? "active" : "inactive",
+              style: new TextStyle(fontSize: 32.0,color: Colors.white),
+            ),
+          ),
+          width: 200.0,
+          height: 200.0,
+          margin: EdgeInsets.all(10),
+          decoration: new BoxDecoration(
+            color: widget.active ? Colors.lightBlue[700] : Colors.grey[600],
+            border: _highLight ? new Border.all(
+              color:Colors.teal[700],
+              width: 10.0,
+            ) : null,
+          ),
+        ),
+      ),
+    );
+  }
+
+}
+

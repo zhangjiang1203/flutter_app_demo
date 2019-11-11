@@ -56,6 +56,7 @@ class MyApp extends StatelessWidget {
         "cupertino_page":(context) => CupertinoRoute(),
         "widget_self":(context) => WidgetSelfBoxA(),
         "parent_widget":(context) => ParentStateWidget(),
+        "mix_widget":(context) => MixControlState()
       },
     );
   }
@@ -190,6 +191,11 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text("ParentWidgetState"),
               onPressed: () => Navigator.pushNamed(context, "parent_widget"),
             ),
+            FlatButton(
+              child: Text("MixWidgetState"),
+              onPressed: () => Navigator.pushNamed(context, "mix_widget"),
+            ),
+
           ],
         ),
       ),
