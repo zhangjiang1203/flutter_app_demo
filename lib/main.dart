@@ -253,14 +253,52 @@ class _MyHomePageState extends State<MyHomePage> {
 //创建一个没有状态的widget
 class NewRoute extends StatelessWidget {
 
+//  void _TapRecognizer() {
+//
+//  }
+
   Widget build(BuildContext centext){
     return Scaffold(
       appBar: AppBar(
-        title: Text("New route"),
+        title: Text("New route",
+          textAlign: TextAlign.center,
+        ),
       ),
       body: Center(
-        child: Text("this is new route"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Text("this is new route",
+              maxLines: 5,
+              overflow: TextOverflow.ellipsis,
+              textScaleFactor: 1.5,
+              style: TextStyle(
+                color: Colors.lightBlueAccent,
+                fontSize: 18,
+                height: 1.2,
+                fontFamily: "Courier",
+                background: new Paint()..color = Colors.yellow,
+                decoration: TextDecoration.lineThrough,//underline 底部横线
+                decorationStyle: TextDecorationStyle.solid,
+              ),
+            ),
+            Text.rich(TextSpan(
+              children: [
+                TextSpan(
+                  text: "Home:"
+                ),
+                TextSpan(
+                  text: "http://www.baidu.com",
+                  style: TextStyle(color: Colors.red),
+//                  recognizer: _TapRecognizer,
+                ),
+              ],
+              ),
+            ),
+          ],
+        ),
       ),
+
     );
   }
 }
