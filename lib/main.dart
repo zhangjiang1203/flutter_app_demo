@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'WidgetTest/StatelessWidgeTest.dart';
 import 'WidgetTest/CupertinoStyle.dart';
 import 'WidgetTest/WidgetStateTest.dart';
+import 'WidgetTest/newRoute.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -247,60 +248,6 @@ class _MyHomePageState extends State<MyHomePage> {
 //    return result;
 //  }
 
-}
-
-
-//创建一个没有状态的widget
-class NewRoute extends StatelessWidget {
-
-//  void _TapRecognizer() {
-//
-//  }
-
-  Widget build(BuildContext centext){
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("New route",
-          textAlign: TextAlign.center,
-        ),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Text("this is new route",
-              maxLines: 5,
-              overflow: TextOverflow.ellipsis,
-              textScaleFactor: 1.5,
-              style: TextStyle(
-                color: Colors.lightBlueAccent,
-                fontSize: 18,
-                height: 1.2,
-                fontFamily: "Courier",
-                background: new Paint()..color = Colors.yellow,
-                decoration: TextDecoration.lineThrough,//underline 底部横线
-                decorationStyle: TextDecorationStyle.solid,
-              ),
-            ),
-            Text.rich(TextSpan(
-              children: [
-                TextSpan(
-                  text: "Home:"
-                ),
-                TextSpan(
-                  text: "http://www.baidu.com",
-                  style: TextStyle(color: Colors.red),
-//                  recognizer: _TapRecognizer,
-                ),
-              ],
-              ),
-            ),
-          ],
-        ),
-      ),
-
-    );
-  }
 }
 
 class TipRoute extends StatelessWidget {
