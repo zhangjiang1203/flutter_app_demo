@@ -1,10 +1,12 @@
 //导入包
-import 'package:english_words/english_words.dart' as prefix0;
+
 import 'package:flutter/material.dart';
 import 'WidgetTest/StatelessWidgeTest.dart';
 import 'WidgetTest/CupertinoStyle.dart';
 import 'WidgetTest/WidgetStateTest.dart';
-import 'WidgetTest/newRoute.dart';
+import 'WidgetTest/newRouteButton.dart';
+import 'WidgetTest/InfoPage-IconAndImage.dart';
+import 'WidgetTest/RandomWords.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -250,52 +252,4 @@ class _MyHomePageState extends State<MyHomePage> {
 
 }
 
-class TipRoute extends StatelessWidget {
-  TipRoute({
-    Key key,
-    @required this.text,//接收一个text参数
-  }) : super(key:key);
 
-  final String text;
-
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("提示"),
-      ),
-      body: Container(
-        padding: EdgeInsets.all(10),
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              Text(text),
-              RaisedButton(
-                onPressed: () => Navigator.pop(context,"我是返回值"),
-                child: Text("我是返回"),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-
-class RandomWordsWidget extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context){
-    //生成随机字符串
-    final wordPair = new prefix0.WordPair.random();
-
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: new Text(
-        wordPair.toString(),
-      ),
-    );
-  }
-
-
-}

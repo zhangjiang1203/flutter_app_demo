@@ -12,6 +12,23 @@ class NewRoute extends StatelessWidget {
     print("开始点击了");
   }
 
+  /*
+  “const FlatButton({
+  ...
+  @required this.onPressed, //按钮点击回调
+  this.textColor, //按钮文字颜色
+  this.disabledTextColor, //按钮禁用时的文字颜色
+  this.color, //按钮背景颜色
+  this.disabledColor,//按钮禁用时的背景颜色
+  this.highlightColor, //按钮按下时的背景颜色
+  this.splashColor, //点击时，水波动画中水波的颜色
+  this.colorBrightness,//按钮主题，默认是浅色主题
+  this.padding, //按钮的填充
+  this.shape, //外形
+  @required this.child, //按钮的内容
+})”
+  * */
+
   Widget build(BuildContext centext){
     return Scaffold(
       appBar: AppBar(
@@ -49,9 +66,9 @@ class NewRoute extends StatelessWidget {
                 ),
               ],
             ),),
-            RaisedButton(child:
+            RaisedButton(
               //漂浮按钮，带有默认的阴影和灰色的背景
-              Text("点击试试看"),
+              child:Text("点击试试看"),
               onPressed: _ButtonClickAction,
               textColor: Colors.white,
               color: Colors.red,
@@ -105,6 +122,28 @@ class NewRoute extends StatelessWidget {
               //“是一个可点击的Icon，不包括文字，默认没有背景，点击后会出现背景”
               icon: Icon(Icons.thumb_up),
               onPressed: _ButtonClickAction,
+            ),
+            RaisedButton.icon(
+              //带图标的按钮
+              onPressed: _ButtonClickAction,
+              icon: Icon(Icons.send),//Icons.add   Icons.info
+              label: Text("发送"),
+              textColor: Colors.blue,
+              color: Colors.white,
+            ),
+            //自定义按钮
+            RaisedButton(
+              color: Colors.blue,
+              hoverColor:Color(0x333333),
+              highlightColor: Colors.blue[700],
+              colorBrightness: Brightness.dark,
+              splashColor: Colors.grey,
+              child: Text('Submit'),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10)
+              ),
+              //点击事件是一个匿名函数
+              onPressed: (){},
             ),
           ],
         ),
