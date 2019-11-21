@@ -61,7 +61,13 @@ class NewRoute extends StatelessWidget {
                 ),
                 TextSpan(
                   text: "http://www.baidu.com",
-                  style: TextStyle(color: Colors.red),
+                  style: TextStyle(
+                    color: Colors.red,
+                    decoration: TextDecoration.underline,
+                    //不设置的时候默认为color
+                    decorationColor: Colors.blue,
+                    decorationStyle: TextDecorationStyle.solid,
+                  ),
 //                  recognizer: _TapRecognizer,
                 ),
               ],
