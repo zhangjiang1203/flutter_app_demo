@@ -1,12 +1,15 @@
 //导入包
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app_demo/WidgetTest/TextFieldModel.dart';
+import 'package:flutter_app_demo/WidgetTest/TextFocusNode.dart';
 import 'WidgetTest/StatelessWidgeTest.dart';
 import 'WidgetTest/CupertinoStyle.dart';
 import 'WidgetTest/WidgetStateTest.dart';
 import 'WidgetTest/newRouteButton.dart';
 import 'WidgetTest/InfoPage-IconAndImage.dart';
 import 'WidgetTest/RandomWords.dart';
+import 'WidgetTest/TextFieldModel.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -59,7 +62,9 @@ class MyApp extends StatelessWidget {
         "cupertino_page":(context) => CupertinoRoute(),
         "widget_self":(context) => WidgetSelfBoxA(),
         "parent_widget":(context) => ParentStateWidget(),
-        "mix_widget":(context) => MixControlState()
+        "mix_widget":(context) => MixControlState(),
+        "textField_widget":(context) => TextFieldModelTest(),
+        "focus_widget":(context) => TextFocusModel(),
       },
     );
   }
@@ -122,24 +127,9 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
@@ -148,18 +138,26 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display2,
             ),
-            FlatButton(
-              child: Text("Open new route"),
-              textColor: Colors.blue,
-              onPressed: (){
+            RandomWordsWidget(),
+            Row(
+              mainAxisSize:MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                FlatButton(
+                  child: Text("新路由"),
+                  textColor: Colors.white,
+                  color: Colors.deepPurple,
+                  onPressed: (){
 //                Navigator.push(context, MaterialPageRoute(builder: (context){
 //                  return NewRoute();
 //                }));
-                  Navigator.pushNamed(context, "new_page");
-              },
-            ),
-            RaisedButton(
-              onPressed: () async {
+                    Navigator.pushNamed(context, "new_page");
+                  },
+                ),
+                FlatButton(
+                  textColor: Colors.white,
+                  color: Colors.blueGrey,
+                  onPressed: () async {
 //                修改为命名路由展示
 //                var result = await Navigator.push(
 //                  context,
@@ -169,34 +167,89 @@ class _MyHomePageState extends State<MyHomePage> {
 //                    }
 //                  ),
 //                );
-              var result = await Navigator.of(context).pushNamed("info_page",arguments:"你好");
-                //点击按钮返回的result会有一个返回值，点击左上角的按钮result没有返回值
-                print("输出路由返回值===$result");
-              },
-              child: Text("打开提示页"),
+                    var result = await Navigator.of(context).pushNamed("info_page",arguments:"你好");
+                    //点击按钮返回的result会有一个返回值，点击左上角的按钮result没有返回值
+                    print("输出路由返回值===$result");
+                  },
+                  child: Text("打开提示页"),
+                ),
+                //添加随机字符串
+
+                FlatButton(
+                  child: Text("加法器"),
+                  textColor: Colors.white,
+                  color: Colors.amber,
+                  onPressed: () => Navigator.pushNamed(context, "counter_page"),
+                ),
+                FlatButton(
+                  child: Text("提示框"),
+                  textColor: Colors.white,
+                  color: Colors.blueAccent,
+                  onPressed: () => Navigator.pushNamed(context, "cupertino_page"),
+                ),
+
+
+              ],
             ),
-            //添加随机字符串
-            RandomWordsWidget(),
-            Echo(text:"我就是我,不一样的烟火"),
-            FlatButton(
-              child: Text("加法器"),
-              onPressed: () => Navigator.pushNamed(context, "counter_page"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                FlatButton(
+                  child: Text("自己管理"),
+                  textColor: Colors.white,
+                  color: Colors.red,
+                  onPressed: () => Navigator.pushNamed(context, "widget_self"),
+                ),
+                FlatButton(
+                  child: Text("父管理"),
+                  textColor: Colors.white,
+                  color: Colors.blue,
+                  onPressed: () => Navigator.pushNamed(context, "parent_widget"),
+                ),
+                FlatButton(
+                  child: Text("混合管理"),
+                  textColor: Colors.white,
+                  color: Colors.green,
+                  onPressed: () => Navigator.pushNamed(context, "mix_widget"),
+                ),
+                FlatButton(
+                  child: Text("输入框"),
+                  textColor: Colors.white,
+                  color: Colors.deepPurpleAccent,
+                  onPressed: () => Navigator.pushNamed(context, "textField_widget"),
+                ),
+              ],
             ),
-            FlatButton(
-              child: Text("Cupertino Demo"),
-              onPressed: () => Navigator.pushNamed(context, "cupertino_page"),
-            ),
-            FlatButton(
-              child: Text("WidgetStateTest"),
-              onPressed: () => Navigator.pushNamed(context, "widget_self"),
-            ),
-            FlatButton(
-              child: Text("ParentWidgetState"),
-              onPressed: () => Navigator.pushNamed(context, "parent_widget"),
-            ),
-            FlatButton(
-              child: Text("MixWidgetState"),
-              onPressed: () => Navigator.pushNamed(context, "mix_widget"),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: <Widget>[
+                FlatButton(
+                  child: Text("键盘焦点"),
+                  textColor: Colors.white,
+                  color: Colors.red,
+                  onPressed: () => Navigator.pushNamed(context, "focus_widget"),
+                ),
+                FlatButton(
+                  child: Text("占位"),
+                  textColor: Colors.white,
+                  color: Colors.blue,
+//                  onPressed: () => Navigator.pushNamed(context, "parent_widget"),
+                ),
+                FlatButton(
+                  child: Text("占位"),
+                  textColor: Colors.white,
+                  color: Colors.green,
+//                  onPressed: () => Navigator.pushNamed(context, "mix_widget"),
+                ),
+                FlatButton(
+                  child: Text("占位"),
+                  textColor: Colors.white,
+                  color: Colors.deepPurpleAccent,
+//                  onPressed: () => Navigator.pushNamed(context, "textField_widget"),
+                ),
+              ],
             ),
 
           ],

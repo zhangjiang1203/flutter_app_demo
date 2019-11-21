@@ -15,8 +15,12 @@ class WidgetSelfBoxA extends StatefulWidget {
 
 //widget自己管理自己的状态
 class _WidgetSelfState extends State<WidgetSelfBoxA> {
-
+  //box是否激活
   bool _active = false;
+  //单选框状态
+  bool _switchState = false;
+  //复选框状态
+  bool _checkboxState = false;
 
   void _handleTap() {
     setState(() {
@@ -27,47 +31,59 @@ class _WidgetSelfState extends State<WidgetSelfBoxA> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("widgetstate管理"),
+        title: Text("单选框和Switch管理"),
         backgroundColor: Colors.blue,
       ),
-      body: GestureDetector(
-        onTap: _handleTap,
-        child: new Container(
-          child: new Center(
-            child: Text(
-              _active ? 'Active' : 'Inactive',
-              style: new TextStyle(fontSize: 32.0,color: Colors.white),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            //手势控制
+            GestureDetector(
+              onTap: _handleTap,
+              child: new Container(
+                child: new Center(
+                  child: Text(
+                    _active ? 'Active' : 'Inactive',
+                    style: new TextStyle(fontSize: 25.0,color: Colors.white),
+                  ),
+                ),
+                margin: EdgeInsets.all(10),
+                width: 120,
+                height: 50,
+                decoration: new BoxDecoration(
+                  color: _active ? Colors.lightGreen[700] : Colors.grey[600],
+                ),
+              ),
             ),
-          ),
-          margin: EdgeInsets.all(10),
-          width: 200,
-          height: 200,
-          decoration: new BoxDecoration(
-            color: _active ? Colors.lightGreen[700] : Colors.grey[600],
-          ),
+            //switch和单选框
+            Switch(
+              value: _switchState,
+              activeColor: Colors.blue,
+//              activeTrackColor: Colors.red,
+              onChanged: (value){
+                setState(() {
+                  _switchState = value;
+                });
+              },
+            ),
+            Checkbox(
+              value: _checkboxState,
+              activeColor: Colors.red,
+              onChanged: (value){
+                setState(() {
+                  _checkboxState = value;
+                });
+              },
+            ),
+
+
+          ],
         ),
       ),
     );
-//    return new GestureDetector(
-//      onTap: _handleTap,
-//      child: new Container(
-//
-//        child: new Center(
-//          child: Text(
-//            _active ? 'Active' : 'Inactive',
-//            style: new TextStyle(fontSize: 32.0,color: Colors.white),
-//          ),
-//        ),
-//        width: 100.0,
-//        height: 100.0,
-//        decoration: new BoxDecoration(
-//          color: _active ? Colors.lightGreen[700] : Colors.grey[600],
-//        ),
-//      ),
-//    );
   }
 }
-
 
 
 //父Widget管理子widget的状态展示
