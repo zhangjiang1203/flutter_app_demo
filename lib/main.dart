@@ -1,6 +1,7 @@
 //导入包
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app_demo/WidgetTest/FormsModelTest.dart';
 import 'package:flutter_app_demo/WidgetTest/TextFieldModel.dart';
 import 'package:flutter_app_demo/WidgetTest/TextFocusNode.dart';
 import 'WidgetTest/StatelessWidgeTest.dart';
@@ -65,6 +66,7 @@ class MyApp extends StatelessWidget {
         "mix_widget":(context) => MixControlState(),
         "textField_widget":(context) => TextFieldModelTest(),
         "focus_widget":(context) => TextFocusModel(),
+        "forms_widget":(context) => FormsModelTest(),
       },
     );
   }
@@ -232,10 +234,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () => Navigator.pushNamed(context, "focus_widget"),
                 ),
                 FlatButton(
-                  child: Text("占位"),
+                  child: Text("forms表单"),
                   textColor: Colors.white,
                   color: Colors.blue,
-//                  onPressed: () => Navigator.pushNamed(context, "parent_widget"),
+                  onPressed: () => Navigator.pushNamed(context, "forms_widget"),
                 ),
                 FlatButton(
                   child: Text("占位"),
