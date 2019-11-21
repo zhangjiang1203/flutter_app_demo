@@ -10,13 +10,30 @@ class TextFocusModel extends StatefulWidget {
 }
 
 class _TextFocusState extends State<TextFocusModel> {
-
+  //监控焦点设置
   FocusNode node1 = new FocusNode();
   FocusNode node2 = new FocusNode();
+  FocusNode node3 = new FocusNode();
   FocusScopeNode scopeNode ;
+  //是否在编辑
+  bool isEditing = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    //动态修改下划线展示颜色
+    node3.addListener((){
+      setState(() {
+        isEditing = node3.hasFocus;
+      });
+    });
+  }
+
 
   @override
   Widget build(BuildContext context) {
+
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
@@ -28,8 +45,7 @@ class _TextFocusState extends State<TextFocusModel> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             TextField(
-              autofocus: true,
-              focusNode: node1,//关联node1
+              focusNode: node1,//关联node2
               decoration: InputDecoration(
                 hintText: "焦点1",
                 prefixIcon: Icon(Icons.phone),
@@ -52,11 +68,11 @@ class _TextFocusState extends State<TextFocusModel> {
                   onPressed: (){
                     //第一种方式
                     FocusScope.of(context).requestFocus(node2);
-                    //第二种写法,就是把第一步拆成两步走
-                    if (null == scopeNode) {
-                      scopeNode = FocusScope.of(context);
-                    }
-                    scopeNode.requestFocus(node2);
+//                    //第二种写法,就是把第一步拆成两步走
+//                    if (null == scopeNode) {
+//                      scopeNode = FocusScope.of(context);
+//                    }
+//                    scopeNode.requestFocus(node2);
                   },
                 ),
                 FlatButton(
@@ -70,6 +86,50 @@ class _TextFocusState extends State<TextFocusModel> {
                   },
                 ),
               ],
+            ),
+            //使用theme设置textfield的
+            Theme(
+              data: Theme.of(context).copyWith(
+                  hintColor: Colors.grey,
+                  inputDecorationTheme: InputDecorationTheme(
+                    labelStyle: TextStyle(
+                      color: Colors.grey[700],
+                    ),
+                    hintStyle: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 14.0,
+                    ),
+                  )
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  labelText: "设置样式",
+                  hintText: "输入文字",
+                  prefixIcon: Icon(Icons.phone),
+                ),
+              ),
+            ),
+            //隐藏textfield的下划线
+            Container(
+              child: TextField(
+                //设置焦点获取和使用设置
+                focusNode: node3,
+                keyboardType: TextInputType.emailAddress,
+                decoration: InputDecoration(
+                  labelText: "自定义",
+                  hintText: "下划线设置",
+                  prefixIcon: Icon(Icons.email),
+                  border: InputBorder.none,
+                  labelStyle: TextStyle(color: Colors.grey),
+                ),
+              ),
+              decoration: BoxDecoration(
+                border: Border(
+                  //设置一个border 宽度1像素
+                  bottom: BorderSide(color: isEditing ? Colors.blue : Colors.grey[200],width: 1)
+                ),
+
+              ),
             ),
           ],
         ),
