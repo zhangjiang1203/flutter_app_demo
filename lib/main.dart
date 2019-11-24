@@ -11,6 +11,7 @@ import 'WidgetTest/newRouteButton.dart';
 import 'WidgetTest/InfoPage-IconAndImage.dart';
 import 'WidgetTest/RandomWords.dart';
 import 'WidgetTest/TextFieldModel.dart';
+import 'WidgetTest/ProcessModelTest.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -67,6 +68,7 @@ class MyApp extends StatelessWidget {
         "textField_widget":(context) => TextFieldModelTest(),
         "focus_widget":(context) => TextFocusModel(),
         "forms_widget":(context) => FormsModelTest(),
+        "process_widget":(context) => ProcessModelTest(),
       },
     );
   }
@@ -240,10 +242,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () => Navigator.pushNamed(context, "forms_widget"),
                 ),
                 FlatButton(
-                  child: Text("占位"),
+                  child: Text("进度条"),
                   textColor: Colors.white,
                   color: Colors.green,
-//                  onPressed: () => Navigator.pushNamed(context, "mix_widget"),
+                  onPressed: () => Navigator.pushNamed(context, "process_widget"),
                 ),
                 FlatButton(
                   child: Text("占位"),
