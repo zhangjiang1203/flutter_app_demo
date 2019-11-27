@@ -12,6 +12,7 @@ import 'WidgetTest/InfoPage-IconAndImage.dart';
 import 'WidgetTest/RandomWords.dart';
 import 'WidgetTest/TextFieldModel.dart';
 import 'WidgetTest/ProcessModelTest.dart';
+import 'WidgetTest/ProcessAnimateModelTest'
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -69,6 +70,7 @@ class MyApp extends StatelessWidget {
         "focus_widget":(context) => TextFocusModel(),
         "forms_widget":(context) => FormsModelTest(),
         "process_widget":(context) => ProcessModelTest(),
+        "process_animate_widget":(context) =>AnimateProcessModelTest()
       },
     );
   }
@@ -248,10 +250,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () => Navigator.pushNamed(context, "process_widget"),
                 ),
                 FlatButton(
-                  child: Text("占位"),
+                  child: Text("进度条动画"),
                   textColor: Colors.white,
                   color: Colors.deepPurpleAccent,
-//                  onPressed: () => Navigator.pushNamed(context, "textField_widget"),
+                  onPressed: () => Navigator.pushNamed(context, "process_animate_widget"),
                 ),
               ],
             ),
