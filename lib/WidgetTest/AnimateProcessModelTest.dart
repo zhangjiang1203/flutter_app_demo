@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 
-class ProcessAnimateModelTest extends StatefulWidget {
-  ProcessAnimateModelTest({Key key}) : super(key:key);
+class AnimateProcessModelTest extends StatefulWidget {
+  AnimateProcessModelTest({Key key}) : super(key:key);
 
   @override
-  _ProcessAnimateModelState createState() => new _ProcessAnimateModelState();
+  _AnimateProcessModelState createState() => new _AnimateProcessModelState();
 
 }
 
-class _ProcessAnimateModelState extends State<ProcessModelTest> {
+class _AnimateProcessModelState extends State<AnimateProcessModelTest> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

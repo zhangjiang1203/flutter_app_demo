@@ -12,7 +12,8 @@ import 'WidgetTest/InfoPage-IconAndImage.dart';
 import 'WidgetTest/RandomWords.dart';
 import 'WidgetTest/TextFieldModel.dart';
 import 'WidgetTest/ProcessModelTest.dart';
-import 'WidgetTest/ProcessAnimateModelTest'
+import 'WidgetTest/AnimateProcessModelTest.dart';
+import 'WidgetTest/Tools/ZJTextStyleTool.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -70,7 +71,7 @@ class MyApp extends StatelessWidget {
         "focus_widget":(context) => TextFocusModel(),
         "forms_widget":(context) => FormsModelTest(),
         "process_widget":(context) => ProcessModelTest(),
-        "process_animate_widget":(context) =>AnimateProcessModelTest()
+        "process_animate_widget":(context) => AnimateProcessModelTest(),
       },
     );
   }
@@ -150,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 FlatButton(
-                  child: Text("新路由"),
+                  child: Text("新路由",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
                   color: Colors.deepPurple,
                   onPressed: (){
@@ -177,18 +178,18 @@ class _MyHomePageState extends State<MyHomePage> {
                     //点击按钮返回的result会有一个返回值，点击左上角的按钮result没有返回值
                     print("输出路由返回值===$result");
                   },
-                  child: Text("打开提示页"),
+                  child: Text("打开提示页",style: ZJTextStyleTool.white_22,),
                 ),
                 //添加随机字符串
 
                 FlatButton(
-                  child: Text("加法器"),
+                  child: Text("加法器",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
                   color: Colors.amber,
                   onPressed: () => Navigator.pushNamed(context, "counter_page"),
                 ),
                 FlatButton(
-                  child: Text("提示框"),
+                  child: Text("提示框",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
                   color: Colors.blueAccent,
                   onPressed: () => Navigator.pushNamed(context, "cupertino_page"),
@@ -202,25 +203,25 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 FlatButton(
-                  child: Text("自己管理"),
+                  child: Text("自己管理",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
                   color: Colors.red,
                   onPressed: () => Navigator.pushNamed(context, "widget_self"),
                 ),
                 FlatButton(
-                  child: Text("父管理"),
+                  child: Text("父管理",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
                   color: Colors.blue,
                   onPressed: () => Navigator.pushNamed(context, "parent_widget"),
                 ),
                 FlatButton(
-                  child: Text("混合管理"),
+                  child: Text("混合管理",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
                   color: Colors.green,
                   onPressed: () => Navigator.pushNamed(context, "mix_widget"),
                 ),
                 FlatButton(
-                  child: Text("输入框"),
+                  child: Text("输入框",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
                   color: Colors.deepPurpleAccent,
                   onPressed: () => Navigator.pushNamed(context, "textField_widget"),
@@ -232,32 +233,31 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisSize: MainAxisSize.max,
               children: <Widget>[
                 FlatButton(
-                  child: Text("键盘焦点"),
+                  child: Text("键盘焦点",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
-                  color: Colors.red,
+                  color: Colors.amber,
                   onPressed: () => Navigator.pushNamed(context, "focus_widget"),
                 ),
                 FlatButton(
-                  child: Text("forms表单"),
+                  child: Text("forms表单",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
-                  color: Colors.blue,
+                  color: Colors.blueGrey,
                   onPressed: () => Navigator.pushNamed(context, "forms_widget"),
                 ),
                 FlatButton(
-                  child: Text("进度条"),
+                  child: Text("进度条",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
-                  color: Colors.green,
+                  color: Colors.indigoAccent,
                   onPressed: () => Navigator.pushNamed(context, "process_widget"),
                 ),
                 FlatButton(
-                  child: Text("进度条动画"),
+                  child: Text("进度条动画",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
-                  color: Colors.deepPurpleAccent,
+                  color: Colors.brown,
                   onPressed: () => Navigator.pushNamed(context, "process_animate_widget"),
                 ),
               ],
             ),
-
           ],
         ),
       ),
