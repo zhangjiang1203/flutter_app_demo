@@ -154,9 +154,10 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.display2,
             ),
             RandomWordsWidget(),
-            Row(
-              mainAxisSize:MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
+            Wrap(
+              spacing: 5,
+              runSpacing: 5,
+              runAlignment: WrapAlignment.start,
               children: <Widget>[
                 FlatButton(
                   child: Text("新路由",style: ZJTextStyleTool.white_22,),
@@ -204,12 +205,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
 
 
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
-              children: <Widget>[
                 FlatButton(
                   child: Text("自己管理",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
@@ -234,12 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.deepPurpleAccent,
                   onPressed: () => Navigator.pushNamed(context, "textField_widget"),
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
-              children: <Widget>[
+
                 FlatButton(
                   child: Text("键盘焦点",style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
@@ -264,11 +254,6 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.brown,
                   onPressed: () => Navigator.pushNamed(context, "process_animate_widget"),
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
                 FlatButton(
                   textColor: Colors.white,
                   color: Colors.blue,
@@ -297,6 +282,149 @@ class _MyHomePageState extends State<MyHomePage> {
 
               ],
             ),
+//            Row(
+//              mainAxisSize:MainAxisSize.max,
+//              mainAxisAlignment: MainAxisAlignment.center,
+//              children: <Widget>[
+//                FlatButton(
+//                  child: Text("新路由",style: ZJTextStyleTool.white_22,),
+//                  textColor: Colors.white,
+//                  color: Colors.deepPurple,
+//                  onPressed: (){
+////                Navigator.push(context, MaterialPageRoute(builder: (context){
+////                  return NewRoute();
+////                }));
+//                    Navigator.pushNamed(context, "new_page");
+//                  },
+//                ),
+//                FlatButton(
+//                  textColor: Colors.white,
+//                  color: Colors.blueGrey,
+//                  onPressed: () async {
+////                修改为命名路由展示
+////                var result = await Navigator.push(
+////                  context,
+////                  MaterialPageRoute(
+////                    builder: (context) {
+////                      return TipRoute(text: "我是提示,你好啊 ",);
+////                    }
+////                  ),
+////                );
+//                    var result = await Navigator.of(context).pushNamed("info_page",arguments:"你好");
+//                    //点击按钮返回的result会有一个返回值，点击左上角的按钮result没有返回值
+//                    print("输出路由返回值===$result");
+//                  },
+//                  child: Text("打开提示页",style: ZJTextStyleTool.white_22,),
+//                ),
+//                //添加随机字符串
+//
+//                FlatButton(
+//                  child: Text("加法器",style: ZJTextStyleTool.white_22,),
+//                  textColor: Colors.white,
+//                  color: Colors.amber,
+//                  onPressed: () => Navigator.pushNamed(context, "counter_page"),
+//                ),
+//                FlatButton(
+//                  child: Text("提示框",style: ZJTextStyleTool.white_22,),
+//                  textColor: Colors.white,
+//                  color: Colors.blueAccent,
+//                  onPressed: () => Navigator.pushNamed(context, "cupertino_page"),
+//                ),
+//
+//
+//              ],
+//            ),
+//            Row(
+//              mainAxisAlignment: MainAxisAlignment.center,
+//              mainAxisSize: MainAxisSize.max,
+//              children: <Widget>[
+//                FlatButton(
+//                  child: Text("自己管理",style: ZJTextStyleTool.white_22,),
+//                  textColor: Colors.white,
+//                  color: Colors.red,
+//                  onPressed: () => Navigator.pushNamed(context, "widget_self"),
+//                ),
+//                FlatButton(
+//                  child: Text("父管理",style: ZJTextStyleTool.white_22,),
+//                  textColor: Colors.white,
+//                  color: Colors.blue,
+//                  onPressed: () => Navigator.pushNamed(context, "parent_widget"),
+//                ),
+//                FlatButton(
+//                  child: Text("混合管理",style: ZJTextStyleTool.white_22,),
+//                  textColor: Colors.white,
+//                  color: Colors.green,
+//                  onPressed: () => Navigator.pushNamed(context, "mix_widget"),
+//                ),
+//                FlatButton(
+//                  child: Text("输入框",style: ZJTextStyleTool.white_22,),
+//                  textColor: Colors.white,
+//                  color: Colors.deepPurpleAccent,
+//                  onPressed: () => Navigator.pushNamed(context, "textField_widget"),
+//                ),
+//              ],
+//            ),
+//            Row(
+//              mainAxisAlignment: MainAxisAlignment.center,
+//              mainAxisSize: MainAxisSize.max,
+//              children: <Widget>[
+//                FlatButton(
+//                  child: Text("键盘焦点",style: ZJTextStyleTool.white_22,),
+//                  textColor: Colors.white,
+//                  color: Colors.amber,
+//                  onPressed: () => Navigator.pushNamed(context, "focus_widget"),
+//                ),
+//                FlatButton(
+//                  child: Text("forms表单",style: ZJTextStyleTool.white_22,),
+//                  textColor: Colors.white,
+//                  color: Colors.blueGrey,
+//                  onPressed: () => Navigator.pushNamed(context, "forms_widget"),
+//                ),
+//                FlatButton(
+//                  child: Text("进度条",style: ZJTextStyleTool.white_22,),
+//                  textColor: Colors.white,
+//                  color: Colors.indigoAccent,
+//                  onPressed: () => Navigator.pushNamed(context, "process_widget"),
+//                ),
+//                FlatButton(
+//                  child: Text("进度条动画",style: ZJTextStyleTool.white_22,),
+//                  textColor: Colors.white,
+//                  color: Colors.brown,
+//                  onPressed: () => Navigator.pushNamed(context, "process_animate_widget"),
+//                ),
+//              ],
+//            ),
+//            Row(
+//              mainAxisAlignment: MainAxisAlignment.center,
+//              children: <Widget>[
+//                FlatButton(
+//                  textColor: Colors.white,
+//                  color: Colors.blue,
+//                  child: Text("Column布局",style: ZJTextStyleTool.white_22,),
+//                  onPressed: () => Navigator.pushNamed(context, "layout_Column"),
+//                ),
+//                FlatButton(
+//                  textColor: Colors.white,
+//                  color: Colors.yellow,
+//                  child: Text("Flex布局",style: ZJTextStyleTool.white_22,),
+//                  onPressed: () => Navigator.pushNamed(context, "layout_Flex"),
+//                ),
+//
+//                FlatButton(
+//                  textColor: Colors.white,
+//                  color: Colors.pinkAccent,
+//                  child: Text("Wrap布局",style: ZJTextStyleTool.white_22,),
+//                  onPressed: () => Navigator.pushNamed(context, "layout_Wrap"),
+//                ),
+//                FlatButton(
+//                  textColor: Colors.white,
+//                  color: Colors.deepOrangeAccent,
+//                  child: Text("Flow布局",style: ZJTextStyleTool.white_22,),
+//                  onPressed: () => Navigator.pushNamed(context, "layout_Flow"),
+//                ),
+//
+//              ],
+//            ),
           ],
         ),
       ),
