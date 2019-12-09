@@ -17,7 +17,7 @@ class _FlexState extends State<FlexStateDemo> {
       appBar: AppBar(
         title: Text("Flow布局"),
       ),
-      //Flex中的控件，按照1：2的比例平分Flex的占用空间
+      //Flex中的控件，按照1：2的比例平分Flex的占用空间,需要借助Expanded去实现
       body: Flex(
         direction: Axis.horizontal,
         mainAxisAlignment: MainAxisAlignment.start,

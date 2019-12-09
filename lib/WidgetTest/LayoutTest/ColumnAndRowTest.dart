@@ -20,6 +20,7 @@ class _ColumenAndRowState extends State<ColumnAndRowTest> {
       body: Container(
         color: Colors.pink,
         child:  Column(
+          // Column和Row本身没有设置大小的属性，其大小都是通过子控件的大小撑开的，
           // 如果Row里面嵌套Row，或者Column里面再嵌套Column，
           // 那么只有对最外面的Row或Column会占用尽可能大的空间，
           // 里面Row或Column所占用的空间为实际大小，”
@@ -72,6 +73,7 @@ class _ColumenAndRowState extends State<ColumnAndRowTest> {
             ),
             Container(
               color: Colors.blue,
+              //Container不设置对应的约束，宽高也是子控件撑开的
               //将minWidth设为double.infinity，可以使宽度占用尽可能多的空间
 //              constraints: BoxConstraints(minWidth: double.infinity),
               child: Column(

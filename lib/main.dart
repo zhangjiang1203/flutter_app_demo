@@ -16,6 +16,8 @@ import 'WidgetTest/AnimateProcessModelTest.dart';
 import 'WidgetTest/Tools/ZJTextStyleTool.dart';
 import 'WidgetTest/LayoutTest/ColumnAndRowTest.dart';
 import 'WidgetTest/LayoutTest/FlexLayoutDemo.dart';
+import 'WidgetTest/LayoutTest/WrapLayoutDemo.dart';
+import 'WidgetTest/LayoutTest/FlowLayoutDemo.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -76,6 +78,8 @@ class MyApp extends StatelessWidget {
         "process_animate_widget":(context) => AnimateProcessModelTest(),
         "layout_Column":(context) => ColumnAndRowTest(),
         "layout_Flex":(context) => FlexStateDemo(),
+        "layout_Wrap":(context) => WrapLayoutDemo(),
+        "layout_Flow":(context) => FlowLayoutDemo(),
       },
     );
   }
@@ -276,6 +280,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.yellow,
                   child: Text("Flex布局",style: ZJTextStyleTool.white_22,),
                   onPressed: () => Navigator.pushNamed(context, "layout_Flex"),
+                ),
+
+                FlatButton(
+                  textColor: Colors.white,
+                  color: Colors.pinkAccent,
+                  child: Text("Wrap布局",style: ZJTextStyleTool.white_22,),
+                  onPressed: () => Navigator.pushNamed(context, "layout_Wrap"),
+                ),
+                FlatButton(
+                  textColor: Colors.white,
+                  color: Colors.deepOrangeAccent,
+                  child: Text("Flow布局",style: ZJTextStyleTool.white_22,),
+                  onPressed: () => Navigator.pushNamed(context, "layout_Flow"),
                 ),
 
               ],
