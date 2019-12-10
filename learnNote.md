@@ -130,3 +130,36 @@ positioned的定位设置，同一方向的设置不能冲突
 
 stack中使用fit=Stack.expand属性，没有定位的widget会遮盖上面的子widget
 ```
+
+> 5.对齐和相对定位Align
+
+```
+Align({
+  Key key,
+  
+  this.alignment = Alignment.center,
+  
+  this.widthFactor,
+  this.heightFactor,
+  Widget child,
+})
+
+```
+
+对齐方式有两中方式，<font color=#ff0000>Alignment和 FractionalOffset </font>
+Alignment Widget会以矩形的中心点作为坐标原点，即Alignment(0.0, 0.0) 。
+x、y的值从-1到1分别代表矩形左边到右边的距离和顶部到底边的距离，
+因此2个水平（或垂直）单位则等于矩形的宽（或高），
+如Alignment(-1.0, -1.0) 代表矩形的左侧顶点，
+而Alignment(1.0, 1.0)代表右侧底部终点，而Alignment(1.0, -1.0) 
+则正是右侧顶点，即Alignment.topRight。
+<font color=#ff0000>实际偏移 = (Alignment.x*childWidth/2+childWidth/2, Alignment.y*childHeight+childHeight/2)</font>
+
+FractionalOffset 继承自 Alignment，它和 Alignment唯一的区别就是坐标原点不同！
+FractionalOffset 的坐标原点为矩形的左侧顶点，这和布局系统的一致，所以理解起来会比较容易。
+FractionalOffset的坐标转换公式为：
+<font color=#ff0000>实际偏移 = (FractionalOffse.x * childWidth, FractionalOffse.y * childHeight)</font>
+
+<font color=#ff0000>Align中的widthFactor和heightFactor,不设置默认我null，组件的宽高将会占用尽可能多的空间，设置之后会按着比例展示</font>
+
+Align主要就是要设置好alignment这个属性，然后计算好对应的偏移量进行数据展示
