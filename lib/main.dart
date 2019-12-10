@@ -19,6 +19,7 @@ import 'WidgetTest/LayoutTest/FlexLayoutDemo.dart';
 import 'WidgetTest/LayoutTest/WrapLayoutDemo.dart';
 import 'WidgetTest/LayoutTest/FlowLayoutDemo.dart';
 import 'WidgetTest/LayoutTest/StackAndPositionDemo.dart';
+import 'WidgetTest/LayoutTest/AlignLayoutDemo.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -82,6 +83,7 @@ class MyApp extends StatelessWidget {
         "layout_Wrap":(context) => WrapLayoutDemo(),
         "layout_Flow":(context) => FlowLayoutDemo(),
         "layout_Stack":(context) => StackAndPositonDemo(),
+        "layout_Align":(context) => AlignLayoutDemo(),
       },
     );
   }
@@ -287,6 +289,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.lightGreen,
                   child: Text("Stack布局",style: ZJTextStyleTool.white_22,),
                   onPressed: () => Navigator.pushNamed(context, "layout_Stack"),
+                ),
+                FlatButton(
+                  textColor: Colors.white,
+                  color: Colors.black12,
+                  child: Text("Align布局",style: ZJTextStyleTool.white_22,),
+                  onPressed: () => Navigator.pushNamed(context, "layout_Align"),
                 ),
 
               ],
