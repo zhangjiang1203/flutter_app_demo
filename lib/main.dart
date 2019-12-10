@@ -18,6 +18,7 @@ import 'WidgetTest/LayoutTest/ColumnAndRowTest.dart';
 import 'WidgetTest/LayoutTest/FlexLayoutDemo.dart';
 import 'WidgetTest/LayoutTest/WrapLayoutDemo.dart';
 import 'WidgetTest/LayoutTest/FlowLayoutDemo.dart';
+import 'WidgetTest/LayoutTest/StackAndPositionDemo.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -80,6 +81,7 @@ class MyApp extends StatelessWidget {
         "layout_Flex":(context) => FlexStateDemo(),
         "layout_Wrap":(context) => WrapLayoutDemo(),
         "layout_Flow":(context) => FlowLayoutDemo(),
+        "layout_Stack":(context) => StackAndPositonDemo(),
       },
     );
   }
@@ -146,6 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            Row(),
             Text(
               'You have pushed the button this many times:',
             ),
@@ -156,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
             RandomWordsWidget(),
             Wrap(
               spacing: 5,
-              runSpacing: 5,
+              runSpacing: -5,
               runAlignment: WrapAlignment.start,
               children: <Widget>[
                 FlatButton(
@@ -278,6 +281,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.deepOrangeAccent,
                   child: Text("Flow布局",style: ZJTextStyleTool.white_22,),
                   onPressed: () => Navigator.pushNamed(context, "layout_Flow"),
+                ),
+                FlatButton(
+                  textColor: Colors.white,
+                  color: Colors.lightGreen,
+                  child: Text("Stack布局",style: ZJTextStyleTool.white_22,),
+                  onPressed: () => Navigator.pushNamed(context, "layout_Stack"),
                 ),
 
               ],
