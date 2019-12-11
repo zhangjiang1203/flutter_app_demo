@@ -20,6 +20,8 @@ import 'WidgetTest/LayoutTest/WrapLayoutDemo.dart';
 import 'WidgetTest/LayoutTest/FlowLayoutDemo.dart';
 import 'WidgetTest/LayoutTest/StackAndPositionDemo.dart';
 import 'WidgetTest/LayoutTest/AlignLayoutDemo.dart';
+import 'WidgetTest/ContainerCollection/PaddingDemo.dart';
+import 'WidgetTest/ContainerCollection/ContainerBoxDemo.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -84,6 +86,8 @@ class MyApp extends StatelessWidget {
         "layout_Flow":(context) => FlowLayoutDemo(),
         "layout_Stack":(context) => StackAndPositonDemo(),
         "layout_Align":(context) => AlignLayoutDemo(),
+        "Container_padding":(context) => PaddingModelTest(),
+        "Container_Box":(context) => ContainerBoxDemo(),
       },
     );
   }
@@ -295,6 +299,18 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.black12,
                   child: Text("Align布局",style: ZJTextStyleTool.white_22,),
                   onPressed: () => Navigator.pushNamed(context, "layout_Align"),
+                ),
+                FlatButton(
+                  textColor: Colors.white,
+                  color: Colors.blueGrey,
+                  child: Text("Padding设置",style: ZJTextStyleTool.white_22,),
+                  onPressed: () => Navigator.pushNamed(context, "Container_padding"),
+                ),
+                FlatButton(
+                  textColor: Colors.white,
+                  color: Colors.blueGrey,
+                  child: Text("Container设置",style: ZJTextStyleTool.white_22,),
+                  onPressed: () => Navigator.pushNamed(context, "Container_Box"),
                 ),
 
               ],
