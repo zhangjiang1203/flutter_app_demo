@@ -22,6 +22,7 @@ import 'WidgetTest/LayoutTest/StackAndPositionDemo.dart';
 import 'WidgetTest/LayoutTest/AlignLayoutDemo.dart';
 import 'WidgetTest/ContainerCollection/PaddingDemo.dart';
 import 'WidgetTest/ContainerCollection/ContainerBoxDemo.dart';
+import 'WidgetTest/ContainerCollection/DecoratedBoxDemo.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -88,6 +89,7 @@ class MyApp extends StatelessWidget {
         "layout_Align":(context) => AlignLayoutDemo(),
         "Container_padding":(context) => PaddingModelTest(),
         "Container_Box":(context) => ContainerBoxDemo(),
+        "Contailer_DecoratedBox":(context) => DecoratedBoxDemo(),
       },
     );
   }
@@ -311,6 +313,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.blueGrey,
                   child: Text("Container设置",style: ZJTextStyleTool.white_22,),
                   onPressed: () => Navigator.pushNamed(context, "Container_Box"),
+                ),
+
+                FlatButton(
+                  textColor: Colors.white,
+                  color: Colors.lightGreen,
+                  child: Text("DecoratedBox设置",style: ZJTextStyleTool.white_22,),
+                  onPressed: () => Navigator.pushNamed(context, "Contailer_DecoratedBox"),
                 ),
 
               ],
