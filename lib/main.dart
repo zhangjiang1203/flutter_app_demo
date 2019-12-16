@@ -24,6 +24,7 @@ import 'WidgetTest/ContainerCollection/PaddingDemo.dart';
 import 'WidgetTest/ContainerCollection/ContainerBoxDemo.dart';
 import 'WidgetTest/ContainerCollection/DecoratedBoxDemo.dart';
 import 'WidgetTest/SimpleDemo/ScaffoldDemo.dart';
+import 'WidgetTest/SimpleDemo/AppBarDemo.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -92,6 +93,7 @@ class MyApp extends StatelessWidget {
         "Container_Box":(context) => ContainerBoxDemo(),
         "Contailer_DecoratedBox":(context) => DecoratedBoxDemo(),
         "Scaffold_demo":(context) => ScaffoldDemo(),
+        "AppBar_demo":(context) => AppBarDemo(),
       },
     );
   }
@@ -329,6 +331,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.orange,
                   child: Text("Scaffold设置",style: ZJTextStyleTool.white_22,),
                   onPressed: () => Navigator.pushNamed(context, "Scaffold_demo"),
+                ),
+
+                FlatButton(
+                  textColor: Colors.white,
+                  color: Colors.green,
+                  child: Text("AppBar设置",style: ZJTextStyleTool.white_22,),
+                  onPressed: () => Navigator.pushNamed(context, "AppBar_demo"),
                 ),
 
               ],
