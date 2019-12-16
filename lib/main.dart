@@ -25,7 +25,8 @@ import 'WidgetTest/ContainerCollection/ContainerBoxDemo.dart';
 import 'WidgetTest/ContainerCollection/DecoratedBoxDemo.dart';
 import 'WidgetTest/SimpleDemo/ScaffoldDemo.dart';
 import 'WidgetTest/SimpleDemo/AppBarDemo.dart';
-
+import 'WidgetTest/SimpleDemo/DrawerDemo.dart';
+import 'WidgetTest/SimpleDemo/BottomNavBarDemo.dart';
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
 
@@ -94,6 +95,8 @@ class MyApp extends StatelessWidget {
         "Contailer_DecoratedBox":(context) => DecoratedBoxDemo(),
         "Scaffold_demo":(context) => ScaffoldDemo(),
         "AppBar_demo":(context) => AppBarDemo(),
+        "Drawer_demo":(context) => DrawerDemo(),
+        "BottomNavBar_demo":(context) => BottomNavBarDemo(),
       },
     );
   }
@@ -338,6 +341,20 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.green,
                   child: Text("AppBar设置",style: ZJTextStyleTool.white_22,),
                   onPressed: () => Navigator.pushNamed(context, "AppBar_demo"),
+                ),
+
+                FlatButton(
+                  textColor: Colors.white,
+                  color: Colors.lightBlue,
+                  child: Text("Drawer设置",style: ZJTextStyleTool.white_22,),
+                  onPressed: () => Navigator.pushNamed(context, "Drawer_demo"),
+                ),
+
+                FlatButton(
+                  textColor: Colors.white,
+                  color: Colors.pink,
+                  child: Text("navbar设置",style: ZJTextStyleTool.white_22,),
+                  onPressed: () => Navigator.pushNamed(context, "BottomNavBar_demo"),
                 ),
 
               ],
