@@ -1,6 +1,10 @@
 //导入包
 
 import 'package:flutter/material.dart';
+import 'WidgetTest/Tools/ZJTextStyleTool.dart';
+import 'WidgetTest/Tools/ZJColorsTool.dart';
+
+
 import 'package:flutter_app_demo/WidgetTest/FormsModelTest.dart';
 import 'package:flutter_app_demo/WidgetTest/TextFieldModel.dart';
 import 'package:flutter_app_demo/WidgetTest/TextFocusNode.dart';
@@ -13,7 +17,7 @@ import 'WidgetTest/RandomWords.dart';
 import 'WidgetTest/TextFieldModel.dart';
 import 'WidgetTest/ProcessModelTest.dart';
 import 'WidgetTest/AnimateProcessModelTest.dart';
-import 'WidgetTest/Tools/ZJTextStyleTool.dart';
+
 import 'WidgetTest/LayoutTest/ColumnAndRowTest.dart';
 import 'WidgetTest/LayoutTest/FlexLayoutDemo.dart';
 import 'WidgetTest/LayoutTest/WrapLayoutDemo.dart';
@@ -28,6 +32,8 @@ import 'WidgetTest/SimpleDemo/AppBarDemo.dart';
 import 'WidgetTest/SimpleDemo/DrawerDemo.dart';
 import 'WidgetTest/SimpleDemo/BottomNavBarDemo.dart';
 import 'WidgetTest/SimpleDemo/ClipRectDemo.dart';
+import 'WidgetTest/ScrollableDemo/SignalChildScrollDemo.dart';
+import 'WidgetTest/ScrollableDemo/ListViewDemo.dart';
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
 
@@ -71,10 +77,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: "/",//名为‘/’的路由作为应用的home首页
       routes: {
+        "/":(context) => MyHomePage(title: "Flutter Demo Home Page"),
         "new_page":(context)=>NewRoute(),
         //TipRoute组件初始化的时候必须加参数，ModalRoute获取传参
         "info_page":(context)=>TipRoute(text: ModalRoute.of(context).settings.arguments),
-        "/":(context) => MyHomePage(title: "Flutter Demo Home Page"),
         "counter_page":(context) => ZJCounterWidget(),
         "cupertino_page":(context) => CupertinoRoute(),
         "widget_self":(context) => WidgetSelfBoxA(),
@@ -99,6 +105,8 @@ class MyApp extends StatelessWidget {
         "Drawer_demo":(context) => DrawerDemo(),
         "BottomNavBar_demo":(context) => BottomNavBarDemo(),
         "ClipRect_demo":(context) => ClipRectDemo(),
+        "SignalChild_demo":(context) => SignalScrollViewDemo(),
+        "listview_demo":(context) => ListViewDemo(),
       },
     );
   }
@@ -127,6 +135,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 //  该组件的状态，
   int _counter = 0;
+
+  List<Map<String,String>> pushVCArr;
 //  该函数的作用是先自增_counter，然后调用setState 方法
 //  setState方法的作用是通知Flutter框架，有状态发生了改变，Flutter框架收到通知后，
 //  会执行build方法来根据新的状态重新构建界面，
@@ -140,6 +150,43 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+  }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    //初始化对应的信息
+    pushVCArr = [
+      {"title":"新路由", "pushVC":"new_page"},
+      {"title":"打开提示页", "pushVC":"info_page"},
+      {"title":"加法器", "pushVC":"counter_page"},
+      {"title":"提示框", "pushVC":"cupertino_page"},
+      {"title":"自己管理", "pushVC":"widget_self"},
+      {"title":"父管理", "pushVC":"parent_widget"},
+      {"title":"混合管理", "pushVC":"mix_widget"},
+      {"title":"输入框", "pushVC":"textField_widget"},
+      {"title":"键盘焦点", "pushVC":"focus_widget"},
+      {"title":"forms表单", "pushVC":"forms_widget"},
+      {"title":"进度条", "pushVC":"process_widget"},
+      {"title":"进度条动画", "pushVC":"process_animate_widget"},
+      {"title":"Column布局", "pushVC":"layout_Column"},
+      {"title":"Flex布局", "pushVC":"layout_Flex"},
+      {"title":"Wrap布局", "pushVC":"layout_Wrap"},
+      {"title":"Flow布局", "pushVC":"layout_Flow"},
+      {"title":"Stack布局", "pushVC":"layout_Stack"},
+      {"title":"Align布局", "pushVC":"layout_Align"},
+      {"title":"Padding布局", "pushVC":"Container_padding"},
+      {"title":"Container布局", "pushVC":"Container_Box"},
+      {"title":"DecorationBox设置", "pushVC":"Contailer_DecoratedBox"},
+      {"title":"Scaffold设置", "pushVC":"Scaffold_demo"},
+      {"title":"AppBar设置", "pushVC":"AppBar_demo"},
+      {"title":"Drawer设置", "pushVC":"Drawer_demo"},
+      {"title":"navBar设置", "pushVC":"BottomNavBar_demo"},
+      {"title":"clip设置", "pushVC":"ClipRect_demo"},
+      {"title":"signalScrollView", "pushVC":"SignalChild_demo"},
+      {"title":"listView", "pushVC":"listview_demo"},
+    ];
   }
 
 
@@ -174,199 +221,53 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.display2,
             ),
             RandomWordsWidget(),
+//            Row(
+//              mainAxisAlignment: MainAxisAlignment.start,
+//              children: <Widget>[
+//                FlatButton(
+//                  child: Text("新路由",style: ZJTextStyleTool.white_22,),
+//                  textColor: Colors.white,
+//                  color: ZJColor.randomColor(),
+//                  onPressed: (){
+////                Navigator.push(context, MaterialPageRoute(builder: (context){
+////                  return NewRoute();
+////                }));
+//                    Navigator.pushNamed(context, "new_page");
+//                  },
+//                ),
+//                FlatButton(
+//                  textColor: Colors.white,
+//                  color: Colors.blueGrey,
+//                  onPressed: () async {
+////                修改为命名路由展示
+////                var result = await Navigator.push(
+////                  context,
+////                  MaterialPageRoute(
+////                    builder: (context) {
+////                      return TipRoute(text: "我是提示,你好啊 ",);
+////                    }
+////                  ),
+////                );
+//                    var result = await Navigator.of(context).pushNamed("info_page",arguments:"你好");
+//                    //点击按钮返回的result会有一个返回值，点击左上角的按钮result没有返回值
+//                    print("输出路由返回值===$result");
+//                  },
+//                  child: Text("打开提示页",style: ZJTextStyleTool.white_22,),
+//                ),
+//              ],
+//            ),
             Wrap(
               spacing: 5,
               runSpacing: -5,
               runAlignment: WrapAlignment.start,
-              children: <Widget>[
-                FlatButton(
-                  child: Text("新路由",style: ZJTextStyleTool.white_22,),
+              children: pushVCArr.map((e){
+                return FlatButton(
+                  child: Text(e["title"],style: ZJTextStyleTool.white_22,),
                   textColor: Colors.white,
-                  color: Colors.deepPurple,
-                  onPressed: (){
-//                Navigator.push(context, MaterialPageRoute(builder: (context){
-//                  return NewRoute();
-//                }));
-                    Navigator.pushNamed(context, "new_page");
-                  },
-                ),
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.blueGrey,
-                  onPressed: () async {
-//                修改为命名路由展示
-//                var result = await Navigator.push(
-//                  context,
-//                  MaterialPageRoute(
-//                    builder: (context) {
-//                      return TipRoute(text: "我是提示,你好啊 ",);
-//                    }
-//                  ),
-//                );
-                    var result = await Navigator.of(context).pushNamed("info_page",arguments:"你好");
-                    //点击按钮返回的result会有一个返回值，点击左上角的按钮result没有返回值
-                    print("输出路由返回值===$result");
-                  },
-                  child: Text("打开提示页",style: ZJTextStyleTool.white_22,),
-                ),
-                //添加随机字符串
-
-                FlatButton(
-                  child: Text("加法器",style: ZJTextStyleTool.white_22,),
-                  textColor: Colors.white,
-                  color: Colors.amber,
-                  onPressed: () => Navigator.pushNamed(context, "counter_page"),
-                ),
-                FlatButton(
-                  child: Text("提示框",style: ZJTextStyleTool.white_22,),
-                  textColor: Colors.white,
-                  color: Colors.blueAccent,
-                  onPressed: () => Navigator.pushNamed(context, "cupertino_page"),
-                ),
-
-
-                FlatButton(
-                  child: Text("自己管理",style: ZJTextStyleTool.white_22,),
-                  textColor: Colors.white,
-                  color: Colors.red,
-                  onPressed: () => Navigator.pushNamed(context, "widget_self"),
-                ),
-                FlatButton(
-                  child: Text("父管理",style: ZJTextStyleTool.white_22,),
-                  textColor: Colors.white,
-                  color: Colors.blue,
-                  onPressed: () => Navigator.pushNamed(context, "parent_widget"),
-                ),
-                FlatButton(
-                  child: Text("混合管理",style: ZJTextStyleTool.white_22,),
-                  textColor: Colors.white,
-                  color: Colors.green,
-                  onPressed: () => Navigator.pushNamed(context, "mix_widget"),
-                ),
-                FlatButton(
-                  child: Text("输入框",style: ZJTextStyleTool.white_22,),
-                  textColor: Colors.white,
-                  color: Colors.deepPurpleAccent,
-                  onPressed: () => Navigator.pushNamed(context, "textField_widget"),
-                ),
-
-                FlatButton(
-                  child: Text("键盘焦点",style: ZJTextStyleTool.white_22,),
-                  textColor: Colors.white,
-                  color: Colors.amber,
-                  onPressed: () => Navigator.pushNamed(context, "focus_widget"),
-                ),
-                FlatButton(
-                  child: Text("forms表单",style: ZJTextStyleTool.white_22,),
-                  textColor: Colors.white,
-                  color: Colors.blueGrey,
-                  onPressed: () => Navigator.pushNamed(context, "forms_widget"),
-                ),
-                FlatButton(
-                  child: Text("进度条",style: ZJTextStyleTool.white_22,),
-                  textColor: Colors.white,
-                  color: Colors.indigoAccent,
-                  onPressed: () => Navigator.pushNamed(context, "process_widget"),
-                ),
-                FlatButton(
-                  child: Text("进度条动画",style: ZJTextStyleTool.white_22,),
-                  textColor: Colors.white,
-                  color: Colors.brown,
-                  onPressed: () => Navigator.pushNamed(context, "process_animate_widget"),
-                ),
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.blue,
-                  child: Text("Column布局",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "layout_Column"),
-                ),
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.yellow,
-                  child: Text("Flex布局",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "layout_Flex"),
-                ),
-
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.pinkAccent,
-                  child: Text("Wrap布局",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "layout_Wrap"),
-                ),
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.deepOrangeAccent,
-                  child: Text("Flow布局",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "layout_Flow"),
-                ),
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.lightGreen,
-                  child: Text("Stack布局",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "layout_Stack"),
-                ),
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.black12,
-                  child: Text("Align布局",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "layout_Align"),
-                ),
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.blueGrey,
-                  child: Text("Padding设置",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "Container_padding"),
-                ),
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.blueGrey,
-                  child: Text("Container设置",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "Container_Box"),
-                ),
-
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.lightGreen,
-                  child: Text("DecoratedBox设置",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "Contailer_DecoratedBox"),
-                ),
-
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.orange,
-                  child: Text("Scaffold设置",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "Scaffold_demo"),
-                ),
-
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.green,
-                  child: Text("AppBar设置",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "AppBar_demo"),
-                ),
-
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.lightBlue,
-                  child: Text("Drawer设置",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "Drawer_demo"),
-                ),
-
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.pink,
-                  child: Text("navbar设置",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "BottomNavBar_demo"),
-                ),
-
-                FlatButton(
-                  textColor: Colors.white,
-                  color: Colors.pink,
-                  child: Text("clip设置",style: ZJTextStyleTool.white_22,),
-                  onPressed: () => Navigator.pushNamed(context, "ClipRect_demo"),
-                ),
-
-              ],
+                  color: ZJColor.randomColor(),
+                  onPressed: () => Navigator.pushNamed(context, e["pushVC"]),
+                );
+              }).toList(),
             ),
           ],
         ),
