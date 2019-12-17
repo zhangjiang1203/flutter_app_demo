@@ -22,6 +22,7 @@ class _ListViewDemoState extends State<ListViewDemo> {
 
   //作用在4上面的表尾标记
   static const String loadingTag = "##loading##";
+  //存放对应的展示数组
   var _words = <String>[loadingTag];
   
   void _onpressChange(){
