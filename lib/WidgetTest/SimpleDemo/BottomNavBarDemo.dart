@@ -65,7 +65,7 @@ class _BottomNavBarState extends State<BottomNavBarDemo>{
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             IconButton(icon: Icon(Icons.home)),
-            //留出打洞的位置
+            //留出打洞的位置，可以根据下面floatingActionButton的位置设置这个SizedBox
             SizedBox(),
             IconButton(icon: Icon(Icons.settings),)
           ],

@@ -27,6 +27,7 @@ import 'WidgetTest/SimpleDemo/ScaffoldDemo.dart';
 import 'WidgetTest/SimpleDemo/AppBarDemo.dart';
 import 'WidgetTest/SimpleDemo/DrawerDemo.dart';
 import 'WidgetTest/SimpleDemo/BottomNavBarDemo.dart';
+import 'WidgetTest/SimpleDemo/ClipRectDemo.dart';
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
 
@@ -97,6 +98,7 @@ class MyApp extends StatelessWidget {
         "AppBar_demo":(context) => AppBarDemo(),
         "Drawer_demo":(context) => DrawerDemo(),
         "BottomNavBar_demo":(context) => BottomNavBarDemo(),
+        "ClipRect_demo":(context) => ClipRectDemo(),
       },
     );
   }
@@ -355,6 +357,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.pink,
                   child: Text("navbar设置",style: ZJTextStyleTool.white_22,),
                   onPressed: () => Navigator.pushNamed(context, "BottomNavBar_demo"),
+                ),
+
+                FlatButton(
+                  textColor: Colors.white,
+                  color: Colors.pink,
+                  child: Text("clip设置",style: ZJTextStyleTool.white_22,),
+                  onPressed: () => Navigator.pushNamed(context, "ClipRect_demo"),
                 ),
 
               ],

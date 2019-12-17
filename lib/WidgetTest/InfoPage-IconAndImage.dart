@@ -38,6 +38,10 @@ class TipRoute extends StatelessWidget {
               Image.network(
                 "http://b-ssl.duitang.com/uploads/blog/201312/04/20131204184148_hhXUT.jpeg",
                 width: 200.0,),
+              Image.network(
+                "http://e.hiphotos.baidu.com/image/pic/item/10dfa9ec8a1363279e1ed28c9b8fa0ec09fac79a.jpg",
+                width: 200.0,),
+
               Row(
                 mainAxisSize:MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.center,
