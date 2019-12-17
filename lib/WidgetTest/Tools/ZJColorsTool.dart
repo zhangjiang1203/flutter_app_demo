@@ -15,9 +15,4 @@ class ZJColor {
 //    print("输出的颜色值$r,$g,$b");
     return Color.fromARGB(255, r, g, b);
   }
-
-
-
-
-
 }
