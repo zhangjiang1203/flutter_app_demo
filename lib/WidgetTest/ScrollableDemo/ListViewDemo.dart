@@ -27,7 +27,7 @@ class _ListViewDemoState extends State<ListViewDemo> {
   
   void _onpressChange(){
     setState(() {
-      if(_currentIndex >= 4){
+      if(_currentIndex >= 5){
         _currentIndex = 1;
       }else {
         _currentIndex++;
@@ -46,6 +46,8 @@ class _ListViewDemoState extends State<ListViewDemo> {
           _createMyShowData();
           _currentTitle = "InfiniteList";
           break;
+        case 5:
+          _currentTitle = "addListTitle";
       }
 
     });
@@ -115,6 +117,24 @@ class _ListViewDemoState extends State<ListViewDemo> {
               return index % 2 == 0 ? devide1 : devide2;
             },
             itemCount: _words.length);
+      case 5:
+        //添加单个表头
+        return Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            ListTile(title: Text("我是表头"),),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 50,
+                itemExtent: 50,
+                itemBuilder: (context,index){
+                  return ListTile(title: Text("title===$index",style: TextStyle(color: Colors.red,fontSize: 28)));
+                },
+              ),
+            ),
+
+          ],
+        );
     }
   }
 
