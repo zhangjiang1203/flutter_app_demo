@@ -34,6 +34,8 @@ import 'WidgetTest/SimpleDemo/BottomNavBarDemo.dart';
 import 'WidgetTest/SimpleDemo/ClipRectDemo.dart';
 import 'WidgetTest/ScrollableDemo/SignalChildScrollDemo.dart';
 import 'WidgetTest/ScrollableDemo/ListViewDemo.dart';
+import 'WidgetTest/ScrollableDemo/GridViewDemo.dart';
+
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
 
@@ -107,6 +109,7 @@ class MyApp extends StatelessWidget {
         "ClipRect_demo":(context) => ClipRectDemo(),
         "SignalChild_demo":(context) => SignalScrollViewDemo(),
         "listview_demo":(context) => ListViewDemo(),
+        "gridview_demo":(context) => GridViewDemo(),
       },
     );
   }
@@ -186,6 +189,7 @@ class _MyHomePageState extends State<MyHomePage> {
       {"title":"clip设置", "pushVC":"ClipRect_demo"},
       {"title":"signalScrollView", "pushVC":"SignalChild_demo"},
       {"title":"listView", "pushVC":"listview_demo"},
+      {"title":"GridView", "pushVC":"gridview_demo"},
     ];
   }
 
