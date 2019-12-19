@@ -15,6 +15,7 @@ class _ListViewDemoState extends State<ListViewDemo> {
   
   int _currentIndex = 1;
   String _currentTitle = "ListViewDemo";
+  static List titleArr = ["ListViewDemo","ListBuilder","ListSeparator","InfiniteList","addListTitle"];
   //创建复用的separator和字符串
   Widget devide1 = Divider(color: Colors.green,height: 0.0,);
   Widget devide2 = Divider(color: Colors.blue,height: 0.0,);
@@ -32,26 +33,9 @@ class _ListViewDemoState extends State<ListViewDemo> {
       }else {
         _currentIndex++;
       }
-      switch(_currentIndex){
-        case 1:
-          _currentTitle = "ListViewDemo";
-          break;
-        case 2:
-          _currentTitle = "ListBuilder";
-          break;
-        case 3:
-          _currentTitle = "ListSeparator";
-          break;
-        case 4:
-          _createMyShowData();
-          _currentTitle = "InfiniteList";
-          break;
-        case 5:
-          _currentTitle = "addListTitle";
-      }
-
     });
   }
+
   
   Widget createMyCustomWidget(int index) {
     switch (index){
@@ -148,6 +132,13 @@ class _ListViewDemoState extends State<ListViewDemo> {
       });
     });
   }
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _createMyShowData();
+  }
   
   @override
   Widget build(BuildContext context) {
@@ -155,7 +146,7 @@ class _ListViewDemoState extends State<ListViewDemo> {
     
     return Scaffold(
       appBar: AppBar(
-        title: Text(_currentTitle),
+        title: Text(titleArr[_currentIndex-1]),
         actions: <Widget>[
           FlatButton(
             child: Text("list变化",style: TextStyle(color: Colors.white),),
