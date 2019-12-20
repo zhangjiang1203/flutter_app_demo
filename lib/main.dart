@@ -208,7 +208,55 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return Scaffold(
+
+    return Material(
+      child: CustomScrollView(
+        slivers: <Widget>[
+          //AppBar
+          SliverAppBar(
+            pinned: true,
+            flexibleSpace: FlexibleSpaceBar(
+              title: Text("flutterDemo",style: ZJTextStyleTool.white_40,),
+              background: Image.asset("assets/images/star_name.png",fit: BoxFit.cover,),
+            ),
+          ),
+          SliverPadding(
+            padding: EdgeInsets.all(8),
+            sliver: SliverGrid(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 5,
+                crossAxisSpacing: 5,
+                childAspectRatio: 4,
+              ),
+              delegate: SliverChildBuilderDelegate((context,index){
+                return Container(
+                  decoration: BoxDecoration(
+                    boxShadow:[
+                      BoxShadow(
+                        color: ZJColor.randomColor(),
+                      ),],
+                    borderRadius: BorderRadius.all(Radius.circular(5)),
+                  ),
+                  child: FlatButton(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(pushVCArr[index]["title"],style: ZJTextStyleTool.white_22,)
+                      ],
+                    ),
+                    onPressed: ()=> Navigator.pushNamed(context, pushVCArr[index]["pushVC"]),
+                  ),
+                );
+              },
+              childCount: pushVCArr.length),
+            ),
+          ),
+        ],
+      ),
+    );
+
+    /*return Scaffold(
       appBar: AppBar(
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
@@ -219,7 +267,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Row(),
             Text(
               'You have pushed the button this many times:',
             ),
@@ -285,6 +332,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
+
+     */
   }
 
 //  final str = "你好";
