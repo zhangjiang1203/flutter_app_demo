@@ -35,6 +35,7 @@ import 'WidgetTest/SimpleDemo/ClipRectDemo.dart';
 import 'WidgetTest/ScrollableDemo/SignalChildScrollDemo.dart';
 import 'WidgetTest/ScrollableDemo/ListViewDemo.dart';
 import 'WidgetTest/ScrollableDemo/GridViewDemo.dart';
+import 'WidgetTest/ScrollableDemo/SliverGridViewDemo.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -110,6 +111,7 @@ class MyApp extends StatelessWidget {
         "SignalChild_demo":(context) => SignalScrollViewDemo(),
         "listview_demo":(context) => ListViewDemo(),
         "gridview_demo":(context) => GridViewDemo(),
+        "sliver_grid_view":(context) => SliverGridViewDemo(),
       },
     );
   }
@@ -190,6 +192,7 @@ class _MyHomePageState extends State<MyHomePage> {
       {"title":"signalScrollView", "pushVC":"SignalChild_demo"},
       {"title":"listView", "pushVC":"listview_demo"},
       {"title":"GridView", "pushVC":"gridview_demo"},
+      {"title":"SliverGridView", "pushVC":"sliver_grid_view"},
     ];
   }
 
