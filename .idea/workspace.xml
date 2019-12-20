@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78be66c3-06c0-4329-b003-2592bbc27233" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learnNote.md" beforeDir="false" afterPath="$PROJECT_DIR$/layoutNote.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LearnNote/List&amp;GridViewNote.md" beforeDir="false" afterPath="$PROJECT_DIR$/LearnNote/List&amp;GridViewNote.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/ScrollableDemo/GridViewDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/ScrollableDemo/GridViewDemo.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,13 +18,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/WidgetTest/ScrollableDemo/SliverGridViewDemo.dart">
+        <entry file="file://$PROJECT_DIR$/lib/WidgetTest/ScrollableDemo/GridViewDemo.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="47" column="18" lean-forward="true" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+            <state relative-caret-position="246">
+              <caret line="231" column="10" lean-forward="true" selection-start-line="231" selection-start-column="10" selection-end-line="231" selection-end-column="10" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/widgets/scrollable.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="89" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -43,7 +51,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/layoutNote.md">
+        <entry file="file://$PROJECT_DIR$/LearnNote/layoutNote.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="745">
@@ -57,10 +65,12 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/List&amp;GridViewNote.md">
+        <entry file="file://$PROJECT_DIR$/LearnNote/List&amp;GridViewNote.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="493">
+                <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+              </first_editor>
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
@@ -109,15 +119,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="377">
               <caret line="48" column="14" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/material/app_bar.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="891" column="8" selection-start-line="891" selection-start-column="8" selection-end-line="891" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -183,16 +184,18 @@
         <option value="$PROJECT_DIR$/lib/WidgetTest/ScrollableDemo/ListViewDemo.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/WidgetTest/SimpleDemo/AppBarDemo.dart" />
-        <option value="$PROJECT_DIR$/lib/WidgetTest/ScrollableDemo/GridViewDemo.dart" />
         <option value="$PROJECT_DIR$/lib/WidgetTest/ScrollableDemo/SliverGridViewDemo.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
+        <option value="$PROJECT_DIR$/List&amp;GridViewNote.md" />
+        <option value="$PROJECT_DIR$/lib/WidgetTest/ScrollableDemo/GridViewDemo.dart" />
+        <option value="$PROJECT_DIR$/LearnNote/List&amp;GridViewNote.md" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="29" />
     <option name="y" value="23" />
-    <option name="width" value="1741" />
+    <option name="width" value="2053" />
     <option name="height" value="1321" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -210,6 +213,24 @@
             <path>
               <item name="flutter_app_demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="flutter_app_demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_app_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_app_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_app_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_app_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="WidgetTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="flutter_app_demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="flutter_app_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+              <item name="WidgetTest" type="462c0819:PsiDirectoryNode" />
+              <item name="ScrollableDemo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -230,6 +251,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/LearnNote" />
       <recent name="$PROJECT_DIR$/assets/images" />
     </key>
   </component>
@@ -265,11 +287,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="29" y="23" width="1741" height="1321" extended-state="0" />
+    <frame x="29" y="23" width="2053" height="1321" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20306063" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17155644" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -295,13 +317,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/widgets/basic.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="584" column="8" selection-start-line="584" selection-start-column="8" selection-end-line="584" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/material/scrollbar.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -605,16 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/WidgetTest/ScrollableDemo/GridViewDemo.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1240">
-          <caret line="61" column="29" lean-forward="true" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/widgets/sliver.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -684,7 +689,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/layoutNote.md">
+    <entry file="file://$PROJECT_DIR$/LearnNote/layoutNote.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="745">
@@ -696,10 +701,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/List&amp;GridViewNote.md">
+    <entry file="file://$PROJECT_DIR$/lib/WidgetTest/ScrollableDemo/GridViewDemo.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="231" column="10" lean-forward="true" selection-start-line="231" selection-start-column="10" selection-end-line="231" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/widgets/scrollable.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="89" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LearnNote/List&amp;GridViewNote.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor />
+          <first_editor relative-caret-position="493">
+            <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
+          </first_editor>
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
