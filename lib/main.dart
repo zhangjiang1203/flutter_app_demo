@@ -36,6 +36,8 @@ import 'WidgetTest/ScrollableDemo/SignalChildScrollDemo.dart';
 import 'WidgetTest/ScrollableDemo/ListViewDemo.dart';
 import 'WidgetTest/ScrollableDemo/GridViewDemo.dart';
 import 'WidgetTest/ScrollableDemo/SliverGridViewDemo.dart';
+import 'WidgetTest/ScrollableDemo/ScrollControllerDemo.dart';
+import 'WidgetTest/ScrollableDemo/NotificationScrollController.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -112,6 +114,8 @@ class MyApp extends StatelessWidget {
         "listview_demo":(context) => ListViewDemo(),
         "gridview_demo":(context) => GridViewDemo(),
         "sliver_grid_view":(context) => SliverGridViewDemo(),
+        "scrollcontroller_demo":(context) => ScrollControllerDemo(),
+        "notification_scrollView":(context) => NotificationScrollController(),
       },
     );
   }
@@ -193,6 +197,8 @@ class _MyHomePageState extends State<MyHomePage> {
       {"title":"listView", "pushVC":"listview_demo"},
       {"title":"GridView", "pushVC":"gridview_demo"},
       {"title":"SliverGridView", "pushVC":"sliver_grid_view"},
+      {"title":"ScrollController", "pushVC":"scrollcontroller_demo"},
+      {"title":"NotificationScroll", "pushVC":"notification_scrollView"},
     ];
   }
 
