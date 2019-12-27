@@ -8,7 +8,7 @@ class ZJTextStyleTool {
   //定义静态的使用
   ZJTextStyleTool._();
   /// 字体20
-  static const TextStyle black_40 = const TextStyle(color: const Color(0xff333333),fontSize: 20.0);
+  static const TextStyle black_40 = const TextStyle(color: const Color(0xff333333),fontSize: 20.0,);
 
   static const TextStyle black_36 = const TextStyle(color: const Color(0xff333333),fontSize: 18.0);
 
