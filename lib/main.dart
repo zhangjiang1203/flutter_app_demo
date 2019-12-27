@@ -1,22 +1,21 @@
 //导入包
 
 import 'package:flutter/material.dart';
-import 'WidgetTest/Tools/ZJTextStyleTool.dart';
-import 'WidgetTest/Tools/ZJColorsTool.dart';
+import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
+import 'package:flutter_app_demo/WidgetTest/Tools/ZJColorsTool.dart';
+import 'package:flutter_section_table_view/flutter_section_table_view.dart';
 
-
-import 'package:flutter_app_demo/WidgetTest/FormsModelTest.dart';
-import 'package:flutter_app_demo/WidgetTest/TextFieldModel.dart';
-import 'package:flutter_app_demo/WidgetTest/TextFocusNode.dart';
-import 'WidgetTest/StatelessWidgeTest.dart';
-import 'WidgetTest/CupertinoStyle.dart';
-import 'WidgetTest/WidgetStateTest.dart';
-import 'WidgetTest/newRouteButton.dart';
-import 'WidgetTest/InfoPage-IconAndImage.dart';
-import 'WidgetTest/RandomWords.dart';
-import 'WidgetTest/TextFieldModel.dart';
-import 'WidgetTest/ProcessModelTest.dart';
-import 'WidgetTest/AnimateProcessModelTest.dart';
+import 'package:flutter_app_demo/WidgetTest/BasicWidgetDemo/FormsModelTest.dart';
+import 'package:flutter_app_demo/WidgetTest/BasicWidgetDemo/TextFieldModel.dart';
+import 'package:flutter_app_demo/WidgetTest/BasicWidgetDemo/TextFocusNode.dart';
+import 'WidgetTest/BasicWidgetDemo//StatelessWidgeTest.dart';
+import 'WidgetTest/BasicWidgetDemo/CupertinoStyle.dart';
+import 'WidgetTest/BasicWidgetDemo/WidgetStateTest.dart';
+import 'WidgetTest/BasicWidgetDemo/newRouteButton.dart';
+import 'WidgetTest/BasicWidgetDemo/InfoPage-IconAndImage.dart';
+import 'WidgetTest/BasicWidgetDemo/TextFieldModel.dart';
+import 'WidgetTest/BasicWidgetDemo/ProcessModelTest.dart';
+import 'WidgetTest/BasicWidgetDemo/AnimateProcessModelTest.dart';
 
 import 'WidgetTest/LayoutTest/ColumnAndRowTest.dart';
 import 'WidgetTest/LayoutTest/FlexLayoutDemo.dart';
@@ -38,6 +37,8 @@ import 'WidgetTest/ScrollableDemo/GridViewDemo.dart';
 import 'WidgetTest/ScrollableDemo/SliverGridViewDemo.dart';
 import 'WidgetTest/ScrollableDemo/ScrollControllerDemo.dart';
 import 'WidgetTest/ScrollableDemo/NotificationScrollController.dart';
+
+import 'WidgetTest/FunctionWidgetDemo/WillPopScopeDemo.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -116,6 +117,7 @@ class MyApp extends StatelessWidget {
         "sliver_grid_view":(context) => SliverGridViewDemo(),
         "scrollcontroller_demo":(context) => ScrollControllerDemo(),
         "notification_scrollView":(context) => NotificationScrollController(),
+        "nav_popScope_demo":(context) => WillPopScopeDemo(),
       },
     );
   }
@@ -142,66 +144,80 @@ class MyHomePage extends StatefulWidget {
 
 //_MyHomePageState类是MyHomePage类对应的状态类
 class _MyHomePageState extends State<MyHomePage> {
-//  该组件的状态，
-  int _counter = 0;
+  bool _showFloatBtn = false;
+  SectionTableController _controller;
 
-  List<Map<String,String>> pushVCArr;
+  List<Map<String,Object>> pushVCArr;
 //  该函数的作用是先自增_counter，然后调用setState 方法
 //  setState方法的作用是通知Flutter框架，有状态发生了改变，Flutter框架收到通知后，
 //  会执行build方法来根据新的状态重新构建界面，
 //  Flutter 对此方法做了优化，使重新执行变的很快，所以你可以重新构建任何需要更新的东西，而无需分别去修改各个widget
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    _controller = SectionTableController(sectionTableViewScrollTo: (section, row, isScrollDown) {
+//      print('received scroll to $section $row scrollDown:$isScrollDown');
+      setState(() {
+        _showFloatBtn = section > 2;
+      });
+    });
+
+    _controller.addListener((){
+      print(_controller);
+    });
     //初始化对应的信息
     pushVCArr = [
-      {"title":"新路由", "pushVC":"new_page"},
-      {"title":"打开提示页", "pushVC":"info_page"},
-      {"title":"加法器", "pushVC":"counter_page"},
-      {"title":"提示框", "pushVC":"cupertino_page"},
-      {"title":"自己管理", "pushVC":"widget_self"},
-      {"title":"父管理", "pushVC":"parent_widget"},
-      {"title":"混合管理", "pushVC":"mix_widget"},
-      {"title":"输入框", "pushVC":"textField_widget"},
-      {"title":"键盘焦点", "pushVC":"focus_widget"},
-      {"title":"forms表单", "pushVC":"forms_widget"},
-      {"title":"进度条", "pushVC":"process_widget"},
-      {"title":"进度条动画", "pushVC":"process_animate_widget"},
-      {"title":"Column布局", "pushVC":"layout_Column"},
-      {"title":"Flex布局", "pushVC":"layout_Flex"},
-      {"title":"Wrap布局", "pushVC":"layout_Wrap"},
-      {"title":"Flow布局", "pushVC":"layout_Flow"},
-      {"title":"Stack布局", "pushVC":"layout_Stack"},
-      {"title":"Align布局", "pushVC":"layout_Align"},
-      {"title":"Padding布局", "pushVC":"Container_padding"},
-      {"title":"Container布局", "pushVC":"Container_Box"},
-      {"title":"DecorationBox设置", "pushVC":"Contailer_DecoratedBox"},
-      {"title":"Scaffold设置", "pushVC":"Scaffold_demo"},
-      {"title":"AppBar设置", "pushVC":"AppBar_demo"},
-      {"title":"Drawer设置", "pushVC":"Drawer_demo"},
-      {"title":"navBar设置", "pushVC":"BottomNavBar_demo"},
-      {"title":"clip设置", "pushVC":"ClipRect_demo"},
-      {"title":"signalScrollView", "pushVC":"SignalChild_demo"},
-      {"title":"listView", "pushVC":"listview_demo"},
-      {"title":"GridView", "pushVC":"gridview_demo"},
-      {"title":"SliverGridView", "pushVC":"sliver_grid_view"},
-      {"title":"ScrollController", "pushVC":"scrollcontroller_demo"},
-      {"title":"NotificationScroll", "pushVC":"notification_scrollView"},
+      {"section":"基础组件","row":[
+        {"title":"新路由", "pushVC":"new_page","color":ZJColor.randomColor()},
+        {"title":"打开提示页", "pushVC":"info_page","color":ZJColor.randomColor()},
+        {"title":"加法器", "pushVC":"counter_page","color":ZJColor.randomColor()},
+        {"title":"提示框", "pushVC":"cupertino_page","color":ZJColor.randomColor()},
+        {"title":"自己管理", "pushVC":"widget_self","color":ZJColor.randomColor()},
+        {"title":"父管理", "pushVC":"parent_widget","color":ZJColor.randomColor()},
+        {"title":"混合管理", "pushVC":"mix_widget","color":ZJColor.randomColor()},
+        {"title":"输入框", "pushVC":"textField_widget","color":ZJColor.randomColor()},
+        {"title":"键盘焦点", "pushVC":"focus_widget","color":ZJColor.randomColor()},
+        {"title":"forms表单", "pushVC":"forms_widget","color":ZJColor.randomColor()},
+        {"title":"进度条", "pushVC":"process_widget","color":ZJColor.randomColor()},
+        {"title":"进度条动画", "pushVC":"process_animate_widget","color":ZJColor.randomColor()}
+        ]
+     },
+     {"section":"布局类组件","row":[
+       {"title":"Column布局", "pushVC":"layout_Column","color":ZJColor.randomColor()},
+       {"title":"Flex布局", "pushVC":"layout_Flex","color":ZJColor.randomColor()},
+       {"title":"Wrap布局", "pushVC":"layout_Wrap","color":ZJColor.randomColor()},
+       {"title":"Flow布局", "pushVC":"layout_Flow","color":ZJColor.randomColor()},
+       {"title":"Stack布局", "pushVC":"layout_Stack","color":ZJColor.randomColor()},
+       {"title":"Align布局", "pushVC":"layout_Align","color":ZJColor.randomColor()},
+       {"title":"Padding布局", "pushVC":"Container_padding","color":ZJColor.randomColor()},
+       {"title":"Container布局", "pushVC":"Container_Box","color":ZJColor.randomColor()},
+       ]
+     },
+     {"section":"容器类组件","row":[
+      {"title":"Scaffold设置", "pushVC":"Scaffold_demo","color":ZJColor.randomColor()},
+      {"title":"AppBar设置", "pushVC":"AppBar_demo","color":ZJColor.randomColor()},
+      {"title":"Drawer设置", "pushVC":"Drawer_demo","color":ZJColor.randomColor()},
+      {"title":"navBar设置", "pushVC":"BottomNavBar_demo","color":ZJColor.randomColor()},
+      {"title":"clip设置", "pushVC":"ClipRect_demo","color":ZJColor.randomColor()},
+      ]
+    },
+    {"section":"可滚动组件","row":[
+      {"title":"signalScrollView", "pushVC":"SignalChild_demo","color":ZJColor.randomColor()},
+      {"title":"listView", "pushVC":"listview_demo","color":ZJColor.randomColor()},
+      {"title":"GridView", "pushVC":"gridview_demo","color":ZJColor.randomColor()},
+      {"title":"SliverGridView", "pushVC":"sliver_grid_view","color":ZJColor.randomColor()},
+      {"title":"ScrollController", "pushVC":"scrollcontroller_demo","color":ZJColor.randomColor()},
+      {"title":"NotificationScroll", "pushVC":"notification_scrollView","color":ZJColor.randomColor()},
+      ]
+    },
+      {"section":"功能型组件","row":[
+        {"title":"导航返回拦截", "pushVC":"nav_popScope_demo","color":ZJColor.randomColor()},
+      ]
+      }
     ];
   }
-
 
   //构建首页的UI界面
   @override
@@ -215,52 +231,120 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
 
-    return Material(
-      child: CustomScrollView(
-        slivers: <Widget>[
-          //AppBar
-          SliverAppBar(
-            pinned: true,
-            flexibleSpace: FlexibleSpaceBar(
-              title: Text("flutterDemo",style: ZJTextStyleTool.white_40,),
-              background: Image.asset("assets/images/star_name.png",fit: BoxFit.cover,),
-            ),
-          ),
-          SliverPadding(
-            padding: EdgeInsets.all(8),
-            sliver: SliverGrid(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                mainAxisSpacing: 5,
-                crossAxisSpacing: 5,
-                childAspectRatio: 4,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("FlutterDemo"),
+        backgroundColor: Colors.blue,
+      ),
+      floatingActionButton: !_showFloatBtn ? null : FloatingActionButton(
+        child: Icon(Icons.arrow_upward),
+        onPressed: (){
+          //直接划到顶部
+          _controller.animateTo(0, 0);
+        },
+      ),
+      body: SafeArea(
+        child: SectionTableView(
+          sectionCount: pushVCArr.length,
+          numOfRowInSection: (section){
+            Map sectionData = pushVCArr[section];
+            List rowData = sectionData["row"];
+            return rowData.length;
+          },
+          cellAtIndexPath: (section,row){
+            Map sectionData = pushVCArr[section];
+            List rowData = sectionData["row"];
+            Map rowMapData = rowData[row];
+            return Container(
+              height: 40,
+              alignment: Alignment.center,
+//              color: rowMapData["color"],
+              child: Stack(
+                fit: StackFit.expand,
+                children: <Widget>[
+                  //没哟用positioned包裹的子widget会expaned父widget
+                  Positioned(
+                    left: 15,
+                    top:10,
+                    child: Text(rowMapData["title"],style: TextStyle(color: Color(0xff333333)),),
+                  ),
+                  FlatButton(
+                    onPressed: () => Navigator.pushNamed(context, rowMapData["pushVC"]),
+                  ),
+                ],
               ),
-              delegate: SliverChildBuilderDelegate((context,index){
-                return Container(
-                  decoration: BoxDecoration(
-                    boxShadow:[
-                      BoxShadow(
-                        color: ZJColor.randomColor(),
-                      ),],
-                    borderRadius: BorderRadius.all(Radius.circular(5)),
-                  ),
-                  child: FlatButton(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(pushVCArr[index]["title"],style: ZJTextStyleTool.white_22,)
-                      ],
-                    ),
-                    onPressed: ()=> Navigator.pushNamed(context, pushVCArr[index]["pushVC"]),
-                  ),
-                );
-              },
-              childCount: pushVCArr.length),
-            ),
+            );
+
+          },
+          headerInSection: (section){
+            Map sectionData = pushVCArr[section];
+            return Container(
+              color: Colors.black26,
+              child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Text(sectionData['section'].toString(),style: ZJTextStyleTool.white_40,),
+              ),
+            );
+          },
+          divider: Container(
+            color: Colors.green,
+            height: 0.1,
           ),
-        ],
+          sectionHeaderHeight: (section)=> 30,
+          cellHeightAtIndexPath: (section,row) => 40,
+          dividerHeight:()=> 0.1,
+          controller: _controller,
+        ),
+
       ),
     );
+
+//    return Material(
+//      child: CustomScrollView(
+//        slivers: <Widget>[
+//          //AppBar
+//          SliverAppBar(
+//            pinned: true,
+//            flexibleSpace: FlexibleSpaceBar(
+//              title: Text("flutterDemo",style: ZJTextStyleTool.white_40,),
+//              background: Image.asset("assets/images/star_name.png",fit: BoxFit.cover,),
+//            ),
+//          ),
+//          SliverPadding(
+//            padding: EdgeInsets.all(8),
+//            sliver: SliverGrid(
+//              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+//                crossAxisCount: 2,
+//                mainAxisSpacing: 5,
+//                crossAxisSpacing: 5,
+//                childAspectRatio: 4,
+//              ),
+//              delegate: SliverChildBuilderDelegate((context,index){
+//                return Container(
+//                  decoration: BoxDecoration(
+//                    boxShadow:[
+//                      BoxShadow(
+//                        color: ZJColor.randomColor(),
+//                      ),],
+//                    borderRadius: BorderRadius.all(Radius.circular(5)),
+//                  ),
+//                  child: FlatButton(
+//                    child: Row(
+//                      mainAxisAlignment: MainAxisAlignment.center,
+//                      children: <Widget>[
+//                        Text(pushVCArr[index]["title"],style: ZJTextStyleTool.white_22,)
+//                      ],
+//                    ),
+//                    onPressed: ()=> Navigator.pushNamed(context, pushVCArr[index]["pushVC"]),
+//                  ),
+//                );
+//              },
+//              childCount: pushVCArr.length),
+//            ),
+//          ),
+//        ],
+//      ),
+//    );
 
     /*return Scaffold(
       appBar: AppBar(
