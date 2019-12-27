@@ -39,6 +39,8 @@ import 'WidgetTest/ScrollableDemo/ScrollControllerDemo.dart';
 import 'WidgetTest/ScrollableDemo/NotificationScrollController.dart';
 
 import 'WidgetTest/FunctionWidgetDemo/WillPopScopeDemo.dart';
+import 'WidgetTest/FunctionWidgetDemo/InheritedWidgetDemo.dart';
+import 'WidgetTest/FunctionWidgetDemo/ProviderDemo.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -118,6 +120,8 @@ class MyApp extends StatelessWidget {
         "scrollcontroller_demo":(context) => ScrollControllerDemo(),
         "notification_scrollView":(context) => NotificationScrollController(),
         "nav_popScope_demo":(context) => WillPopScopeDemo(),
+        "inherited_demo":(context) => InheritedWidgetDemo(),
+        "provider_demo":(context) => ProviderDemo(),
       },
     );
   }
@@ -170,50 +174,53 @@ class _MyHomePageState extends State<MyHomePage> {
     //初始化对应的信息
     pushVCArr = [
       {"section":"基础组件","row":[
-        {"title":"新路由", "pushVC":"new_page","color":ZJColor.randomColor()},
-        {"title":"打开提示页", "pushVC":"info_page","color":ZJColor.randomColor()},
-        {"title":"加法器", "pushVC":"counter_page","color":ZJColor.randomColor()},
-        {"title":"提示框", "pushVC":"cupertino_page","color":ZJColor.randomColor()},
-        {"title":"自己管理", "pushVC":"widget_self","color":ZJColor.randomColor()},
-        {"title":"父管理", "pushVC":"parent_widget","color":ZJColor.randomColor()},
-        {"title":"混合管理", "pushVC":"mix_widget","color":ZJColor.randomColor()},
-        {"title":"输入框", "pushVC":"textField_widget","color":ZJColor.randomColor()},
-        {"title":"键盘焦点", "pushVC":"focus_widget","color":ZJColor.randomColor()},
-        {"title":"forms表单", "pushVC":"forms_widget","color":ZJColor.randomColor()},
-        {"title":"进度条", "pushVC":"process_widget","color":ZJColor.randomColor()},
-        {"title":"进度条动画", "pushVC":"process_animate_widget","color":ZJColor.randomColor()}
+        {"title":"新路由", "pushVC":"new_page", },
+        {"title":"打开提示页", "pushVC":"info_page", },
+        {"title":"加法器", "pushVC":"counter_page", },
+        {"title":"提示框", "pushVC":"cupertino_page", },
+        {"title":"自己管理", "pushVC":"widget_self", },
+        {"title":"父管理", "pushVC":"parent_widget", },
+        {"title":"混合管理", "pushVC":"mix_widget", },
+        {"title":"输入框", "pushVC":"textField_widget", },
+        {"title":"键盘焦点", "pushVC":"focus_widget", },
+        {"title":"forms表单", "pushVC":"forms_widget", },
+        {"title":"进度条", "pushVC":"process_widget", },
+        {"title":"进度条动画", "pushVC":"process_animate_widget", }
         ]
      },
      {"section":"布局类组件","row":[
-       {"title":"Column布局", "pushVC":"layout_Column","color":ZJColor.randomColor()},
-       {"title":"Flex布局", "pushVC":"layout_Flex","color":ZJColor.randomColor()},
-       {"title":"Wrap布局", "pushVC":"layout_Wrap","color":ZJColor.randomColor()},
-       {"title":"Flow布局", "pushVC":"layout_Flow","color":ZJColor.randomColor()},
-       {"title":"Stack布局", "pushVC":"layout_Stack","color":ZJColor.randomColor()},
-       {"title":"Align布局", "pushVC":"layout_Align","color":ZJColor.randomColor()},
-       {"title":"Padding布局", "pushVC":"Container_padding","color":ZJColor.randomColor()},
-       {"title":"Container布局", "pushVC":"Container_Box","color":ZJColor.randomColor()},
+       {"title":"Column布局", "pushVC":"layout_Column", },
+       {"title":"Flex布局", "pushVC":"layout_Flex", },
+       {"title":"Wrap布局", "pushVC":"layout_Wrap", },
+       {"title":"Flow布局", "pushVC":"layout_Flow", },
+       {"title":"Stack布局", "pushVC":"layout_Stack", },
+       {"title":"Align布局", "pushVC":"layout_Align", },
+       {"title":"Padding布局", "pushVC":"Container_padding", },
+       {"title":"Container布局", "pushVC":"Container_Box", },
        ]
      },
      {"section":"容器类组件","row":[
-      {"title":"Scaffold设置", "pushVC":"Scaffold_demo","color":ZJColor.randomColor()},
-      {"title":"AppBar设置", "pushVC":"AppBar_demo","color":ZJColor.randomColor()},
-      {"title":"Drawer设置", "pushVC":"Drawer_demo","color":ZJColor.randomColor()},
-      {"title":"navBar设置", "pushVC":"BottomNavBar_demo","color":ZJColor.randomColor()},
-      {"title":"clip设置", "pushVC":"ClipRect_demo","color":ZJColor.randomColor()},
+      {"title":"Scaffold设置", "pushVC":"Scaffold_demo", },
+      {"title":"AppBar设置", "pushVC":"AppBar_demo", },
+      {"title":"Drawer设置", "pushVC":"Drawer_demo", },
+      {"title":"navBar设置", "pushVC":"BottomNavBar_demo", },
+      {"title":"clip设置", "pushVC":"ClipRect_demo", },
       ]
     },
     {"section":"可滚动组件","row":[
-      {"title":"signalScrollView", "pushVC":"SignalChild_demo","color":ZJColor.randomColor()},
-      {"title":"listView", "pushVC":"listview_demo","color":ZJColor.randomColor()},
-      {"title":"GridView", "pushVC":"gridview_demo","color":ZJColor.randomColor()},
-      {"title":"SliverGridView", "pushVC":"sliver_grid_view","color":ZJColor.randomColor()},
-      {"title":"ScrollController", "pushVC":"scrollcontroller_demo","color":ZJColor.randomColor()},
-      {"title":"NotificationScroll", "pushVC":"notification_scrollView","color":ZJColor.randomColor()},
+      {"title":"signalScrollView", "pushVC":"SignalChild_demo", },
+      {"title":"listView", "pushVC":"listview_demo", },
+      {"title":"GridView", "pushVC":"gridview_demo", },
+      {"title":"SliverGridView", "pushVC":"sliver_grid_view", },
+      {"title":"ScrollController", "pushVC":"scrollcontroller_demo", },
+      {"title":"NotificationScroll", "pushVC":"notification_scrollView", },
       ]
     },
       {"section":"功能型组件","row":[
-        {"title":"导航返回拦截", "pushVC":"nav_popScope_demo","color":ZJColor.randomColor()},
+        {"title":"导航返回拦截", "pushVC":"nav_popScope_demo", },
+        {"title":"数据共享", "pushVC":"inherited_demo", },
+        {"title":"跨组件状态共享", "pushVC":"provider_demo", },
+
       ]
       }
     ];

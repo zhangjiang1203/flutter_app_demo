@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78be66c3-06c0-4329-b003-2592bbc27233" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/WillPopScopeDemo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/InheritedWidgetDemo.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/ProviderDemo.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/AnimateProcessModelTest.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/BasicWidgetDemo/AnimateProcessModelTest.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/CupertinoStyle.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/BasicWidgetDemo/CupertinoStyle.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/FormsModelTest.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/BasicWidgetDemo/FormsModelTest.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/InfoPage-IconAndImage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/BasicWidgetDemo/InfoPage-IconAndImage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/ProcessModelTest.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/BasicWidgetDemo/ProcessModelTest.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/RandomWords.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/BasicWidgetDemo/RandomWords.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/SimpleDemo/ScaffoldDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/SimpleDemo/ScaffoldDemo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/StatelessWidgeTest.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/BasicWidgetDemo/StatelessWidgeTest.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/TextFieldModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/BasicWidgetDemo/TextFieldModel.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/TextFocusNode.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/BasicWidgetDemo/TextFocusNode.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/Tools/ZJTextStyleTool.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/Tools/ZJTextStyleTool.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/WidgetStateTest.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/BasicWidgetDemo/WidgetStateTest.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/newRouteButton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/BasicWidgetDemo/newRouteButton.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,8 +40,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="207" column="83" lean-forward="true" selection-start-line="207" selection-start-column="83" selection-end-line="207" selection-end-column="83" />
+            <state relative-caret-position="274">
+              <caret line="123" column="49" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="49" />
               <folding>
                 <element signature="e#7#46#0" expanded="true" />
               </folding>
@@ -62,11 +49,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/WillPopScopeDemo.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+            <state relative-caret-position="462">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -74,53 +64,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/widgets/will_pop_scope.dart">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="411">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/InheritedWidgetDemo.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-215">
+              <caret line="24" column="72" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/ProviderDemo.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/widgets/framework.dart">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/widgets/basic.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="3130" column="2" selection-start-line="3130" selection-start-column="2" selection-end-line="3130" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/material/flat_button.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-836">
-              <caret line="101" column="8" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/WidgetTest/Tools/ZJTextStyleTool.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/WidgetTest/BasicWidgetDemo/StatelessWidgeTest.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-205">
-              <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_section_table_view-1.0.5/lib/flutter_section_table_view.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="70" column="23" lean-forward="true" selection-start-line="70" selection-start-column="23" selection-end-line="70" selection-end-column="23" />
+              <caret line="1580" column="15" selection-start-line="1580" selection-start-column="15" selection-end-line="1580" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -151,7 +123,11 @@
       <find>body</find>
       <find>BoxDecoration</find>
       <find>_scrollController</find>
+      <find>&quot;color&quot;:ZJColor.randomColor()</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -194,8 +170,10 @@
         <option value="$PROJECT_DIR$/lib/WidgetTest/ScrollableDemo/NotificationScrollController.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/WidgetTest/Tools/ZJTextStyleTool.dart" />
-        <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/WillPopScopeDemo.dart" />
+        <option value="$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/InheritedWidgetDemo.dart" />
+        <option value="$PROJECT_DIR$/lib/main.dart" />
+        <option value="$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/ProviderDemo.dart" />
       </list>
     </option>
   </component>
@@ -320,7 +298,7 @@
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32872254" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" order="4" weight="0.32872254" />
-      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.23270953" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.23270953" />
       <window_info anchor="bottom" id="Debug" order="6" />
       <window_info anchor="bottom" id="Flutter Performance" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="8" />
@@ -334,33 +312,6 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/material/app.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4284">
-          <caret line="218" column="54" selection-start-line="218" selection-start-column="54" selection-end-line="218" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/WidgetTest/Tools/ZJColorsTool.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/english_words-3.1.5/lib/src/word_pair.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2688">
-          <caret line="135" column="19" selection-start-line="135" selection-start-column="19" selection-end-line="135" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/flutter/bin/cache/pkg/sky_engine/lib/core/list.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="10038">
@@ -698,13 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/widgets/basic.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="3130" column="2" selection-start-line="3130" selection-start-column="2" selection-end-line="3130" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_section_table_view-1.0.5/lib/flutter_section_table_view.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="227">
@@ -712,27 +656,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/WillPopScopeDemo.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/widgets/basic.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="3130" column="2" selection-start-line="3130" selection-start-column="2" selection-end-line="3130" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/widgets/will_pop_scope.dart">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/flutter/packages/flutter/lib/src/widgets/framework.dart">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <caret line="1580" column="15" selection-start-line="1580" selection-start-column="15" selection-end-line="1580" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/InheritedWidgetDemo.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-215">
+          <caret line="24" column="72" selection-start-line="24" selection-start-column="72" selection-end-line="24" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="207" column="83" lean-forward="true" selection-start-line="207" selection-start-column="83" selection-end-line="207" selection-end-column="83" />
+        <state relative-caret-position="274">
+          <caret line="123" column="49" selection-start-line="123" selection-start-column="37" selection-end-line="123" selection-end-column="49" />
           <folding>
             <element signature="e#7#46#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/WillPopScopeDemo.dart">
+    <entry file="file://$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/ProviderDemo.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+        <state relative-caret-position="231">
+          <caret line="11" column="15" lean-forward="true" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
         </state>
       </provider>
     </entry>
