@@ -53,6 +53,7 @@ class _TextWidgetState extends State<TextWidgetDemo> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    print("开始刷新");
     return Text(
       ShareDataWidget.of(context).data.toString()
     );
@@ -106,6 +107,7 @@ class _InheritedWidgetState extends State<InheritedWidgetDemo> {
               ),
               RaisedButton(
                 child: Text("Inherited"),
+                //重新刷新build方法
                 onPressed: ()=> setState(()=> ++count),
               ),
 
@@ -116,4 +118,6 @@ class _InheritedWidgetState extends State<InheritedWidgetDemo> {
     );
   }
 }
+
+
 
