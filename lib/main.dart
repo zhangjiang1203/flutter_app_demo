@@ -121,7 +121,7 @@ class MyApp extends StatelessWidget {
         "notification_scrollView":(context) => NotificationScrollController(),
         "nav_popScope_demo":(context) => WillPopScopeDemo(),
         "inherited_demo":(context) => InheritedWidgetDemo(),
-        "provider_demo":(context) => ProviderDemo(),
+        "provider_demo":(context) => ChangeNotifierProvider(),
       },
     );
   }

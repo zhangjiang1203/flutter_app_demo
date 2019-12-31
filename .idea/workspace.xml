@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78be66c3-06c0-4329-b003-2592bbc27233" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/App.framework/flutter_assets/kernel_blob.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/InheritedWidgetDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/InheritedWidgetDemo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/ProviderDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/ProviderDemo.dart" afterDir="false" />
-    </list>
+    <list default="true" id="78be66c3-06c0-4329-b003-2592bbc27233" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,8 +68,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/ProviderDemo.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="53" column="27" lean-forward="true" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+            <state relative-caret-position="330">
+              <caret line="72" column="22" lean-forward="true" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -697,8 +692,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/WidgetTest/FunctionWidgetDemo/ProviderDemo.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="53" column="27" lean-forward="true" selection-start-line="53" selection-start-column="27" selection-end-line="53" selection-end-column="27" />
+        <state relative-caret-position="330">
+          <caret line="72" column="22" lean-forward="true" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
         </state>
       </provider>
     </entry>
