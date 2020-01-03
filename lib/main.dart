@@ -40,7 +40,8 @@ import 'WidgetTest/ScrollableDemo/NotificationScrollController.dart';
 
 import 'WidgetTest/FunctionWidgetDemo/WillPopScopeDemo.dart';
 import 'WidgetTest/FunctionWidgetDemo/InheritedWidgetDemo.dart';
-import 'WidgetTest/FunctionWidgetDemo/ProviderDemo.dart';
+import 'WidgetTest/FunctionWidgetDemo/ShopCarDemo/ProviderDemo.dart';
+import 'WidgetTest/FunctionWidgetDemo/ShopCarDemo/ShopModel.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -121,7 +122,7 @@ class MyApp extends StatelessWidget {
         "notification_scrollView":(context) => NotificationScrollController(),
         "nav_popScope_demo":(context) => WillPopScopeDemo(),
         "inherited_demo":(context) => InheritedWidgetDemo(),
-        "provider_demo":(context) => ChangeNotifierProvider(),
+        "shopcar_demo":(context) => MyShopCarDemo(),
       },
     );
   }
@@ -219,7 +220,7 @@ class _MyHomePageState extends State<MyHomePage> {
       {"section":"功能型组件","row":[
         {"title":"导航返回拦截", "pushVC":"nav_popScope_demo", },
         {"title":"数据共享", "pushVC":"inherited_demo", },
-        {"title":"跨组件状态共享", "pushVC":"provider_demo", },
+        {"title":"跨组件状态共享", "pushVC":"shopcar_demo", },
 
       ]
       }
