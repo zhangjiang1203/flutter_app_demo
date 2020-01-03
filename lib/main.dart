@@ -1,6 +1,7 @@
 //导入包
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 import 'package:flutter_app_demo/WidgetTest/Tools/ZJColorsTool.dart';
 import 'package:flutter_section_table_view/flutter_section_table_view.dart';
@@ -40,8 +41,10 @@ import 'WidgetTest/ScrollableDemo/NotificationScrollController.dart';
 
 import 'WidgetTest/FunctionWidgetDemo/WillPopScopeDemo.dart';
 import 'WidgetTest/FunctionWidgetDemo/InheritedWidgetDemo.dart';
-import 'WidgetTest/FunctionWidgetDemo/ShopCarDemo/ProviderDemo.dart';
 import 'WidgetTest/FunctionWidgetDemo/ShopCarDemo/ShopModel.dart';
+import 'WidgetTest/ThemeAndColor/ThemeAndColor.dart';
+import 'WidgetTest/ThemeAndColor/ThemeTestDemo.dart';
+import 'WidgetTest/ThemeAndColor/ChangeGlobalThemeDemo.dart';
 
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() => runApp(MyApp());
@@ -51,6 +54,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   //Flutter在构建页面时，会调用组件的build方法，widget的主要工作是提供一个build()
   //方法来描述如何构建UI界面（通常是通过组合、拼装其它基础widget）。
+
+  //系统的主题色
+  Color _themeColor ;
+
+
   @override
   Widget build(BuildContext context) {
 //    return MaterialApp(
@@ -77,54 +85,65 @@ class MyApp extends StatelessWidget {
 //      home: MyHomePage(title: 'Flutter Demo Home Page'),
 //    );
 
-
-    // 使用命名路由来跳转
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: "/",//名为‘/’的路由作为应用的home首页
-      routes: {
-        "/":(context) => MyHomePage(title: "Flutter Demo Home Page"),
-        "new_page":(context)=>NewRoute(),
-        //TipRoute组件初始化的时候必须加参数，ModalRoute获取传参
-        "info_page":(context)=>TipRoute(text: ModalRoute.of(context).settings.arguments),
-        "counter_page":(context) => ZJCounterWidget(),
-        "cupertino_page":(context) => CupertinoRoute(),
-        "widget_self":(context) => WidgetSelfBoxA(),
-        "parent_widget":(context) => ParentStateWidget(),
-        "mix_widget":(context) => MixControlState(),
-        "textField_widget":(context) => TextFieldModelTest(),
-        "focus_widget":(context) => TextFocusModel(),
-        "forms_widget":(context) => FormsModelTest(),
-        "process_widget":(context) => ProcessModelTest(),
-        "process_animate_widget":(context) => AnimateProcessModelTest(),
-        "layout_Column":(context) => ColumnAndRowTest(),
-        "layout_Flex":(context) => FlexStateDemo(),
-        "layout_Wrap":(context) => WrapLayoutDemo(),
-        "layout_Flow":(context) => FlowLayoutDemo(),
-        "layout_Stack":(context) => StackAndPositonDemo(),
-        "layout_Align":(context) => AlignLayoutDemo(),
-        "Container_padding":(context) => PaddingModelTest(),
-        "Container_Box":(context) => ContainerBoxDemo(),
-        "Contailer_DecoratedBox":(context) => DecoratedBoxDemo(),
-        "Scaffold_demo":(context) => ScaffoldDemo(),
-        "AppBar_demo":(context) => AppBarDemo(),
-        "Drawer_demo":(context) => DrawerDemo(),
-        "BottomNavBar_demo":(context) => BottomNavBarDemo(),
-        "ClipRect_demo":(context) => ClipRectDemo(),
-        "SignalChild_demo":(context) => SignalScrollViewDemo(),
-        "listview_demo":(context) => ListViewDemo(),
-        "gridview_demo":(context) => GridViewDemo(),
-        "sliver_grid_view":(context) => SliverGridViewDemo(),
-        "scrollcontroller_demo":(context) => ScrollControllerDemo(),
-        "notification_scrollView":(context) => NotificationScrollController(),
-        "nav_popScope_demo":(context) => WillPopScopeDemo(),
-        "inherited_demo":(context) => InheritedWidgetDemo(),
-        "shopcar_demo":(context) => MyShopCarDemo(),
+  return MultiProvider(
+    providers: [ChangeNotifierProvider.value(value: AppInfoProvider())],
+    child: Consumer<AppInfoProvider>(
+      builder: (context,appinfo,_){
+        _themeColor = appinfo.themeColor;
+        return MaterialApp(
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primarySwatch: _themeColor,
+          ),
+          initialRoute: "/",//名为‘/’的路由作为应用的home首页
+          routes: {
+            "/":(context) => MyHomePage(title: "Flutter Demo Home Page"),
+            "new_page":(context)=>NewRoute(),
+            //TipRoute组件初始化的时候必须加参数，ModalRoute获取传参
+            "info_page":(context)=>TipRoute(text: ModalRoute.of(context).settings.arguments),
+            "counter_page":(context) => ZJCounterWidget(),
+            "cupertino_page":(context) => CupertinoRoute(),
+            "widget_self":(context) => WidgetSelfBoxA(),
+            "parent_widget":(context) => ParentStateWidget(),
+            "mix_widget":(context) => MixControlState(),
+            "textField_widget":(context) => TextFieldModelTest(),
+            "focus_widget":(context) => TextFocusModel(),
+            "forms_widget":(context) => FormsModelTest(),
+            "process_widget":(context) => ProcessModelTest(),
+            "process_animate_widget":(context) => AnimateProcessModelTest(),
+            "layout_Column":(context) => ColumnAndRowTest(),
+            "layout_Flex":(context) => FlexStateDemo(),
+            "layout_Wrap":(context) => WrapLayoutDemo(),
+            "layout_Flow":(context) => FlowLayoutDemo(),
+            "layout_Stack":(context) => StackAndPositonDemo(),
+            "layout_Align":(context) => AlignLayoutDemo(),
+            "Container_padding":(context) => PaddingModelTest(),
+            "Container_Box":(context) => ContainerBoxDemo(),
+            "Contailer_DecoratedBox":(context) => DecoratedBoxDemo(),
+            "Scaffold_demo":(context) => ScaffoldDemo(),
+            "AppBar_demo":(context) => AppBarDemo(),
+            "Drawer_demo":(context) => DrawerDemo(),
+            "BottomNavBar_demo":(context) => BottomNavBarDemo(),
+            "ClipRect_demo":(context) => ClipRectDemo(),
+            "SignalChild_demo":(context) => SignalScrollViewDemo(),
+            "listview_demo":(context) => ListViewDemo(),
+            "gridview_demo":(context) => GridViewDemo(),
+            "sliver_grid_view":(context) => SliverGridViewDemo(),
+            "scrollcontroller_demo":(context) => ScrollControllerDemo(),
+            "notification_scrollView":(context) => NotificationScrollController(),
+            "nav_popScope_demo":(context) => WillPopScopeDemo(),
+            "inherited_demo":(context) => InheritedWidgetDemo(),
+            "shopcar_demo":(context) => MyShopCarDemo(),
+            "custom_navbar_demo":(context) => ThemeAndColorDemo(),
+            "custom_theme_demo":(context) => ThemeTestDemo(),
+            "change_global_theme":(context) => ChangeGlobalThemeDemo(),
+          },
+        );
       },
-    );
+    ),
+  );
+
+//  return
   }
 }
 
@@ -221,6 +240,9 @@ class _MyHomePageState extends State<MyHomePage> {
         {"title":"导航返回拦截", "pushVC":"nav_popScope_demo", },
         {"title":"数据共享", "pushVC":"inherited_demo", },
         {"title":"跨组件状态共享", "pushVC":"shopcar_demo", },
+        {"title":"颜色设置","pushVC":"custom_navbar_demo"},
+        {"title":"修改主题","pushVC":"custom_theme_demo"},
+        {"title":"修改全局主题","pushVC":"change_global_theme"},
 
       ]
       }
@@ -242,7 +264,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("FlutterDemo"),
-        backgroundColor: Colors.blue,
       ),
       floatingActionButton: !_showFloatBtn ? null : FloatingActionButton(
         child: Icon(Icons.arrow_upward),
