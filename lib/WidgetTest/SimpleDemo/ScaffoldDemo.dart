@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_demo/WidgetTest/RandomWords.dart';
+import 'package:flutter_app_demo/WidgetTest/BasicWidgetDemo/RandomWords.dart';
 import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 
 

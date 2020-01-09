@@ -15,4 +15,9 @@ class ZJColor {
 //    print("输出的颜色值$r,$g,$b");
     return Color.fromARGB(255, r, g, b);
   }
+
+  ///设置字符串转颜色的便捷方法
+  static Color StringColor(String colorStr) {
+    return Color(int.parse(colorStr,radix: 16)|0xff000000);
+  }
 }
