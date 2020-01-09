@@ -56,8 +56,6 @@ class _NotificationScrollControllerState extends State<NotificationScrollControl
                 backgroundColor: Color(0x66000000),
                 child: Text(_progress,style: ZJTextStyleTool.white_24,),
               ),
-
-
             ],
           ),
         ),
