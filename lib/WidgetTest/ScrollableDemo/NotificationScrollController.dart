@@ -9,6 +9,7 @@ class NotificationScrollController extends StatefulWidget {
   _NotificationScrollControllerState createState() => new _NotificationScrollControllerState();
 }
 
+
 class _NotificationScrollControllerState extends State<NotificationScrollController> {
 
   //记录当前的滚动位置的百分比
