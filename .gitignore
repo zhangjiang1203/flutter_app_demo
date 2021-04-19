@@ -23,3 +23,4 @@ xcuserdata/
 /app/android/key.properties
 .DS_Store
 *.xcconfig
+ios/Flutter/
