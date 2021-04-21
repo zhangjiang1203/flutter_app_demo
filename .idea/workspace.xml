@@ -31,8 +31,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78be66c3-06c0-4329-b003-2592bbc27233" name="Default Changelist" comment="修改手势识别展示的当前数据类型和设置，配置不同的behavior和evnet">
-      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/18.TestFlutterApp/01.testApp.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/18.TestFlutterApp/02.nullsafety.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/18.TestFlutterApp/03.flutterEngineGroup.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +82,7 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -141,6 +147,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="修改手势识别展示的当前数据类型和设置，配置不同的behavior和evnet" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="219" y="98" key="SettingsEditor" timestamp="1618907537864">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="219" y="98" key="SettingsEditor/0.25.1440.875/-1920.-220.1920.1055@0.25.1440.875" timestamp="1618907537864" />
     <state x="410" y="217" width="615" height="490" key="find.popup" timestamp="1618814953174">
       <screen x="0" y="25" width="1440" height="875" />
     </state>

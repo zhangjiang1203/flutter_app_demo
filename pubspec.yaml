@@ -24,39 +24,39 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.git
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.2
+  cupertino_icons: ^1.0.2
   # 添加依赖包
-  english_words: ^3.1.5
+  english_words: ^4.0.0
   # 设置多种样式的grid
-  flutter_staggered_grid_view: ^0.3.0
+  flutter_staggered_grid_view: ^0.4.0
   # 设置heade的tableview
   flutter_section_table_view: ^1.0.5
   #设置状态管理
-  provider: ^3.2.0
+  provider: ^5.0.0
   #路径设置
-  path_provider: ^1.6.5
+  path_provider: ^2.0.1
   # 网络请求
-  dio: ^3.0.9
+  dio: ^4.0.0
   # webSocket
-  web_socket_channel: ^1.1.0
+  web_socket_channel: ^2.0.0
   # json序列化
 #  json_annotation: ^3.0.1
   # 轻量级数据保存，
-  shared_preferences: ^0.5.7
+  shared_preferences: ^2.0.5
   # 事件流处理
-  event_bus: ^1.1.1
+  event_bus: ^2.0.0
   # 网络监控
-  connectivity: ^0.4.8+1
+  connectivity: ^3.0.3
   # 图片处理
-  image: ^2.1.19
-  json_annotation: ^3.0.0
+  image: ^3.0.2
+  json_annotation: ^4.0.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   #json依
   build_runner: ^1.0.0
-  json_serializable: ^3.2.0
+  json_serializable: ^4.1.0
 
 
 # For information on the generic Dart part of this file, see the
