@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "FLTConnectivityLocationHandler.h"
 #import "FLTConnectivityPlugin.h"
 
 FOUNDATION_EXPORT double connectivityVersionNumber;

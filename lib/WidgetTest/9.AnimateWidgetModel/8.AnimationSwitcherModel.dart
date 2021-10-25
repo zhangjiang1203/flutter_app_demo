@@ -34,7 +34,7 @@ class _AnimationSwitcherModelState extends State<AnimationSwitcherModel> {
                 child: Text('$_count',
                   //显示的指定key,不同的key被认为是不同的widget,这样才能执行动画
                   key: ValueKey<int>(_count),
-                  style: Theme.of(context).textTheme.display1,
+                  style: Theme.of(context).textTheme.subtitle1,
                 ),
               ),
               RaisedButton(

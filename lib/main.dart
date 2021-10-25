@@ -110,6 +110,8 @@ import 'WidgetTest/13.flutterInternationalization/1.InternalLanguageTest.dart';
 import 'WidgetTest/14.FlutterCorePrinciples/5.CustomImageModel.dart';
 import 'WidgetTest/16.PathAndAnimation/01.test_path_model.dart';
 
+import 'WidgetTest/19.GetXTest/1.getTestController.dart';
+
 //设置多语言支持
 import 'WidgetTest/Tools/LocaleTool.dart';
 import 'WidgetTest/Tools/TranslationsLanauage.dart';
@@ -279,6 +281,9 @@ class _MyAppState extends State<MyApp> {
       "animation_paint_test":(context)=> AnimationPaintTest1(),
       "custom_animation_tween":(context)=> CustomTweenAnimationWidget(),
       "curve_animation_widget":(context)=> CurveAnimationTest(),
+
+      // 19
+      "get_test_main_page":(context) => GetTestController(),
     };
   }
 
@@ -506,6 +511,9 @@ class _MyHomePageState extends State<MyHomePage> {
         {"title":"paint动画--吃豆子","pushVC":"animation_paint_test"},
         {"title":"custom_tween_paint","pushVC":"custom_animation_tween"},
         {"title":"curve_animation_test","pushVC":"curve_animation_widget"},
+      ]},
+      {"section":"19.GetTest练习","row":[
+        {"title":"Get测试主页","pushVC":"get_test_main_page"},
       ]},
     ];
   }

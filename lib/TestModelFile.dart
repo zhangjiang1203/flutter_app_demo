@@ -39,7 +39,7 @@ class _TestModelState extends State<TestModel> {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Text("nihao",style: Theme.of(context).textTheme.display1)
+            new Text("nihao",style: Theme.of(context).textTheme.subtitle1)
           ],
         ),
       ),
