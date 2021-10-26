@@ -24,7 +24,7 @@ import 'WidgetTest/7.BuilderThemeAndColor/8.StreamBuilderModel.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 import 'package:flutter_section_table_view/flutter_section_table_view.dart';
-
+import 'package:get/get.dart';
 import 'WidgetTest/3.BasicWidgetDemo/8.FormsModelTest.dart';
 import 'WidgetTest/3.BasicWidgetDemo/6.TextFieldModel.dart';
 import 'WidgetTest/3.BasicWidgetDemo/7.TextFocusNode.dart';
@@ -295,7 +295,7 @@ class _MyAppState extends State<MyApp> {
       child: Consumer<AppInfoProvider>(
         builder: (context,appinfo,_){
           _themeColor = appinfo.themeColor;
-          return MaterialApp(
+          return GetMaterialApp(
             title: 'Flutter Demo',
             theme: ThemeData(
               primarySwatch: _themeColor,

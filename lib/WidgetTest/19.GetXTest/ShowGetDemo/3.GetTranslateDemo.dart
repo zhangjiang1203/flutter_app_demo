@@ -1,6 +1,6 @@
 /*
-* 1.SimpleCountDemo created by zj 
-* on 2021/10/25 15:30
+* 3.GetTranslateDemo created by zj 
+* on 2021/10/26 11:17
 * copyright on zhangjiang
 */
 // **************************************************************************
@@ -37,53 +37,33 @@
 // **************************************************************************
 */
 
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-/// 设置关联的Controller
-class CountController extends GetxController{
-  var count = 0.obs;
-  increment() => count++;
-}
-
-class SimpleCountDemo extends StatelessWidget {
-  const SimpleCountDemo({Key key}) : super(key: key);
-
+class Message extends Translations{
   @override
-  Widget build(BuildContext context) {
-    //实例化对对应的controller,使其对当下的所有子路由可用
-    final controller = Get.put(CountController());
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Obx(()=> Text("${controller.count}")),
-        elevation: 0,
-      ),
-      body: Center(
-        child: ElevatedButton(
-          child: Text("我来了"),
-          onPressed: ()=> Get.to(() => Other()),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: controller.increment,
-      ),
-    );
-  }
+  // TODO: implement keys
+  Map<String, Map<String, String>> get keys => {
+    'zh_CN':{
+      "hello":"你好 时间"
+    },
+    'en_US':{
+      "hello":"hello world"
+    }
+  };
 }
 
-/// 访问之前的计数器
-class Other extends StatelessWidget{
-  final CountController c = Get.find();
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Scaffold(
-      appBar: AppBar(title: Text("访问计数器"),),
-      body: Center(
-        child: Text("${c.count}"),
-      ),
-    );
-  }
-}
+/*
+* 翻译的使用  在key值后面添加后缀 .tr
+* Text("hello".tr)
+*
+*
+* 参数在App main方法中进行设置
+* return GetMaterialApp(
+*   translations:Messages(),
+*   locale:Local('zh','CN'),
+*   fallbackLocal: Local('en','US'),
+* )
+*
+* 改变语言
+* Get.updateLocal(Local('zh','CN'))
+* */

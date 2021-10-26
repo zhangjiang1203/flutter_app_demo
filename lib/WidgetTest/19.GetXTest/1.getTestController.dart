@@ -40,6 +40,7 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'ShowGetDemo/1.SimpleCountDemo.dart';
+import 'ShowGetDemo/2.AvoidContextDemo.dart';
 
 
 class GetTestController extends StatelessWidget{
@@ -49,6 +50,7 @@ class GetTestController extends StatelessWidget{
     
     final showData = [
       {"title":"simpleDemo","controller": SimpleCountDemo()},
+      {"title":"avoidContextDemo","controller":AvoidContextDemo()}
     ];
     // TODO: implement build
     return Scaffold(
