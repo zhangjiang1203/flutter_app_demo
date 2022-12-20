@@ -1,0 +1,29 @@
+{
+  "name": "flutter_tts",
+  "version": "0.0.1",
+  "summary": "A flutter text to speech plugin.",
+  "description": "A flutter text to speech plugin",
+  "homepage": "https://github.com/dlutton/flutter_tts",
+  "license": {
+    "file": "../LICENSE"
+  },
+  "authors": {
+    "tundralabs": "eyedea32@gmail.com"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": "Classes/**/*",
+  "public_header_files": "Classes/**/*.h",
+  "dependencies": {
+    "Flutter": [
+
+    ]
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "swift_versions": "4.2",
+  "static_framework": true,
+  "swift_version": "4.2"
+}

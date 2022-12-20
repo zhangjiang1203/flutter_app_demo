@@ -10,7 +10,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:ui' as ui;
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/06.paint_image_text_model.dart';
+import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/06.paint_image_text_model.dart';
 import 'package:image/image.dart' as image ;
 
 class PaintColorWidget extends StatefulWidget {

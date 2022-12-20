@@ -8,7 +8,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/04.paint_point_model.dart';
+import '04.paint_point_model.dart';
 import 'dart:ui' as ui show Image, ParagraphBuilder,ParagraphStyle,TextStyle,TextBaseline,Paragraph,ParagraphConstraints;
 
 class PaintImageAndTextModel extends StatefulWidget {

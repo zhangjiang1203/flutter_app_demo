@@ -10,7 +10,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/03.canvas_action_model.dart';
+import '03.canvas_action_model.dart';
 
 
 class PaintPointModel extends StatefulWidget {

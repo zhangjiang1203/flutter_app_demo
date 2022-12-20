@@ -5,21 +5,21 @@ import 'package:flutter/services.dart';
 import 'package:flutter_app_demo/WidgetTest/15.NetStudy/01.ShowFirstPage.dart';
 import 'package:flutter_app_demo/WidgetTest/15.NetStudy/02.GlobalKeyTest.dart';
 import 'package:flutter_app_demo/WidgetTest/16.PathAndAnimation/03.test_transform_model.dart';
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/01.paint_basic_demo.dart';
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/02.property_learn_test.dart';
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/03.canvas_action_model.dart';
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/04.paint_point_model.dart';
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/05.paint_rect_model.dart';
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/06.paint_image_text_model.dart';
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/07.path_paint_model.dart';
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/08.paint_color_widget.dart';
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/10.animation_paint_test1.dart';
-import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/12.curve_animation_widget.dart';
+import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/01.paint_basic_demo.dart';
+import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/02.property_learn_test.dart';
+import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/03.canvas_action_model.dart';
+import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/04.paint_point_model.dart';
+import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/05.paint_rect_model.dart';
+import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/06.paint_image_text_model.dart';
+import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/07.path_paint_model.dart';
+import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/08.paint_color_widget.dart';
+import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/10.animation_paint_test1.dart';
+import 'package:flutter_app_demo/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/12.curve_animation_widget.dart';
 import 'package:flutter_app_demo/WidgetTest/6.ScrollableDemo/7.ScrollTableModel.dart';
 import 'package:flutter_app_demo/WidgetTest/7.BuilderThemeAndColor/10.ListViewAndDialog.dart';
 import 'WidgetTest/16.PathAndAnimation/02.wave_path_demo.dart';
-import 'WidgetTest/17.juejinPaintAndAnimation/09.custom_paint_test.dart';
-import 'WidgetTest/17.juejinPaintAndAnimation/11.custom_tween_animation.dart';
+import 'WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/09.custom_paint_test.dart';
+import 'WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/11.custom_tween_animation.dart';
 import 'WidgetTest/7.BuilderThemeAndColor/8.StreamBuilderModel.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
@@ -46,6 +46,7 @@ import 'WidgetTest/4.LayoutTest/7.PaddingDemo.dart';
 import 'WidgetTest/4.LayoutTest/8.ContainerBoxDemo.dart';
 import 'WidgetTest/4.LayoutTest/9.DecoratedBoxDemo.dart';
 import 'WidgetTest/4.LayoutTest/10.FlexContainerDemo.dart';
+import 'WidgetTest/4.LayoutTest/11.TestWrapWidget.dart';
 
 import 'WidgetTest/5.ContainerCollection/1.ScaffoldDemo.dart';
 import 'WidgetTest/5.ContainerCollection/2.AppBarDemo.dart';
@@ -112,6 +113,8 @@ import 'WidgetTest/16.PathAndAnimation/01.test_path_model.dart';
 
 import 'WidgetTest/19.GetXTest/1.getTestController.dart';
 
+import 'WidgetTest/20.VoiceTest/1.speak_with_message.dart';
+
 //设置多语言支持
 import 'WidgetTest/Tools/LocaleTool.dart';
 import 'WidgetTest/Tools/TranslationsLanauage.dart';
@@ -120,6 +123,7 @@ import 'dart:io';
 //应用程序的入口，使用=> 这是单行函数的简写
 void main() {
   runApp(MyApp());
+
   if (Platform.isAndroid) {
     final SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(statusBarColor: Colors.transparent);
     SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
@@ -194,6 +198,7 @@ class _MyAppState extends State<MyApp> {
       "Container_Box":(context) => ContainerBoxDemo(),
       "Contailer_DecoratedBox":(context) => DecoratedBoxDemo(),
       "Flex_container":(context)=> FlexContainerDemo(),
+      "TestWrap_widget":(context)=> ZJWrapTestWidget(),
       //5
       "Scaffold_demo":(context) => ScaffoldDemo(),
       "AppBar_demo":(context) => AppBarDemo(),
@@ -284,6 +289,8 @@ class _MyAppState extends State<MyApp> {
 
       // 19
       "get_test_main_page":(context) => GetTestController(),
+      // 20
+      "show_speak_message":(context) => ZJSpeakMessageWidget(),
     };
   }
 
@@ -411,6 +418,9 @@ class _MyHomePageState extends State<MyHomePage> {
        {"title":"Container布局", "pushVC":"Container_Box", },
        {"title":"DecoratedBox布局", "pushVC":"Contailer_DecoratedBox"},
         {"title":"Flex布局", "pushVC":"Flex_container"},
+        {"title":"Wrap Test", "pushVC":"TestWrap_widget"},
+
+
        ]},
       {"section":"5.容器类组件","row":[
       {"title":"Scaffold设置", "pushVC":"Scaffold_demo", },
@@ -514,6 +524,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ]},
       {"section":"19.GetTest练习","row":[
         {"title":"Get测试主页","pushVC":"get_test_main_page"},
+      ]},
+      {"section":"20.语音播报","row":[
+        {"title":"语音播报","pushVC":"show_speak_message"},
       ]},
     ];
   }

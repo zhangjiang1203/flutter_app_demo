@@ -12,6 +12,12 @@
 @import connectivity;
 #endif
 
+#if __has_include(<flutter_tts/FlutterTtsPlugin.h>)
+#import <flutter_tts/FlutterTtsPlugin.h>
+#else
+@import flutter_tts;
+#endif
+
 #if __has_include(<path_provider/FLTPathProviderPlugin.h>)
 #import <path_provider/FLTPathProviderPlugin.h>
 #else
@@ -28,6 +34,7 @@
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
   [FLTConnectivityPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTConnectivityPlugin"]];
+  [FlutterTtsPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterTtsPlugin"]];
   [FLTPathProviderPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPathProviderPlugin"]];
   [FLTSharedPreferencesPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTSharedPreferencesPlugin"]];
 }

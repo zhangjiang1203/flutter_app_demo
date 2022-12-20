@@ -31,13 +31,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78be66c3-06c0-4329-b003-2592bbc27233" name="Default Changelist" comment="修改手势识别展示的当前数据类型和设置，配置不同的behavior和evnet">
-      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/19.GetXTest/ShowGetDemo/2.AvoidContextDemo.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/19.GetXTest/ShowGetDemo/3.GetTranslateDemo.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/.symlinks/plugins/flutter_tts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Local Podspecs/flutter_tts.podspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/flutter_tts/flutter_tts-Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/flutter_tts/flutter_tts-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/flutter_tts/flutter_tts-prefix.pch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/flutter_tts/flutter_tts-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/flutter_tts/flutter_tts.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/BasicGrammar/1.basicDataType.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/FlutterRenderElements/1.threeTreeBasic.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/20.VoiceTest/1.speak_with_message.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/20.VoiceTest/tt_manager.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/4.LayoutTest/11.TestWrapWidget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/flutter_app_demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flutter_app_demo.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/19.GetXTest/1.getTestController.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/19.GetXTest/1.getTestController.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/19.GetXTest/ShowGetDemo/1.SimpleCountDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/19.GetXTest/ShowGetDemo/1.SimpleCountDemo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.markdown" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/01.paint_basic_demo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/01.paint_basic_demo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/02.property_learn_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/02.property_learn_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/03.canvas_action_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/03.canvas_action_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/04.paint_point_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/04.paint_point_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/05.paint_rect_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/05.paint_rect_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/06.paint_image_text_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/06.paint_image_text_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/07.path_paint_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/07.path_paint_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/08.paint_color_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/08.paint_color_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/09.custom_paint_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/09.custom_paint_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/10.animation_paint_test1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/10.animation_paint_test1.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/11.custom_tween_animation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/11.custom_tween_animation.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/12.curve_animation_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/12.curve_animation_widget.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -49,7 +79,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -85,25 +114,27 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="cidr.known.project.marker" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/languages" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation" />
       <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/build" />
-      <recent name="$PROJECT_DIR$/lib/WidgetTest/5.ContainerCollection" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/languages" />
     </key>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">
@@ -111,10 +142,19 @@
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
+    <configuration name="showName" type="FlutterRunConfigurationType" factoryName="Flutter">
+      <option name="filePath" value="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/FlutterRenderElements/1.threeTreeBasic.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_path_name.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
       <option name="filePath" value="$PROJECT_DIR$/lib/test_path_name.dart" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Flutter.showName" />
+      <item itemvalue="Flutter.main.dart" />
+      <item itemvalue="Flutter.test_path_name.dart" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Flutter.test_path_name.dart" />
