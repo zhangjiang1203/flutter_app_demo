@@ -107,7 +107,7 @@ class _InheritedWidgetState extends State<InheritedWidgetDemo> {
                 //子widget中依赖ShareDataWidget
                 child: TextWidgetDemo(),
               ),
-              RaisedButton(
+              TextButton(
                 child: Text("Inherited"),
                 //重新刷新build方法
                 onPressed: ()=> setState(()=> ++count),

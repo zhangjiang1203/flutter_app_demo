@@ -238,7 +238,7 @@ class _GridViewState extends State<GridViewDemo> {
       appBar: AppBar(
         title: Text(titleArr[_currentIndex-1]),
         actions: <Widget>[
-          FlatButton(
+          TextButton(
             child: Text("修改GridView",style: ZJTextStyleTool.white_28,),
             onPressed: _onChangeGridView,
           ),

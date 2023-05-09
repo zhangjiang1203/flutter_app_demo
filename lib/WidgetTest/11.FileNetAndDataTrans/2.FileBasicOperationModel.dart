@@ -111,7 +111,7 @@ class _FileBasicOperationModel extends State<FileBasicOperationModel> {
           children: <Widget>[
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: RaisedButton(
+              child: TextButton(
                 child: const Text('Get Temporary Directory'),
                 onPressed: _requestTempDirectory,
               ),
@@ -120,7 +120,7 @@ class _FileBasicOperationModel extends State<FileBasicOperationModel> {
                 future: _tempDirectory, builder: _buildDirectory),
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: RaisedButton(
+              child: TextButton(
                 child: const Text('Get Application Documents Directory'),
                 onPressed: _requestAppDocumentsDirectory,
               ),
@@ -147,7 +147,7 @@ class _FileBasicOperationModel extends State<FileBasicOperationModel> {
                 future: _appLibraryDirectory, builder: _buildDirectory),
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: RaisedButton(
+              child: TextButton(
                 child: Text(
                     '${Platform.isIOS ? "External directories are unavailable " "on iOS" : "Get External Storage Directory"}'),
                 onPressed:
@@ -159,7 +159,7 @@ class _FileBasicOperationModel extends State<FileBasicOperationModel> {
             Column(children: <Widget>[
               Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: RaisedButton(
+                child: TextButton(
                   child: Text(
                       '${Platform.isIOS ? "External directories are unavailable " "on iOS" : "Get External Storage Directories"}'),
                   onPressed: Platform.isIOS
@@ -178,7 +178,7 @@ class _FileBasicOperationModel extends State<FileBasicOperationModel> {
             Column(children: <Widget>[
               Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: RaisedButton(
+                child: TextButton(
                   child: Text(
                       '${Platform.isIOS ? "External directories are unavailable " "on iOS" : "Get External Cache Directories"}'),
 //                  onPressed:

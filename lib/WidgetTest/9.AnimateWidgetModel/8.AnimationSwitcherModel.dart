@@ -37,7 +37,7 @@ class _AnimationSwitcherModelState extends State<AnimationSwitcherModel> {
                   style: Theme.of(context).textTheme.subtitle1,
                 ),
               ),
-              RaisedButton(
+              TextButton(
                 onPressed: (){
                   setState(() {
                     _count += 1;

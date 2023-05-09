@@ -30,12 +30,12 @@ class _DialogTestModel extends State<DialogTestModel> {
           title: Text("对话框1"),
           content: Text("测试展示数据，你看看那边是不是就是这样的"),
           actions: <Widget>[
-            FlatButton(
+            TextButton(
               child: Text("取消"),
               //对话框关闭
               onPressed: ()=>Navigator.of(context).pop(1),
             ),
-            FlatButton(
+            TextButton(
               child: Text("删除"),
               //删除
               onPressed: ()=>Navigator.of(context).pop(2),
@@ -244,11 +244,11 @@ class _DialogTestModel extends State<DialogTestModel> {
 //          ],
 //        ),
 //        actions: <Widget>[
-//          FlatButton(
+//          TextButton(
 //            child: Text("取消"),
 //            onPressed: ()=> Navigator.of(context).pop(),
 //          ),
-//          FlatButton(
+//          TextButton(
 //            child: Text('删除'),
 //            onPressed: ()=> Navigator.of(context).pop(withTree),
 //          ),
@@ -360,7 +360,7 @@ class _DialogTestModel extends State<DialogTestModel> {
       .closed
       .whenComplete((){
         if(mounted){
-          _scaffoldkey.currentState.showSnackBar(new SnackBar(content: Text("我是选中数据")));
+          _scaffoldkey.currentState.showBottomSheet((context) => SnackBar(content: Text("我就是选中的数据")));
         }
       });
   }
@@ -463,7 +463,7 @@ class _DialogTestModel extends State<DialogTestModel> {
           runSpacing: -5,
           runAlignment: WrapAlignment.start,
           children: <Widget>[
-            RaisedButton(
+            TextButton(
               child: Text("AlertDialog"),
               onPressed:  () async {
                 int delete = await ShowMyDialogOne();
@@ -474,7 +474,7 @@ class _DialogTestModel extends State<DialogTestModel> {
                 }
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text("SimpleDialog"),
               onPressed: () async{
                 int index = await showSimpleDialogView();
@@ -495,7 +495,7 @@ class _DialogTestModel extends State<DialogTestModel> {
                 }
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text("有边界对话框"),
               onPressed: () async {
                 int index = await ShowDialogView();
@@ -503,14 +503,14 @@ class _DialogTestModel extends State<DialogTestModel> {
 
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text("无边界对话框"),
               onPressed: () async{
                 int index = await showUnconstrainedBoxView();
                 print("当前点击的顺序$index");
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text("自定义弹出对话框"),
               onPressed: () async{
                 int index = await showCustomDialogView<int>(
@@ -520,11 +520,11 @@ class _DialogTestModel extends State<DialogTestModel> {
                         title: Text("你好"),
                         content:Text("你是不是想山车这个"),
                         actions: <Widget>[
-                          FlatButton(
+                          TextButton(
                             child: Text("取消"),
                             onPressed: () => Navigator.of(context).pop(0),
                           ),
-                          FlatButton(
+                          TextButton(
                             child: Text("删除"),
                             onPressed: () {
                               // 执行删除操作
@@ -537,7 +537,7 @@ class _DialogTestModel extends State<DialogTestModel> {
                 print("当前点击的顺序$index");
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text('不能选中的复选框对话框'),
               onPressed: () async{
                 //修改点击的位置信息，复选框不能选中
@@ -565,11 +565,11 @@ class _DialogTestModel extends State<DialogTestModel> {
                       ],
                     ),
                     actions: <Widget>[
-                      FlatButton(
+                      TextButton(
                         child: Text("取消"),
                         onPressed: ()=> Navigator.of(context).pop(),
                       ),
-                      FlatButton(
+                      TextButton(
                         child: Text('删除'),
                         onPressed: ()=> Navigator.of(context).pop(withTree),
                       ),
@@ -584,7 +584,7 @@ class _DialogTestModel extends State<DialogTestModel> {
                 }
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text("可以选中的复选框"),
               onPressed: () async{
                 //修改点击的位置信息，复选框可以选中
@@ -612,11 +612,11 @@ class _DialogTestModel extends State<DialogTestModel> {
                       ],
                     ),
                     actions: <Widget>[
-                      FlatButton(
+                      TextButton(
                         child: Text("取消"),
                         onPressed: ()=> Navigator.of(context).pop(),
                       ),
-                      FlatButton(
+                      TextButton(
                         child: Text('删除'),
                         onPressed: ()=> Navigator.of(context).pop(withTree),
                       ),
@@ -632,7 +632,7 @@ class _DialogTestModel extends State<DialogTestModel> {
 
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text("使用stateBuilder设置的可选框"),
               onPressed: () async{
                 //修改点击的位置信息，复选框可以选中
@@ -665,11 +665,11 @@ class _DialogTestModel extends State<DialogTestModel> {
                       ],
                     ),
                     actions: <Widget>[
-                      FlatButton(
+                      TextButton(
                         child: Text("取消"),
                         onPressed: ()=> Navigator.of(context).pop(),
                       ),
-                      FlatButton(
+                      TextButton(
                         child: Text('删除'),
                         onPressed: ()=> Navigator.of(context).pop(withTree),
                       ),
@@ -685,7 +685,7 @@ class _DialogTestModel extends State<DialogTestModel> {
 
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text('element设置可选框可选'),
               onPressed: () async{
                 //修改点击的位置信息，复选框不能选中
@@ -716,11 +716,11 @@ class _DialogTestModel extends State<DialogTestModel> {
                       ],
                     ),
                     actions: <Widget>[
-                      FlatButton(
+                      TextButton(
                         child: Text("取消"),
                         onPressed: ()=> Navigator.of(context).pop(),
                       ),
-                      FlatButton(
+                      TextButton(
                         child: Text('删除'),
                         onPressed: ()=> Navigator.of(context).pop(withTree),
                       ),
@@ -735,7 +735,7 @@ class _DialogTestModel extends State<DialogTestModel> {
                 }
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text('builder设置范围可选框'),
               onPressed: () async{
                 //修改点击的位置信息，复选框不能选中
@@ -773,11 +773,11 @@ class _DialogTestModel extends State<DialogTestModel> {
                       ],
                     ),
                     actions: <Widget>[
-                      FlatButton(
+                      TextButton(
                         child: Text("取消"),
                         onPressed: ()=> Navigator.of(context).pop(),
                       ),
-                      FlatButton(
+                      TextButton(
                         child: Text('删除'),
                         onPressed: ()=> Navigator.of(context).pop(withTree),
                       ),
@@ -792,7 +792,7 @@ class _DialogTestModel extends State<DialogTestModel> {
                 }
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text('底部dialog'),
               onPressed: () async{
                 //修改点击的位置信息，复选框不能选中
@@ -801,14 +801,14 @@ class _DialogTestModel extends State<DialogTestModel> {
 
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text('全屏的dialog'),
               onPressed: () {
                 //修改点击的位置信息，复选框不能选中
                 showFullScreenDialog();
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text("展示loading(大小不能自定)"),
               onPressed: (){
                 showLoadingDialogView();
@@ -818,7 +818,7 @@ class _DialogTestModel extends State<DialogTestModel> {
                 });
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text("展示loading(大小可自定)"),
               onPressed: (){
                 showCustomSizeLoadingDialogView();
@@ -828,14 +828,14 @@ class _DialogTestModel extends State<DialogTestModel> {
                 });
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text("日历选择器)"),
               onPressed: () async{
                 DateTime time = await showDatePickerDialogView();
                 print("选中的时间$time");
               },
             ),
-            RaisedButton(
+            TextButton(
               child: Text("iOS日历选择器)"),
               onPressed: () async{
                 DateTime time = await showiOSDatePickerDialogView();

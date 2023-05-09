@@ -31,45 +31,84 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78be66c3-06c0-4329-b003-2592bbc27233" name="Default Changelist" comment="修改手势识别展示的当前数据类型和设置，配置不同的behavior和evnet">
-      <change afterPath="$PROJECT_DIR$/ios/.symlinks/plugins/flutter_tts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Pods/Local Podspecs/flutter_tts.podspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/flutter_tts/flutter_tts-Info.plist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/flutter_tts/flutter_tts-dummy.m" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/flutter_tts/flutter_tts-prefix.pch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/flutter_tts/flutter_tts-umbrella.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/flutter_tts/flutter_tts.modulemap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/BasicGrammar/1.basicDataType.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/FlutterRenderElements/1.threeTreeBasic.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/20.VoiceTest/1.speak_with_message.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/20.VoiceTest/tt_manager.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/4.LayoutTest/11.TestWrapWidget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/.symlinks/plugins/path_provider_ios" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/.symlinks/plugins/shared_preferences_ios" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Local Podspecs/path_provider_ios.podspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Local Podspecs/shared_preferences_ios.podspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/path_provider_ios/path_provider_ios-Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/path_provider_ios/path_provider_ios-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/path_provider_ios/path_provider_ios-prefix.pch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/path_provider_ios/path_provider_ios-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/path_provider_ios/path_provider_ios.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/shared_preferences_ios/shared_preferences_ios-Info.plist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/shared_preferences_ios/shared_preferences_ios-dummy.m" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/shared_preferences_ios/shared_preferences_ios-prefix.pch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/shared_preferences_ios/shared_preferences_ios-umbrella.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/shared_preferences_ios/shared_preferences_ios.modulemap" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/21.StartLearnTest/1.define_class_and_use.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/flutter_app_demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flutter_app_demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/.symlinks/plugins/connectivity" beforeDir="false" afterPath="$PROJECT_DIR$/ios/.symlinks/plugins/connectivity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/.symlinks/plugins/flutter_tts" beforeDir="false" afterPath="$PROJECT_DIR$/ios/.symlinks/plugins/flutter_tts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/.symlinks/plugins/path_provider" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/.symlinks/plugins/shared_preferences" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/flutter_export_environment.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Manifest.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-Info.plist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.markdown" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/Reachability/Reachability-Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/Reachability/Reachability-Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/connectivity/connectivity-Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/connectivity/connectivity-Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/flutter_tts/flutter_tts-Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Target Support Files/flutter_tts/flutter_tts-Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/path_provider/path_provider-Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/path_provider/path_provider-dummy.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/path_provider/path_provider-prefix.pch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/path_provider/path_provider-umbrella.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/path_provider/path_provider.modulemap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/shared_preferences/shared_preferences-Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/shared_preferences/shared_preferences-dummy.m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/shared_preferences/shared_preferences-prefix.pch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/shared_preferences/shared_preferences-umbrella.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Target Support Files/shared_preferences/shared_preferences.modulemap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/GeneratedPluginRegistrant.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/01.paint_basic_demo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/01.paint_basic_demo.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/02.property_learn_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/02.property_learn_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/03.canvas_action_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/03.canvas_action_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/04.paint_point_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/04.paint_point_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/05.paint_rect_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/05.paint_rect_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/06.paint_image_text_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/06.paint_image_text_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/07.path_paint_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/07.path_paint_model.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/08.paint_color_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/08.paint_color_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/09.custom_paint_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/09.custom_paint_test.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/10.animation_paint_test1.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/10.animation_paint_test1.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/11.custom_tween_animation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/11.custom_tween_animation.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/12.curve_animation_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/17.juejinPaintAndAnimation/PaintAndAnimation/12.curve_animation_widget.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/10.CustomCombineWidget/2.CustomTurnBoxModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/10.CustomCombineWidget/2.CustomTurnBoxModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/11.FileNetAndDataTrans/1.FileOperationModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/11.FileNetAndDataTrans/1.FileOperationModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/11.FileNetAndDataTrans/2.FileBasicOperationModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/11.FileNetAndDataTrans/2.FileBasicOperationModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/11.FileNetAndDataTrans/3.HttpClientModelTest.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/11.FileNetAndDataTrans/3.HttpClientModelTest.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/11.FileNetAndDataTrans/5.DioHttpClientModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/11.FileNetAndDataTrans/5.DioHttpClientModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/3.BasicWidgetDemo/1.newRouteButton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/3.BasicWidgetDemo/1.newRouteButton.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/3.BasicWidgetDemo/7.TextFocusNode.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/3.BasicWidgetDemo/7.TextFocusNode.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/3.BasicWidgetDemo/8.FormsModelTest.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/3.BasicWidgetDemo/8.FormsModelTest.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/4.LayoutTest/5.StackAndPositionDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/4.LayoutTest/5.StackAndPositionDemo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/5.ContainerCollection/1.ScaffoldDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/5.ContainerCollection/1.ScaffoldDemo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/5.ContainerCollection/2.AppBarDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/5.ContainerCollection/2.AppBarDemo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/5.ContainerCollection/3.DrawerDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/5.ContainerCollection/3.DrawerDemo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/6.ScrollableDemo/2.ListViewDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/6.ScrollableDemo/2.ListViewDemo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/6.ScrollableDemo/3.GridViewDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/6.ScrollableDemo/3.GridViewDemo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/6.ScrollableDemo/4.SliverGridViewDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/6.ScrollableDemo/4.SliverGridViewDemo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/7.BuilderThemeAndColor/2.InheritedWidgetDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/7.BuilderThemeAndColor/2.InheritedWidgetDemo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/7.BuilderThemeAndColor/6.ChangeGlobalThemeDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/7.BuilderThemeAndColor/6.ChangeGlobalThemeDemo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/7.BuilderThemeAndColor/9.DialogTestDemo.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/7.BuilderThemeAndColor/9.DialogTestDemo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/7.BuilderThemeAndColor/ShopCarDemo/3.ShopModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/7.BuilderThemeAndColor/ShopCarDemo/3.ShopModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/8.EventAndNotifier/7.CustomNotificationModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/8.EventAndNotifier/7.CustomNotificationModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/8.EventAndNotifier/8.StopBubblingNotificationModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/8.EventAndNotifier/8.StopBubblingNotificationModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/8.EventAndNotifier/CustomNotificationModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/8.EventAndNotifier/CustomNotificationModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/9.AnimateWidgetModel/10.AdvanceAnimatedModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/9.AnimateWidgetModel/10.AdvanceAnimatedModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/9.AnimateWidgetModel/11.AnimatedDecorationBoxModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/9.AnimateWidgetModel/11.AnimatedDecorationBoxModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/9.AnimateWidgetModel/12.CustomImpcilityAnimationModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/9.AnimateWidgetModel/12.CustomImpcilityAnimationModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/9.AnimateWidgetModel/13.PresetAnimationModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/9.AnimateWidgetModel/13.PresetAnimationModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/9.AnimateWidgetModel/5.CustomRouteAnimationModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/9.AnimateWidgetModel/5.CustomRouteAnimationModel.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/WidgetTest/9.AnimateWidgetModel/8.AnimationSwitcherModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/WidgetTest/9.AnimateWidgetModel/8.AnimationSwitcherModel.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +140,13 @@
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/pubspec.yaml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1ZZ8DKowhAiSKOUw7970V5bpcz2" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -109,22 +155,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
-    <property name="cidr.known.project.marker" value="true" />
-    <property name="dart.analysis.tool.window.force.activate" value="false" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="editing.templates" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/douyu/Documents/Github/flutter_app_demo&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/languages" />
@@ -137,7 +180,16 @@
       <recent name="$PROJECT_DIR$/build" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter.main.dart">
+  <component name="RunManager" selected="Dart Command Line App.1.define_class_and_use.dart">
+    <configuration name="1.define_class_and_use.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/WidgetTest/21.StartLearnTest/1.define_class_and_use.dart" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="1.define_class_and_use.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/lib/WidgetTest/21.StartLearnTest/1.define_class_and_use.dart" />
+      <method v="2" />
+    </configuration>
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" singleton="false">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
@@ -151,12 +203,16 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Dart Command Line App.1.define_class_and_use.dart" />
       <item itemvalue="Flutter.showName" />
       <item itemvalue="Flutter.main.dart" />
+      <item itemvalue="Flutter.1.define_class_and_use.dart" />
       <item itemvalue="Flutter.test_path_name.dart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Dart Command Line App.1.define_class_and_use.dart" />
+        <item itemvalue="Flutter.1.define_class_and_use.dart" />
         <item itemvalue="Flutter.test_path_name.dart" />
       </list>
     </recent_temporary>
@@ -189,7 +245,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

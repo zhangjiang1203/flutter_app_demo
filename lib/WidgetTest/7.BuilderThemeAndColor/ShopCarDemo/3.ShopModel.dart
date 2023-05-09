@@ -131,7 +131,7 @@ class _MyShopCarState extends State<MyShopCarDemo> {
                   Customer<CarModel>(builder: (context,value)=>Text("总价:${value.totalPrice}")),
                   Builder(builder: (context){
                     print("重新构建按钮");
-                    return FlatButton(
+                    return TextButton(
                       child: Text("添加商品"),
                       onPressed: (){
                         print("按钮开始点击");

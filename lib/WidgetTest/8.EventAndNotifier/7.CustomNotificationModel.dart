@@ -35,7 +35,7 @@ class _CustomNotificationModelState extends State<CustomNotificationModel> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Builder(builder: (context){
-                  return RaisedButton(
+                  return TextButton(
                     onPressed: (){
                       //dispatch函数用来分发方法 展示实现逻辑
                       CustomNotification("你好","我就是我").dispatch(context);

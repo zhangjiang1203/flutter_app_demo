@@ -27,7 +27,7 @@ class _CustomImpcilityAnimationModelState
         ),
         body: Center(
           child: ShowAnimationDecorationBox(
-              child: FlatButton(
+              child: TextButton(
                 child: Text('那么来一次啊'),
                 onPressed: (){
                   setState(() {

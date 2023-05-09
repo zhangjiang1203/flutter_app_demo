@@ -12,6 +12,6 @@
 
 #import "FLTPathProviderPlugin.h"
 
-FOUNDATION_EXPORT double path_providerVersionNumber;
-FOUNDATION_EXPORT const unsigned char path_providerVersionString[];
+FOUNDATION_EXPORT double path_provider_iosVersionNumber;
+FOUNDATION_EXPORT const unsigned char path_provider_iosVersionString[];
 

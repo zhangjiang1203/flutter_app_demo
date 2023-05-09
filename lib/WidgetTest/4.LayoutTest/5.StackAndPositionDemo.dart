@@ -53,7 +53,7 @@ class _StackAndPositionState extends State<StackAndPositonDemo> {
 
             Positioned(
               top: 100,
-              child: FlatButton(
+              child: TextButton(
                 child: Text("点击切换模式",style: ZJTextStyleTool.red_28,),
                 onPressed: _handleButtonClick,
               ),

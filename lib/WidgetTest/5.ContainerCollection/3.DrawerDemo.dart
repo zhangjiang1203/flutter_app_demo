@@ -60,15 +60,15 @@ class _DrawerDemoState extends State<DrawerDemo>{
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text('首页'),
+            label: '首页',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
-            title: Text('商务'),
+            label: '商务',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
-            title: Text('学校'),
+            label: '学校',
           ),
         ],
         currentIndex: _selectedIndex,

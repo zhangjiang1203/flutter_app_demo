@@ -61,7 +61,7 @@ class _CustomTurnBoxState extends State<CustomTurnBoxModel> {
                 turns: _turns,
                 child: Icon(Icons.refresh,size: 100,),
               ),
-              RaisedButton(
+              TextButton(
                 child: Text('加速0.5'),
                 onPressed: (){
                   setState(() {
@@ -69,7 +69,7 @@ class _CustomTurnBoxState extends State<CustomTurnBoxModel> {
                   });
                 },
               ),
-              RaisedButton(
+              TextButton(
                 child: Text("减速0.5"),
                 onPressed: (){
                   setState(() {

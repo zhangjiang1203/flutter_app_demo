@@ -29,7 +29,7 @@ class _CustomRouteAnimationModelState extends State<CustomRouteAnimationModel> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              RaisedButton(
+              TextButton(
                 child: Text("fadeTransition"),
                 onPressed: (){
                   //跳转到新的路由
@@ -41,7 +41,7 @@ class _CustomRouteAnimationModelState extends State<CustomRouteAnimationModel> {
                           }));
                 },
               ),
-              RaisedButton(
+              TextButton(
                 child: Text('SizeTransition'),
                 onPressed: (){
                   Navigator.push(context,
@@ -54,7 +54,7 @@ class _CustomRouteAnimationModelState extends State<CustomRouteAnimationModel> {
                 },
               ),
 
-              RaisedButton(
+              TextButton(
                 child: Text('ScaleTransition'),
                 onPressed: (){
                   Navigator.push(context,
@@ -67,7 +67,7 @@ class _CustomRouteAnimationModelState extends State<CustomRouteAnimationModel> {
                 },
               ),
 
-              RaisedButton(
+              TextButton(
                 child: Text('customTransition'),
                 onPressed: (){
                   Navigator.push(context,

@@ -70,7 +70,7 @@ class _FileOperationModelState extends State<FileOperationModel> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text("点击次数$_counter"),
-              RaisedButton(
+              TextButton(
                 child: Text("开始点击"),
                 onPressed: _changeCounter,
               ),

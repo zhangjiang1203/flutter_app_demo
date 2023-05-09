@@ -85,19 +85,19 @@ class _AdvanceAnimatedModelState extends State<AdvanceAnimatedModel> {
 //                  );
 //                }).toList(),
 //              ),
-              RaisedButton(
+              TextButton(
                 child: Text("up",style: TextStyle(fontSize: 20),),
                 onPressed: ()=>setIncrementCount(AxisDirection.up),
               ),
-              RaisedButton(
+              TextButton(
                 child: Text("down",style: TextStyle(fontSize: 20),),
                 onPressed: ()=>setIncrementCount(AxisDirection.down),
               ),
-              RaisedButton(
+              TextButton(
                 child: Text("left",style: TextStyle(fontSize: 20),),
                 onPressed: ()=>setIncrementCount(AxisDirection.left),
               ),
-              RaisedButton(
+              TextButton(
                 child: Text("right",style: TextStyle(fontSize: 20),),
                 onPressed: ()=>setIncrementCount(AxisDirection.right),
               ),

@@ -37,7 +37,7 @@ class _PresetAnimationModelState extends State<PresetAnimationModel> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
-              RaisedButton(
+              TextButton(
                 child: AnimatedPadding(
                   duration: duration,
                   padding: EdgeInsets.all(_padding),
@@ -55,7 +55,7 @@ class _PresetAnimationModelState extends State<PresetAnimationModel> {
                     AnimatedPositioned(
                       duration: duration,
                       left: _left,
-                      child: RaisedButton(
+                      child: TextButton(
                         child: Text('positioned test'),
                         onPressed: (){
                           (context as Element).markNeedsBuild();
@@ -73,7 +73,7 @@ class _PresetAnimationModelState extends State<PresetAnimationModel> {
                 child: AnimatedAlign(
                   duration: duration,
                   alignment: _align,
-                  child: FlatButton(
+                  child: TextButton(
                     child: Text("align test"),
                     onPressed: (){
                       (context as Element).markNeedsBuild();
@@ -87,7 +87,7 @@ class _PresetAnimationModelState extends State<PresetAnimationModel> {
                 duration: duration,
                 height: _height,
                 color: _color,
-                child: FlatButton(
+                child: TextButton(
                   child: Text("container test"),
                   onPressed: (){
                     //不用显式调用setstate
@@ -115,7 +115,7 @@ class _PresetAnimationModelState extends State<PresetAnimationModel> {
               ShowAnimationDecorationBox(
                 duration: duration,
                 decoration: BoxDecoration(color: _decorationColor),
-                child: FlatButton(
+                child: TextButton(
                   child: Text("Decorationmodel"),
                   onPressed: (){
                     (context as Element).markNeedsBuild();

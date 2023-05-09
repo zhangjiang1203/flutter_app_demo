@@ -148,7 +148,7 @@ class _ListViewDemoState extends State<ListViewDemo> {
       appBar: AppBar(
         title: Text(titleArr[_currentIndex-1]),
         actions: <Widget>[
-          FlatButton(
+          TextButton(
             child: Text("list变化",style: TextStyle(color: Colors.white),),
             onPressed: _onpressChange,
           ),

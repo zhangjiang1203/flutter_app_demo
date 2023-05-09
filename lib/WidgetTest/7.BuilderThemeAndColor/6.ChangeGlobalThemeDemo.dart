@@ -92,7 +92,7 @@ class _ChangeGlobalThemeState extends State<ChangeGlobalThemeDemo> {
                       top:15,
                       child: Text(keyStr,style: TextStyle(color: Colors.white),),
                     ),
-                    FlatButton(
+                    TextButton(
                         onPressed: (){
                           //修改展示的字体
                           //TODO:保存修改的主题

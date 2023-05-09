@@ -44,7 +44,7 @@ class _StopBubblingNotificationModelState
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Builder(builder: (context){
-                    return RaisedButton(
+                    return TextButton(
                       child: Text("点我开始测试"),
                       onPressed: (){
                         //通知分发

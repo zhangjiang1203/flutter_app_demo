@@ -60,7 +60,7 @@ class _DioHttpClientModel extends State<DioHttpClientModel> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
-              RaisedButton(
+              TextButton(
                 child: Text("get请求"),
                 onPressed: _getMethod,
               ),

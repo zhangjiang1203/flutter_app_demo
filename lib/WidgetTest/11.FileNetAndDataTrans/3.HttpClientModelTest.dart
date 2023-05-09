@@ -79,7 +79,7 @@ class _HttpClientModelTest extends State<HttpClientModelTest> {
           child: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                RaisedButton(
+                TextButton(
                   onPressed: (){
                     _getBaiduNetContent();
                   },

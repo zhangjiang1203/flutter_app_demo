@@ -17,7 +17,7 @@ class _SliverGridState extends State<SliverGridViewDemo> {
         slivers: <Widget>[
           SliverAppBar(
             actions: <Widget>[
-              FlatButton(
+              TextButton(
                 child: Text('分享',style: ZJTextStyleTool.white_36,),
                 onPressed: (){
                   print("分享按钮点击");

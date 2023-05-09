@@ -31,7 +31,7 @@ class _AnimatedDecorationBoxState extends State<AnimatedDecorationBoxModel> {
             color: _decorationColor,
           ),
           duration: duration,
-          child: FlatButton(
+          child: TextButton(
             child: Text("点击修改颜色",style: TextStyle(color: Colors.white) ),
             onPressed: (){
               _decorationColor = _decorationColor == Colors.red ? Colors.blue : Colors.red;

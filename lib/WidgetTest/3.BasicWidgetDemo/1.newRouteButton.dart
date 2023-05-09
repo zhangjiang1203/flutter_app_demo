@@ -13,7 +13,7 @@ class NewRoute extends StatelessWidget {
   }
 
   /*
-  “const FlatButton({
+  “const TextButton({
   ...
   @required this.onPressed, //按钮点击回调
   this.textColor, //按钮文字颜色
@@ -82,56 +82,56 @@ class NewRoute extends StatelessWidget {
                 return Container();
               },
             ),
-            RaisedButton(
+            TextButton(
               //漂浮按钮，带有默认的阴影和灰色的背景
               child:Text("点击试试看"),
               onPressed: _ButtonClickAction,
-              textColor: Colors.white,
-              color: Colors.red,
-              padding: EdgeInsets.all(30),
-              //圆角设置
-              shape: CircleBorder(
-                side: BorderSide(
-                  color: Colors.white,
-                )
-              ),
+              // textColor: Colors.white,
+              // color: Colors.red,
+              // padding: EdgeInsets.all(30),
+              // //圆角设置
+              // shape: CircleBorder(
+              //   side: BorderSide(
+              //     color: Colors.white,
+              //   )
+              // ),
             ),
-            FlatButton(
+            TextButton(
               //扁平按钮，默认背景透明并不带阴影
-              child: Text("FlatButton"),
+              child: Text("TextButton"),
               onPressed: _ButtonClickAction,
-              textColor: Colors.blue,
-              color: Colors.white,
-              //带边线的长方形边框
-              shape: BeveledRectangleBorder(
-                side: BorderSide(
-                  color: Colors.lightBlue,
-                  width: 1,
-                ),
-                borderRadius: BorderRadius.all(Radius.circular(10))
-              ),
+              // textColor: Colors.blue,
+              // color: Colors.white,
+              // //带边线的长方形边框
+              // shape: BeveledRectangleBorder(
+              //   side: BorderSide(
+              //     color: Colors.lightBlue,
+              //     width: 1,
+              //   ),
+              //   borderRadius: BorderRadius.all(Radius.circular(10))
+              // ),
             ),
-            OutlineButton(
+            TextButton(
               // 默认有一个边框，不带阴影且背景透明，按下后边框颜色会变亮，同时出现背景和阴影
               child: Text("OutLineButton"),
               onPressed: _ButtonClickAction,
-              textColor: Colors.blue,
-              color: Colors.yellow,
-              //设置带有圆角的矩形
-              shape: RoundedRectangleBorder(
-                side: BorderSide(
-                  color: Colors.limeAccent,
-                ),
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-
-              ),
+              // textColor: Colors.blue,
+              // color: Colors.yellow,
+              // //设置带有圆角的矩形
+              // shape: RoundedRectangleBorder(
+              //   side: BorderSide(
+              //     color: Colors.limeAccent,
+              //   ),
+              //   borderRadius: BorderRadius.all(Radius.circular(10)),
+              //
+              // ),
             ),
-            FlatButton(
-              textColor: Colors.green,
-              color: Colors.red,
+            TextButton(
+              // textColor: Colors.green,
+              // color: Colors.red,
               child: Text("你好"),
               //两端都是半圆的边框
-              shape: StadiumBorder(),
+              // shape: StadiumBorder(),
               onPressed: _ButtonClickAction,
             ),
             IconButton(
@@ -139,25 +139,25 @@ class NewRoute extends StatelessWidget {
               icon: Icon(Icons.thumb_up),
               onPressed: _ButtonClickAction,
             ),
-            RaisedButton.icon(
+            TextButton(
               //带图标的按钮
               onPressed: _ButtonClickAction,
-              icon: Icon(Icons.send),//Icons.add   Icons.info
-              label: Text("发送"),
-              textColor: Colors.blue,
-              color: Colors.white,
+              // icon: Icon(Icons.send),//Icons.add   Icons.info
+              child: Text("发送"),
+              // textColor: Colors.blue,
+              // color: Colors.white,
             ),
             //自定义按钮
-            RaisedButton(
-              color: Colors.blue,
-              hoverColor:Color(0x333333),
-              highlightColor: Colors.blue[700],
-              colorBrightness: Brightness.dark,
-              splashColor: Colors.grey,
+            TextButton(
+              // color: Colors.blue,
+              // hoverColor:Color(0x333333),
+              // highlightColor: Colors.blue[700],
+              // colorBrightness: Brightness.dark,
+              // splashColor: Colors.grey,
               child: Text('Submit'),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10)
-              ),
+              // shape: RoundedRectangleBorder(
+              //   borderRadius: BorderRadius.circular(10)
+              // ),
               //点击事件是一个匿名函数
               onPressed: (){},
             ),

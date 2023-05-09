@@ -61,10 +61,10 @@ class _TextFocusState extends State<TextFocusModel> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                FlatButton(
-                  child: Text("切换焦点2"),
-                  color: Colors.blue,
-                  textColor: Colors.white,
+                FilledButton(
+                  child: Text("切换焦点2",style: TextStyle(color: Colors.blue),),
+                  // style: ButtonStyle(backgroundColor:Colors.blue,textStyle: ),
+                  // textColor: Colors.white,
                   onPressed: (){
                     //第一种方式
                     FocusScope.of(context).requestFocus(node2);
@@ -75,16 +75,16 @@ class _TextFocusState extends State<TextFocusModel> {
 //                    scopeNode.requestFocus(node2);
                   },
                 ),
-                FlatButton(
-                  color: Colors.redAccent,
-                  textColor: Colors.white,
-                  child: Text("关闭键盘"),
-                  onPressed: (){
-                    //  所有编辑框都失去焦点，键盘就会关闭
-                    node2.unfocus();
-                    node1.unfocus();
-                  },
-                ),
+                // (
+                //   color: Colors.redAccent,
+                //   textColor: Colors.white,
+                //   child: Text("关闭键盘"),
+                //   onPressed: (){
+                //     //  所有编辑框都失去焦点，键盘就会关闭
+                //     node2.unfocus();
+                //     node1.unfocus();
+                //   },
+                // ),
               ],
             ),
             //使用theme设置textfield的

@@ -69,7 +69,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-## path_provider
+## path_provider_ios
 
 Copyright 2013 The Flutter Authors. All rights reserved.
 
@@ -98,7 +98,7 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
-## shared_preferences
+## shared_preferences_ios
 
 Copyright 2013 The Flutter Authors. All rights reserved.
 

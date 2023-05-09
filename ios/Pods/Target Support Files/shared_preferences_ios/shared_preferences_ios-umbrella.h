@@ -12,6 +12,6 @@
 
 #import "FLTSharedPreferencesPlugin.h"
 
-FOUNDATION_EXPORT double shared_preferencesVersionNumber;
-FOUNDATION_EXPORT const unsigned char shared_preferencesVersionString[];
+FOUNDATION_EXPORT double shared_preferences_iosVersionNumber;
+FOUNDATION_EXPORT const unsigned char shared_preferences_iosVersionString[];
 
