@@ -61,7 +61,7 @@ class _TextFocusState extends State<TextFocusModel> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                FilledButton(
+                TextButton(
                   child: Text("切换焦点2",style: TextStyle(color: Colors.blue),),
                   // style: ButtonStyle(backgroundColor:Colors.blue,textStyle: ),
                   // textColor: Colors.white,

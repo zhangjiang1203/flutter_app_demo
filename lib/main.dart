@@ -577,12 +577,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   Positioned(
                     left: 15,
                     top: 10,
-                    child: Text(rowMapData["title"],
-                      style: TextStyle(color: Color(0xff333333)),),
-                  ),
-                  FlatButton(
-                    onPressed: () =>
-                        Navigator.pushNamed(context, rowMapData["pushVC"]),
+                    child: TextButton(
+                      child: Text(rowMapData["title"],
+                        style: TextStyle(color: Color(0xff333333)),),
+                      onPressed: () =>
+                          Navigator.pushNamed(context, rowMapData["pushVC"]),
+                    ),
                   ),
                 ],
               ),
