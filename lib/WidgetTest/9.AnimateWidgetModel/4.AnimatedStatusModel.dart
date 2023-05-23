@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/WidgetTest/9.AnimateWidgetModel/3.AnimatedBuilderModel.dart';
 
 class AnimatedStatusModel extends StatefulWidget {
-  AnimatedStatusModel({Key key}) : super(key: key);
+  AnimatedStatusModel({Key? key}) : super(key: key);
 
   @override
   _AnimatedStatusModelState createState() => _AnimatedStatusModelState();
@@ -16,8 +16,8 @@ class AnimatedStatusModel extends StatefulWidget {
 
 class _AnimatedStatusModelState extends State<AnimatedStatusModel> with SingleTickerProviderStateMixin {
 
-  Animation<double> animation;
-  AnimationController animationController;
+  late Animation<double> animation;
+  late AnimationController animationController;
 
   @override
   void initState() {

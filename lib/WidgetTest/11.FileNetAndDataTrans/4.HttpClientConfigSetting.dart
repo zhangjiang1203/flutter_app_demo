@@ -11,7 +11,7 @@ import 'package:flutter/scheduler.dart';
 
 //只是作为一个测试，
 class HttpClientConfigSetting extends StatefulWidget {
-  HttpClientConfigSetting({Key key}) : super(key: key);
+  HttpClientConfigSetting({Key? key}) : super(key: key);
 
   @override
   _HttpClientConfigSetting createState() => _HttpClientConfigSetting();
@@ -39,7 +39,7 @@ class _HttpClientConfigSetting extends State<HttpClientConfigSetting> {
     httpClient.addCredentials(Uri.parse("http://www.baidu.com/"), "admin",HttpClientDigestCredentials('username','password'));
 
     //动态添加用户凭证
-    httpClient.authenticate = (Uri uri,String scheme,String realm) async{
+    httpClient.authenticate = (Uri uri,String scheme,String? realm) async{
       if(uri.host == "xxx.com"){
         httpClient.addCredentials(uri, 'admin', HttpClientBasicCredentials('username','pwd'));
         return true;

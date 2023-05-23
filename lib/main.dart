@@ -142,10 +142,10 @@ class _MyAppState extends State<MyApp> {
   //Flutter在构建页面时，会调用组件的build方法，widget的主要工作是提供一个build()
   //方法来描述如何构建UI界面（通常是通过组合、拼装其它基础widget）。
   //系统的主题色
-  Color _themeColor ;
+  late MaterialColor _themeColor ;
 
   ///app内部修改语言时，强制更新app
-  SpecificLocalizationDelete _localeOverrideDelegate;
+  late SpecificLocalizationDelete _localeOverrideDelegate;
 
   /// 刷新本地对应的语言
   void _onLocaleChanged(Locale locale){
@@ -166,7 +166,7 @@ class _MyAppState extends State<MyApp> {
     // });
 
     /// 初始化一个新的Localization Delegate，有了它，当用户选择一种新的工作语言时，可以强制初始化一个新的Translations
-    _localeOverrideDelegate = new SpecificLocalizationDelete(null);
+    _localeOverrideDelegate = new SpecificLocalizationDelete(Locale('zh',''));
     /// 保存这个方法的指针，当用户改变语言时，我们可以调用localTool.onLocaleChanged(new Locale('en',''));，通过SetState()我们可以强制App整个刷新
     localTool.onLocaleChangeed = _onLocaleChanged;
   }
@@ -176,7 +176,7 @@ class _MyAppState extends State<MyApp> {
       "/":(context) => MyHomePage(title: "Flutter Demo Home Page"),
       "new_page":(context)=>NewRoute(),
       //TipRoute组件初始化的时候必须加参数，ModalRoute获取传参
-      "info_page":(context)=>TipRoute(text: ModalRoute.of(context).settings.arguments),
+      "info_page":(context)=>TipRoute(text: ModalRoute.of(context)!.settings.arguments as String),
       "counter_page":(context) => ZJCounterWidget(),
       "cupertino_page":(context) => CupertinoRoute(),
       "widget_self":(context) => WidgetSelfBoxA(),
@@ -255,7 +255,7 @@ class _MyAppState extends State<MyApp> {
       "circular_progress_paint":(context) => CustomCircleProgressModel(),
       //11
       "file_operation_model":(context) => FileOperationModel(),
-      "file_basic_operation_model":(context) => FileBasicOperationModel(),
+      "file_basic_operation_model":(context) => FileBasicOperationModel(title: '文件处理',),
       "http_client_model":(context) => HttpClientModelTest(),
       "dio_test_model":(context) => DioHttpClientModel(),
       "socket_connect_model":(context) => WebSocketConnectModel(),
@@ -330,12 +330,12 @@ class _MyAppState extends State<MyApp> {
             onGenerateRoute: (RouteSettings settings){
               return MaterialPageRoute(
                 builder: (context){
-                  String routeName = settings.name;
+                  String? routeName = settings.name;
                   //根据返回的routename做权限判断
                   if(routeName == ''){
                     return JosnToModelTest();
                   }
-                  return null;
+                  return Container();
                 }
               );
             },
@@ -350,7 +350,7 @@ class _MyAppState extends State<MyApp> {
 
 //有状态的组件（Stateful widget） 和无状态的组件（Stateless widget）
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -361,7 +361,7 @@ class MyHomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  final String title;
+  final String? title;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -370,9 +370,9 @@ class MyHomePage extends StatefulWidget {
 //_MyHomePageState类是MyHomePage类对应的状态类
 class _MyHomePageState extends State<MyHomePage> {
   bool _showFloatBtn = false;
-  SectionTableController _controller;
+  late SectionTableController _controller;
 
-  List<Map<String,Object>> pushVCArr;
+  late List<Map<String,Object>> pushVCArr;
 //  该函数的作用是先自增_counter，然后调用setState 方法
 //  setState方法的作用是通知Flutter框架，有状态发生了改变，Flutter框架收到通知后，
 //  会执行build方法来根据新的状态重新构建界面，

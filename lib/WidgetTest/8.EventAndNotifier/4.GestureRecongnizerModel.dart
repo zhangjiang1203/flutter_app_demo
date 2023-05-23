@@ -8,7 +8,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class GestureRecognizerModel extends StatefulWidget {
-  GestureRecognizerModel({Key key}) : super(key: key);
+  GestureRecognizerModel({Key? key}) : super(key: key);
 
   @override
   _GestureRecognizerModelState createState() =>

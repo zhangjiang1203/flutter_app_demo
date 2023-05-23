@@ -3,7 +3,7 @@ import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 
 
 class WillPopScopeDemo extends StatefulWidget {
-  WillPopScopeDemo({Key key}) : super(key:key);
+  WillPopScopeDemo({Key? key}) : super(key:key);
 
   @override
   _WillPopScopeState createState() => _WillPopScopeState();
@@ -12,7 +12,7 @@ class WillPopScopeDemo extends StatefulWidget {
 
 class _WillPopScopeState extends State<WillPopScopeDemo> {
   //记录此刻的时间展示
-  DateTime _duration ;
+  late DateTime _duration ;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

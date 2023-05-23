@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/WidgetTest/8.EventAndNotifier/7.CustomNotificationModel.dart';
 
 class StopBubblingNotificationModel extends StatefulWidget {
-  StopBubblingNotificationModel({Key key}) : super(key: key);
+  StopBubblingNotificationModel({Key? key}) : super(key: key);
 
   @override
   _StopBubblingNotificationModelState createState() =>

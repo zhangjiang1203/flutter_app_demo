@@ -8,7 +8,7 @@
 
 ```dart
   const Scrollable({
-    Key key,
+    Key? key,
     //设置滚动方向
     this.axisDirection = AxisDirection.down,
     //监听滚动事件和滚动位置
@@ -19,7 +19,7 @@
     // ClampingScrollPhysics：Android下微光效果。
     // BouncingScrollPhysics：iOS下弹性效果。
     this.physics,
-    @required this.viewportBuilder,
+    required this.viewportBuilder,
     this.excludeFromSemantics = false,
     this.semanticChildCount,
     this.dragStartBehavior = DragStartBehavior.start,

@@ -9,7 +9,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class ThreeTreeBasic extends StatefulWidget {
-  ThreeTreeBasic({Key key}) : super(key: key);
+  ThreeTreeBasic({Key? key}) : super(key: key);
 
   @override
   State<ThreeTreeBasic> createState() => _ThreeTreeBasicState();

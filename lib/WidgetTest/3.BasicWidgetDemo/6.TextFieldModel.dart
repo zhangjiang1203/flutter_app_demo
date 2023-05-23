@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class TextFieldModelTest extends StatefulWidget {
   //调用初始化
-  TextFieldModelTest({Key key}): super(key:key);
+  TextFieldModelTest({Key? key}): super(key:key);
 
   _TextFieldState createState() => new _TextFieldState();
 }
@@ -70,15 +70,15 @@ class _TextFieldState extends State<TextFieldModelTest> {
                     print("编辑结束");
                   },
                   //长按输入框支持的功能
-                  toolbarOptions: ToolbarOptions(
-                    copy: true,
-                    cut: true,
-                    paste: true,
-                    selectAll: true
-                  ),
-                  buildCounter:(BuildContext context, {int currentLength,int maxLength,bool isFocused,}){
-                    return Text("$currentLength/$maxLength");
-                  },
+                  // toolbarOptions: ToolbarOptions(
+                  //   copy: true,
+                  //   cut: true,
+                  //   paste: true,
+                  //   selectAll: true
+                  // ),
+                  // buildCounter:(BuildContext context, {int currentLength,int maxLength,bool isFocused,}){
+                  //   return Text("$currentLength/$maxLength");
+                  // },
                 ),
                 TextField(
                   decoration: InputDecoration(

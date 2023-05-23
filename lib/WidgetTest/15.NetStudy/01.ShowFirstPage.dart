@@ -21,8 +21,8 @@ class FirstPageStudy extends StatefulWidget {
 
 
 class _FirstPageStudyState extends State<FirstPageStudy> {
-  StreamSubscription _subscription;
-  String _netStatus;
+  late StreamSubscription _subscription;
+  late String _netStatus;
   @override
   void initState() {
     super.initState();

@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class AnimationSwitcherModel extends StatefulWidget {
-  AnimationSwitcherModel({Key key}) : super(key: key);
+  AnimationSwitcherModel({Key? key}) : super(key: key);
 
   @override
   _AnimationSwitcherModelState createState() => _AnimationSwitcherModelState();

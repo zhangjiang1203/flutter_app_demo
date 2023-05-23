@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FormsModelTest extends StatefulWidget {
-  FormsModelTest({Key key}) : super(key:key);
+  FormsModelTest({Key? key}) : super(key:key);
 
   @override
   _FormsModelState createState() => new _FormsModelState();
@@ -39,7 +39,7 @@ class _FormsModelState extends State<FormsModelTest> {
                 keyboardType: TextInputType.phone,
                 //带有参数的回调
                 validator: (v){
-                  return v.trim().length > 0 ? null : "用户名不能为空";
+                  return v!.trim().length> 0 ? null : "用户名不能为空";
                 },
               ),
               TextFormField(
@@ -53,7 +53,7 @@ class _FormsModelState extends State<FormsModelTest> {
                 obscureText: true,
                 keyboardType: TextInputType.text,
                 validator: (v){
-                  return v.trim().length > 5 ? null : "密码不能少于5位";
+                  return v!.trim().length > 5 ? null : "密码不能少于5位";
                 },
               ),
               Padding(

@@ -16,9 +16,9 @@ class SomeClass {
   //2.实例变量直接声明时初始化或者通过构造器来初始化
   int atDec = 0;
   int formal;
-  int showList;
+  int? showList;
 
-  String notAString;
+  String? notAString;
 
 
   SomeClass(this.formal);

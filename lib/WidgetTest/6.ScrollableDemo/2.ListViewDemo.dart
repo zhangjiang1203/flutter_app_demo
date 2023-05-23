@@ -4,7 +4,7 @@ import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 
 class ListViewDemo extends StatefulWidget {
   @override
-  ListViewDemo({Key key}):super(key:key);
+  ListViewDemo({Key? key}):super(key:key);
   
   @override
   _ListViewDemoState createState() => _ListViewDemoState();
@@ -37,7 +37,7 @@ class _ListViewDemoState extends State<ListViewDemo> {
   }
 
   
-  Widget createMyCustomWidget(int index) {
+  Widget? createMyCustomWidget(int index) {
     switch (index){
       case 1:
         return ListView(

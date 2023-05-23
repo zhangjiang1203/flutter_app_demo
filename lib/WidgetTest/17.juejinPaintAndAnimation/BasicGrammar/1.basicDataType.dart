@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class ZJBasicGrammarTest extends StatefulWidget {
-  const ZJBasicGrammarTest({Key key}) : super(key: key);
+  const ZJBasicGrammarTest({Key? key}) : super(key: key);
 
   @override
   State<ZJBasicGrammarTest> createState() => _ZJBasicGrammarTestState();
@@ -57,9 +57,9 @@ class Vec2  implements Calculate {
   double x;
   double y;
 
-  String _name;
+  String? _name;
 
-  Vec2({this.x = 0, @required this.y, String name}): _name = name;
+  Vec2({this.x = 0, required this.y, String? name}): _name = name;
 
   /// 简单模式获取 对应类信息
   String getInfo() => "Vec2($x,$y)";
@@ -198,7 +198,7 @@ typedef DCallBack = void Function(String value);
 
 class D with Position, Moveable {
 
-  final void Function(String value) hook;
+  final void Function(String value)? hook;
 
   String name;
 
@@ -214,7 +214,7 @@ class E {
   E(this.data);
 
   void showData(String name){
-    data.hook(name);
+    data.hook!(name);
   }
 
 }
@@ -235,11 +235,11 @@ class TestE {
 /// 异步数据的处理
 class GetLocalFile {
 
-  StreamSubscription<List<int>> subscription;
+  late StreamSubscription<List<int>> subscription;
   int fileLength = 0;
   int counter = 0;
 
-  Duration data ;
+  late Duration data ;
 
   void doTask2() async {
     // File file = File(path.join(Director.current.path,"assets","Jane Eyre.txt"));
@@ -269,7 +269,7 @@ class GetLocalFile {
 
 
 class ZTValueChangeTest extends StatefulWidget {
-  ZTValueChangeTest({Key key}) : super(key: key);
+  ZTValueChangeTest({Key? key}) : super(key: key);
 
   @override
   State<ZTValueChangeTest> createState() => _ZTValueChangeTestState();

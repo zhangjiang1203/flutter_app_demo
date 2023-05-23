@@ -4,7 +4,7 @@ import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 
 class DrawerDemo extends StatefulWidget {
 
-  DrawerDemo({Key key}): super(key:key);
+  DrawerDemo({Key? key}): super(key:key);
 
   @override
   _DrawerDemoState createState() => new _DrawerDemoState();
@@ -99,7 +99,7 @@ class _DrawerDemoState extends State<DrawerDemo>{
 //定义Drawer
 class MyDrawer extends StatelessWidget {
 
-  const MyDrawer({Key key}) : super(key:key);
+  const MyDrawer({Key? key}) : super(key:key);
 
   @override
   Widget build(BuildContext context) {

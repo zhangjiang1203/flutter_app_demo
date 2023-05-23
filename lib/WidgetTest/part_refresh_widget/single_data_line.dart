@@ -22,16 +22,14 @@ import 'data_observer_widget.dart';
 * */
 
 class SingleDataLine<T> {
-  StreamController<T> _streamController;
+  late StreamController<T> _streamController;
   //设置当前的数据
-  T currentValue;
+  late T currentValue;
 
-  SingleDataLine([T initData]){
-    currentValue = initData;
+  SingleDataLine([T? initData]){
+    currentValue = initData!;
     _streamController = StreamController<T>();
-    if (initData != null) {
-      _streamController.add(initData);
-    }
+    _streamController.add(initData);
   }
   get outer => _streamController.stream;
   get inner => _streamController.sink;
@@ -45,7 +43,7 @@ class SingleDataLine<T> {
     inner.add(value);
   }
   ///构造对应的widget
-  Widget addObserver({T initValue,DataBuildContext builder}){
+  Widget addObserver({required T initValue,required DataBuildContext builder}){
     return DataObserverWidget<T>(initData: initValue,dataLine:this,builder:builder);
   }
   ///释放stream
@@ -58,12 +56,12 @@ class SingleDataLine<T> {
 mixin MultDataLine{
   final Map<String,SingleDataLine> dataBus = Map();
 
-  SingleDataLine<T> getObserver<T>(String key){
+  SingleDataLine getObserver<T>(String key){
     if (!dataBus.containsKey(key)) {
       SingleDataLine<T> dataLine = new SingleDataLine<T>();
       dataBus[key] = dataLine;
     }
-    return dataBus[key];
+    return dataBus[key]!;
   }
 
   void dataLineDispose(){

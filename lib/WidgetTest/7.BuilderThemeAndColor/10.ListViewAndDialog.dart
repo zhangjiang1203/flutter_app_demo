@@ -12,16 +12,16 @@ class ListViewAndDialog extends StatefulWidget {
 
 
 
-  ListViewAndDialog({Key key,this.title="你好"}) : super(key: key);
+  ListViewAndDialog({Key? key,this.title="你好"}) : super(key: key);
   @override
   _ListViewAndDialog createState() => _ListViewAndDialog();
 }
 
 class _ListViewAndDialog extends State<ListViewAndDialog> {
 
-  Map<String,Object> _showData;
+  late Map<String,Map<String,List<String>>> _showData;
 
-  SectionTableController _controller;
+  late SectionTableController _controller;
 
   @override
   void initState() {
@@ -38,13 +38,13 @@ class _ListViewAndDialog extends State<ListViewAndDialog> {
   }
 
   void _updateMyShowData(int section,int row,String select){
-    Map sectionData = _showData[section.toString()];
-    List subtitles = [];
-    if (sectionData.containsKey("subtitle")){
-      subtitles = sectionData["subtitle"];
+    Map<String, List<String>>? sectionData = _showData[section.toString()];
+    List<String>? subtitles = [];
+    if (sectionData?.containsKey("subtitle") == true){
+      subtitles = sectionData!["subtitle"];
     }
-    subtitles[row] = select;
-    sectionData["subtitle"] = subtitles;
+    subtitles![row] = select;
+    sectionData!["subtitle"] = subtitles!;
     _showData[section.toString()] = sectionData;
     setState(() {
 
@@ -61,29 +61,29 @@ class _ListViewAndDialog extends State<ListViewAndDialog> {
       body: SectionTableView(
         sectionCount: _showData.length,
         numOfRowInSection: (int section){
-          Map sectionData = _showData[section.toString()];
+          Map? sectionData = _showData[section.toString()];
           List titles = [];
-          if (sectionData.containsKey("title")){
-            titles = sectionData["title"];
+          if (sectionData?.containsKey("title") == true){
+            titles = sectionData!["title"];
           }
           return titles.length;
         },
         cellAtIndexPath: (section,row){
-          Map sectionData = _showData[section.toString()];
+          Map? sectionData = _showData[section.toString()];
           List titles = [];
           List subtitles = [];
-          if (sectionData.containsKey("title")){
-            titles = sectionData["title"];
+          if (sectionData?.containsKey("title") == true){
+            titles = sectionData!["title"];
           }
-          if (sectionData.containsKey("subtitle")){
-            subtitles = sectionData["subtitle"];
+          if (sectionData?.containsKey("subtitle") == true){
+            subtitles = sectionData!["subtitle"];
           }
           return ListTile(
             title: Text(titles[row]),
             subtitle: Text(subtitles[row]),
             onTap: () async{
-              String chooseStr = await ShowDialogView();
-              _updateMyShowData(section,row,chooseStr);
+              String? chooseStr = await ShowDialogView();
+              _updateMyShowData(section,row,chooseStr!);
             },
           );
         },
@@ -102,7 +102,7 @@ class _ListViewAndDialog extends State<ListViewAndDialog> {
 
 
   /// dialog示例
-  Future<String> ShowDialogView() {
+  Future<String?> ShowDialogView() {
 
     return showDialog(
       context: context,

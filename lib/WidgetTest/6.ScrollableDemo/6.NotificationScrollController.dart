@@ -5,7 +5,7 @@ import 'package:flutter_app_demo/WidgetTest/Tools/ZJColorsTool.dart';
 
 class NotificationScrollController extends StatefulWidget {
 
-  NotificationScrollController({Key key}) : super(key:key);
+  NotificationScrollController({Key? key}) : super(key:key);
   _NotificationScrollControllerState createState() => new _NotificationScrollControllerState();
 }
 

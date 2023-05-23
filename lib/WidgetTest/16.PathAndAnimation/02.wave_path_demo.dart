@@ -16,10 +16,10 @@ class WaveTestModel extends StatefulWidget {
 
 class _WaveTestModelState extends State<WaveTestModel> with SingleTickerProviderStateMixin {
 
-  AnimationController _animationController;
+  late AnimationController _animationController;
   double offsetX = 0;
 
-  Timer timer;
+  late Timer timer;
 
   @override
   void initState() {
@@ -84,7 +84,7 @@ class WaveCliper extends CustomClipper<Path>{
 }
 
 class WavePaint extends CustomPainter {
-  WavePaint({this.progress = 0,this.showColor});
+  WavePaint({this.progress = 0,required this.showColor});
 
   final double progress;
   final Color showColor;
@@ -133,7 +133,7 @@ class WavePaint extends CustomPainter {
 }
 
 class ForWavePaint extends CustomPainter {
-  ForWavePaint({this.progress = 0,this.showColor});
+  ForWavePaint({this.progress = 0,required this.showColor});
 
   final double progress;
   final Color showColor;

@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 class DioRequestRangeDemo extends StatefulWidget {
-  DioRequestRangeDemo({Key key}) : super(key: key);
+  DioRequestRangeDemo({Key? key}) : super(key: key);
 
   @override
   _DioRequestRangeDemo createState() => _DioRequestRangeDemo();
@@ -27,7 +27,7 @@ class _DioRequestRangeDemo extends State<DioRequestRangeDemo> {
       url,
       savePath,
   {
-    ProgressCallback onReceiveProgress,
+    ProgressCallback? onReceiveProgress,
   }) async{
     const firstChunkSize = 102;
     const maxChunk = 3;
@@ -39,9 +39,9 @@ class _DioRequestRangeDemo extends State<DioRequestRangeDemo> {
     createCallback(no){
       return (int received,_){
 //        progress[no] = received,
-//        if(onReceiveProgress != null && total != 0){
-          onReceiveProgress(progress.reduce((a,b)=> a+ b),total);
-//        }
+       if(onReceiveProgress != null && total != 0){
+          onReceiveProgress!(progress.reduce((a,b)=> a+ b),total);
+       }
       };
     }
   }
@@ -50,9 +50,9 @@ class _DioRequestRangeDemo extends State<DioRequestRangeDemo> {
   * end 结束位置
   * no 第几块
   * */
-  Future<Response> downloadChunk(url,start,end,no) async{
-
-  }
+  // Future<Response> downloadChunk(url,start,end,no) async{
+  //
+  // }
 
   @override
   Widget build(BuildContext context) {

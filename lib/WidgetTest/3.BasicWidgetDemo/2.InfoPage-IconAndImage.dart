@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 class TipRoute extends StatelessWidget {
   TipRoute({
-    Key key,
-    @required this.text,//接收一个text参数
+    Key? key,
+    required this.text,//接收一个text参数
   }) : super(key:key);
 
   final String text;

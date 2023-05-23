@@ -9,15 +9,15 @@ import 'dart:convert';
 import  '9.UserJsonModelChange.dart';
 
 class JosnToModelTest extends StatefulWidget {
-  JosnToModelTest({Key key}) : super(key: key);
+  JosnToModelTest({Key? key}) : super(key: key);
 
   @override
   _JosnToModelTest createState() => _JosnToModelTest();
 }
 
 class _JosnToModelTest extends State<JosnToModelTest> {
-  String _name;
-  Person _person;
+  late String _name;
+  late Person _person;
 
   @override
   void initState() {

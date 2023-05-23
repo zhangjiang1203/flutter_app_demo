@@ -16,7 +16,7 @@ enum ResponseStatus {
 
 
 class DioHttpClientModel extends StatefulWidget {
-  DioHttpClientModel({Key key}) : super(key: key);
+  DioHttpClientModel({Key? key}) : super(key: key);
 
   @override
   _DioHttpClientModel createState() => _DioHttpClientModel();
@@ -26,12 +26,12 @@ class _DioHttpClientModel extends State<DioHttpClientModel> {
   //全局一个dio实例就可以，如果要区别设置请求头或者其他的配置，可以新建新的dio实例
   Dio _dio = new Dio();
 
-  List<String> _showData;
+  late List<String> _showData;
 
   void _getMethod() async {
     showDialogContent(ResponseStatus.loading);
     Response response = await _dio.get("http://www.baidu.com");
-    if(response.statusCode >= 200  && response.statusCode <= 210){
+    if(response.statusCode! >= 200  && response.statusCode! <= 210){
       Navigator.of(context).pop();
       showDialogContent(ResponseStatus.success);
     }else{

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 
 class WidgetSelfBoxA extends StatefulWidget {
 
-  WidgetSelfBoxA({Key key}): super(key:key);
+  WidgetSelfBoxA({Key? key}): super(key:key);
 
   @override
   _WidgetSelfState createState() => new _WidgetSelfState();
@@ -72,7 +72,7 @@ class _WidgetSelfState extends State<WidgetSelfBoxA> {
               activeColor: Colors.red,
               onChanged: (value){
                 setState(() {
-                  _checkboxState = value;
+                  _checkboxState = value!;
                 });
               },
             ),
@@ -117,9 +117,9 @@ class _ParentState extends State<ParentStateWidget> {
 class TapBoxB extends StatelessWidget {
 
   TapBoxB({
-    Key key,
+    Key? key,
     this.active: false,
-    @required this.onChange,
+    required this.onChange,
   }): super(key:key);
 
   final bool active;
@@ -187,9 +187,9 @@ class _MixWidgetState extends State<MixControlState> {
 
 class TapBoxC extends StatefulWidget {
   TapBoxC({
-    Key key,
+    Key? key,
     this.active:false,
-    @required
+    required
     this.onChanged
   }) : super(key:key);
 
@@ -254,7 +254,7 @@ class _TapBoxCState extends State<TapBoxC> {
           decoration: new BoxDecoration(
             color: widget.active ? Colors.lightBlue[700] : Colors.grey[600],
             border: _highLight ? new Border.all(
-              color:Colors.teal[700],
+              color:Colors.teal[700]!,
               width: 10.0,
             ) : null,
           ),

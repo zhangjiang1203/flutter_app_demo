@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 
 class DragOrScrollViewModel extends StatefulWidget {
-  DragOrScrollViewModel({Key key,}) : super(key: key);
+  DragOrScrollViewModel({Key? key,}) : super(key: key);
 
   @override
   _DragOrScrollViewModelState createState() => _DragOrScrollViewModelState();

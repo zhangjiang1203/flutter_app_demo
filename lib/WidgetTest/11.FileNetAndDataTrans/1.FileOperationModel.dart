@@ -10,7 +10,7 @@ import 'package:path_provider/path_provider.dart';
 
 
 class FileOperationModel extends StatefulWidget {
-  FileOperationModel({Key key}) : super(key: key);
+  FileOperationModel({Key? key}) : super(key: key);
 
   @override
   _FileOperationModelState createState() => new _FileOperationModelState();
@@ -18,7 +18,7 @@ class FileOperationModel extends StatefulWidget {
 
 class _FileOperationModelState extends State<FileOperationModel> {
 
-  int _counter;
+  late int _counter;
 
   //获取路径
   Future<File> _getLocalPath() async{

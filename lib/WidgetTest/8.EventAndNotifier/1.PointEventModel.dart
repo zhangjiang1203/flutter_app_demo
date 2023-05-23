@@ -4,7 +4,7 @@ import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 
 class PointerEventModelTest extends StatefulWidget {
 
-  PointerEventModelTest({Key key}): super(key:key);
+  PointerEventModelTest({Key? key}): super(key:key);
 
 
   @override
@@ -17,9 +17,9 @@ class PointerEventModelTest extends StatefulWidget {
 class _PointerEventState extends State<PointerEventModelTest> {
 
   //保存全局的状态
-  PointerEvent _event1;
-  PointerEvent _event2;
-  PointerEvent _event3;
+  late PointerEvent _event1;
+  late PointerEvent _event2;
+  late PointerEvent _event3;
   List<Map<String,Object>> eventList = [];
 
 
@@ -62,9 +62,9 @@ class _PointerEventState extends State<PointerEventModelTest> {
                 //设置对应的behavior
                 //deferToChild 子组件会一个接一个的进行命中测试
                 //opaque 将当前组件当做不透明的处理，效果是当前widget的区域都是可点击的区域
-                behavior: e['behavior'],
+                behavior: e['behavior'] as HitTestBehavior,
                 child: Container(
-                  color: e["color"],
+                  color: e["color"] as Color,
                   alignment: Alignment.center,
                   height: 200,
                   margin: EdgeInsets.only(bottom: 10),

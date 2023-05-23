@@ -48,7 +48,7 @@ class GetTestController extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     
-    final showData = [
+    final List<Map<String,dynamic>> showData = [
       {"title":"simpleDemo","controller": SimpleCountDemo()},
       {"title":"avoidContextDemo","controller":AvoidContextDemo()}
     ];

@@ -21,9 +21,9 @@ class PaintColorWidget extends StatefulWidget {
 class _PaintColorWidgetState extends State<PaintColorWidget> {
 
 
-  image.Image _image;
-  ui.Image _imageStr;
-  List<ColorImageBall> colorBalls;
+  late image.Image _image;
+  late ui.Image _imageStr;
+  late List<ColorImageBall> colorBalls;
 
   @override
   void initState() {
@@ -37,15 +37,13 @@ class _PaintColorWidgetState extends State<PaintColorWidget> {
 
   Future _initImageBall(String imagePath) async{
     double step = 2;
-    _image = await loadAssetImage(imagePath);
+    _image = (await loadAssetImage(imagePath))!;
     print("当前图片的宽高width:${_image.width},height:${_image.height}");
     //根据图片的宽高 生成balls
     colorBalls = [];
     for (int i = 0; i < _image.width;i++) {
       for (int j = 0; j < _image.height;j++) {
-        ColorImageBall ball = ColorImageBall();
-        ball.x = i * step+step*0.5;
-        ball.y = j * step+step*0.5;
+        ColorImageBall ball = ColorImageBall(x: i * step+step*0.5,y: j * step+step*0.5);
         ball.radius = step*0.5;
         var color = Color(_image.getPixel(i, j));
         ball.color = Color.fromARGB(color.alpha, color.blue, color.green, color.red);
@@ -55,17 +53,18 @@ class _PaintColorWidgetState extends State<PaintColorWidget> {
     setState(() {});
   }
 
-  Future<image.Image> loadAssetImage(String imageName) async{
+  Future<image.Image?> loadAssetImage(String imageName) async{
     ByteData byteData = await rootBundle.load(imageName);
-    List<int> bites = byteData.buffer.asUint8List(byteData.offsetInBytes,byteData.lengthInBytes);
+    Uint8List bites = byteData.buffer.asUint8List(byteData.offsetInBytes,byteData.lengthInBytes);
     return image.decodeImage(bites);
   }
 
-  Future<ui.Image> _loadImageData(String path) async{
+  Future<ui.Image?> _loadImageData(String path) async{
     ByteData data = await rootBundle.load(path);
-    List<int> bytes = data.buffer.asUint8List(data.offsetInBytes,data.lengthInBytes);
+    Uint8List bytes = data.buffer.asUint8List(data.offsetInBytes,data.lengthInBytes);
     _imageStr = await decodeImageFromList(bytes);
     setState(() {});
+    return null;
   }
 
   @override
@@ -82,7 +81,7 @@ class _PaintColorWidgetState extends State<PaintColorWidget> {
 
 class MyPainter10 extends CustomPainter{
 
-  MyPainter10({this.colorImages,this.imageStr});
+  MyPainter10({required this.colorImages,required this.imageStr});
 
   final ui.Image imageStr;
 
@@ -282,7 +281,7 @@ class MyPainter10 extends CustomPainter{
     _paint..style = PaintingStyle.fill;
     canvas.translate(-100, -100);
     colorImages.forEach((element) {
-      canvas.drawCircle(Offset(element.x, element.y),  element.radius, _paint..color = element.color);
+      canvas.drawCircle(Offset(element.x, element.y),  element.radius, _paint..color = element.color!);
     });
   }
 
@@ -338,7 +337,7 @@ class MyPainter10 extends CustomPainter{
 
   }
 
-  void _drawValueColorFilter(Canvas canvas,ui.Image image,String name,Offset offset,{ColorFilter colorFilter}){
+  void _drawValueColorFilter(Canvas canvas,ui.Image image,String name,Offset offset,{ColorFilter? colorFilter}){
 
     const double width = 60.0;
     final Rect src = Rect.fromCenter(center: Offset(50,40),width: width,height: width);
@@ -436,9 +435,9 @@ class MyPainter10 extends CustomPainter{
 }
 
 class ColorImageBall {
-  ColorImageBall({this.x,this.y,this.color,this.radius = 20});
+  ColorImageBall({required this.x,required this.y,this.color,this.radius = 20});
   double x;
   double y;
-  Color color;
+  Color? color;
   double radius;
 }

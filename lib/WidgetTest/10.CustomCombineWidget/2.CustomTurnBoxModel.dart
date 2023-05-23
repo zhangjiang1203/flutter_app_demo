@@ -10,7 +10,7 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 
 class CustomTurnBoxModel extends StatefulWidget {
-  CustomTurnBoxModel({Key key}) : super(key: key);
+  CustomTurnBoxModel({Key? key}) : super(key: key);
 
   @override
   _CustomTurnBoxState createState() => _CustomTurnBoxState();
@@ -18,8 +18,8 @@ class CustomTurnBoxModel extends StatefulWidget {
 
 class _CustomTurnBoxState extends State<CustomTurnBoxModel> {
   double _turns = 0.0;
-  Timer countTime ;
-  Future autoTurn(){
+  late Timer countTime ;
+  void autoTurn(){
     countTime = Timer.periodic(const Duration(milliseconds: 700), (timer){
       setState(() {
         _turns += 0.1;
@@ -31,7 +31,6 @@ class _CustomTurnBoxState extends State<CustomTurnBoxModel> {
   void dispose() {
     // TODO: implement dispose
     countTime?.cancel();
-    countTime = null;
     super.dispose();
   }
 
@@ -89,10 +88,10 @@ class _CustomTurnBoxState extends State<CustomTurnBoxModel> {
 class TurnBox extends StatefulWidget{
 
   TurnBox({
-    Key key,
+    Key? key,
     this.speed = 200,
     this.turns = 0.0,
-    @required this.child,
+    required this.child,
   }):super(key:key);
 
   final int speed;
@@ -109,7 +108,7 @@ class TurnBox extends StatefulWidget{
 
 class TurnsBoxState extends State<TurnBox> with SingleTickerProviderStateMixin {
 
-  AnimationController controller;
+  late AnimationController controller;
 
   @override
   void initState() {

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ThemeAndColorDemo extends StatefulWidget {
 
-  ThemeAndColorDemo({Key key}) : super(key:key);
+  ThemeAndColorDemo({Key? key}) : super(key:key);
 
   @override
   _ThemeAndColorState createState() => _ThemeAndColorState();
@@ -40,9 +40,9 @@ class _ThemeAndColorState extends State<ThemeAndColorDemo> {
 class NavbarView extends StatelessWidget {
 
   final String title;
-  final Color backgroundColor;
+  final Color? backgroundColor;
 
-  const NavbarView({Key key,this.title,this.backgroundColor}): super(key:key);
+  const NavbarView({Key? key,required this.title,this.backgroundColor}): super(key:key);
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ class NavbarView extends StatelessWidget {
         style: TextStyle(
           fontWeight: FontWeight.bold,
           //根据背景色亮度确定字体颜色
-          color: backgroundColor.computeLuminance() < 0.5 ? Colors.white : Colors.black,
+          color: backgroundColor!.computeLuminance() < 0.5 ? Colors.white : Colors.black,
         ),
       ),
     );

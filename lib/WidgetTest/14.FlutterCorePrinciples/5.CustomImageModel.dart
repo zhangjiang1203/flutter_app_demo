@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class CustomImageModel extends StatefulWidget {
-  CustomImageModel({Key key}) : super(key: key);
+  CustomImageModel({Key? key}) : super(key: key);
 
   @override
   _CustomImageModel createState() => _CustomImageModel();
@@ -39,8 +39,8 @@ class _CustomImageModel extends State<CustomImageModel> {
 class MyImageWidget extends StatefulWidget {
 
   MyImageWidget({
-    Key key,
-    @required this.imageProvider
+    Key? key,
+    required this.imageProvider
   }) :assert(imageProvider != null),
         super(key:key);
 
@@ -54,8 +54,8 @@ class MyImageWidget extends StatefulWidget {
 class _MyImageWidgetState extends State<MyImageWidget> {
 
   //定义image数据流和数据信息
-  ImageStream _imageStream;
-  ImageInfo _imageInfo;
+  late ImageStream _imageStream;
+  late ImageInfo _imageInfo;
 
   @override
   void didChangeDependencies() {

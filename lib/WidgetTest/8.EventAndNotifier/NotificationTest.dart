@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class NotificationTest extends StatefulWidget {
-  NotificationTest({Key key}) : super(key: key);
+  NotificationTest({Key? key}) : super(key: key);
 
   @override
   _NotificationTestState createState() => _NotificationTestState();
@@ -54,6 +54,7 @@ class _NotificationTestState extends State<NotificationTest> {
       body: NotificationListener<ScrollUpdateNotification>(
         onNotification: (notification){
           print("滚动的距离===${notification.scrollDelta}");
+          return true;
         },
         child: ListView.builder(
             itemCount: 50,

@@ -38,7 +38,7 @@ class CarModel extends ChangeNotifier {
 
 //定义示例界面
 class MyShopCarDemo extends StatefulWidget {
-//  MyShopCarDemo({Key key}) : super(key:key);
+//  MyShopCarDemo({Key? key}) : super(key:key);
 
   @override
   _MyShopCarState createState() =>  _MyShopCarState();
@@ -92,10 +92,8 @@ class MyShopCarDemo extends StatefulWidget {
 //优化实现
 //1.定义一个便利获取Provider的类
 class Customer<T> extends StatelessWidget {
-  Customer({Key key,@required this.builder,this.child,this.listen = true}):
-        assert(builder != null),
+  Customer({Key? key,required this.builder,this.listen = true}):
         super(key:key);
-  final Widget child;
 
   final Widget Function(BuildContext context,T value) builder;
 

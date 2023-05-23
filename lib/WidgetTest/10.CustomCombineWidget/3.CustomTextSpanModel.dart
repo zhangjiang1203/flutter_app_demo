@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/WidgetTest/Tools/ZJRegExpTool.dart';
 import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 class CustomTextSpanModel extends StatefulWidget {
-  CustomTextSpanModel({Key key}) : super(key: key);
+  CustomTextSpanModel({Key? key}) : super(key: key);
 
   @override
   _CustomTextSpanModelState createState() => _CustomTextSpanModelState();
@@ -75,13 +75,13 @@ class _CustomTextSpanModelState extends State<CustomTextSpanModel> {
 
 class MyRichTextModel extends StatefulWidget {
   MyRichTextModel({
-    Key key,
-    this.text,
+    Key? key,
+    required this.text,
     this.style,
   }):super(key:key);
 
   final String text;
-  final TextStyle style;
+  final TextStyle? style;
 
   @override
   _MyRichTextState createState() =>  _MyRichTextState();
@@ -90,16 +90,16 @@ class MyRichTextModel extends StatefulWidget {
 
 class _MyRichTextState extends State<MyRichTextModel> {
 
-  TextSpan _span;
+  late TextSpan _span;
 
   /// 解析文本中的url
   TextSpan _parseText(String text){
-    List<InlineSpan> contentList = new List();
+    List<InlineSpan> contentList = [];
 
     RegExp url = new RegExp(r"((https|http|ftp|rtsp|mms)?:\/\/)[^\s]+");
     List listString = text.split(url);
 
-    List listUrl = new List();
+    List listUrl = [];
     Iterable<Match> matches = ZJRegExpTool.allMatchUrl(text);
     int urlIndex = 0;
     for (Match m in matches) {

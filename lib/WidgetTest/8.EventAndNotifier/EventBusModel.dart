@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class EventBusModel extends StatefulWidget {
-  EventBusModel({Key key}) : super(key: key);
+  EventBusModel({Key? key}) : super(key: key);
 
   @override
   _EventBusModelState createState() => _EventBusModelState();
@@ -49,17 +49,15 @@ class EventBusTest {
   void on(eventName,EventCallBack f){
     //添加观察者
     if(eventName == null || f == null) return;
-    _emap[eventName] ??= new List<EventCallBack>();
-    _emap[eventName].add(f);
+    _emap[eventName] ??= <EventCallBack>[];
+    _emap[eventName]?.add(f);
   }
 
   //移除
-  void off(eventName,[EventCallBack f]){
+  void off(eventName,[EventCallBack? f]){
     var listValue = _emap[eventName];
     if(eventName == null || listValue == null) return;
-    if(f == null){
-      _emap[eventName] = null;
-    }else{
+    if(f != null){
       //移除一个子集
       listValue.remove(f);
     }

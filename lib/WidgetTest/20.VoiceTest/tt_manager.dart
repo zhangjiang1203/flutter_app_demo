@@ -13,17 +13,15 @@ class TTManager {
     initTTS();
   }
 
-  static TTManager _manager;
+  /// 创建单例
+  static final TTManager _manager = TTManager._internal();
+  TTManager._internal();
 
-  factory TTManager(){
-    if (_manager == null){
-      _manager = TTManager._();
-    }
+  factory TTManager() {
     return _manager;
   }
 
-
-  FlutterTts flutterTts;
+  late FlutterTts flutterTts;
 
   /// 设置语音播报展示内容
   initTTS() {

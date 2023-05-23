@@ -19,8 +19,8 @@ class PaintImageAndTextModel extends StatefulWidget {
 class _PaintImageAndTextModelState extends State<PaintImageAndTextModel> {
 
   //注意要引入的头文件
-  ui.Image _image;
-  ui.Image _chatImage;
+  late ui.Image _image;
+  late ui.Image _chatImage;
 
   @override
   void initState() {
@@ -40,7 +40,7 @@ class _PaintImageAndTextModelState extends State<PaintImageAndTextModel> {
 
   Future<ui.Image> _loadImageData(String path) async{
     ByteData data = await rootBundle.load(path);
-    List<int> bytes = data.buffer.asUint8List(data.offsetInBytes,data.lengthInBytes);
+    Uint8List bytes = data.buffer.asUint8List(data.offsetInBytes,data.lengthInBytes);
     return decodeImageFromList(bytes);
   }
 
@@ -59,9 +59,9 @@ class _PaintImageAndTextModelState extends State<PaintImageAndTextModel> {
 
 class MyPainter7 extends CustomPainter{
 
-  Paint _paint;
+  late Paint _paint;
 
-  MyPainter7({this.image}){
+  MyPainter7({required this.image}){
     //初始化值
     _paint = Paint()..color = Colors.red..strokeWidth = 2..style = PaintingStyle.fill;
   }
@@ -304,7 +304,7 @@ class MyPainter8 extends CustomPainter{
     for (int i = 0; i < count ;i++){
       //偶数绘制文字
       if (i == 0) {
-        _drawText(canvas, "0",color: Colors.black,isX: null);
+        _drawText(canvas, "0",color: Colors.black,isX: false);
       }
       if (i.isEven && i != 0) {
         var axin = i * step;

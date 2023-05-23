@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/WidgetTest/9.AnimateWidgetModel/TestPushAnimationModel.dart';
 
 class CustomRouteAnimationModel extends StatefulWidget {
-  CustomRouteAnimationModel({Key key}) : super(key: key);
+  CustomRouteAnimationModel({Key? key}) : super(key: key);
 
   @override
   _CustomRouteAnimationModelState createState() =>
@@ -36,7 +36,7 @@ class _CustomRouteAnimationModelState extends State<CustomRouteAnimationModel> {
                   Navigator.push(context,
                       PageRouteBuilder(
                           transitionDuration: timer,
-                          pageBuilder: (BuildContext context,Animation animation,Animation secondaryAnimation){
+                          pageBuilder: (BuildContext context,Animation<double> animation,Animation secondaryAnimation){
                             return new FadeTransition(opacity: animation,child: TestPushAnimationModel(),);
                           }));
                 },
@@ -47,7 +47,7 @@ class _CustomRouteAnimationModelState extends State<CustomRouteAnimationModel> {
                   Navigator.push(context,
                       PageRouteBuilder(
                           transitionDuration: timer,
-                          pageBuilder: (BuildContext context,Animation animation,Animation secondaryAnimation){
+                          pageBuilder: (BuildContext context,Animation<double> animation,Animation secondaryAnimation){
                             return new SizeTransition(sizeFactor: animation,child: TestPushAnimationModel(),);
                           }
                       ));
@@ -60,7 +60,7 @@ class _CustomRouteAnimationModelState extends State<CustomRouteAnimationModel> {
                   Navigator.push(context,
                       PageRouteBuilder(
                           transitionDuration: timer,
-                          pageBuilder: (BuildContext context,Animation animation,Animation secondaryAnimation){
+                          pageBuilder: (BuildContext context,Animation<double> animation,Animation secondaryAnimation){
                             return new ScaleTransition(scale: animation,child: TestPushAnimationModel(),);
                           }
                       ));
@@ -88,7 +88,7 @@ class _CustomRouteAnimationModelState extends State<CustomRouteAnimationModel> {
 //自定义继承pagerouter,实现下面的特定方法，进行对应的方法和属性设置
 class MySelfPageRouter extends PageRoute {
   MySelfPageRouter({
-    @required this.builder,
+    required this.builder,
     this.transitionDuration = const Duration(milliseconds: 300),
     this.opaque = true,
     this.barrierDismissible = false,
@@ -109,10 +109,10 @@ class MySelfPageRouter extends PageRoute {
   final bool barrierDismissible;
 
   @override
-  final Color barrierColor;
+  final Color? barrierColor;
 
   @override
-  final String barrierLabel;
+  final String? barrierLabel;
 
   @override
   final bool maintainState;

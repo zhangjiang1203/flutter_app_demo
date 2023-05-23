@@ -5,7 +5,7 @@ import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 
 class ScaffoldDemo extends StatefulWidget {
 
-  ScaffoldDemo({Key key}): super(key:key);
+  ScaffoldDemo({Key? key}): super(key:key);
 
   @override
   _ScaffoldState createState() => new _ScaffoldState();

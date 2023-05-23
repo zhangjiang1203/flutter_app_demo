@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/WidgetTest/10.CustomCombineWidget/1.GradientButtonModel.dart';
 
 class ZJWrapTestWidget extends StatefulWidget {
-  const ZJWrapTestWidget({Key key}) : super(key: key);
+  const ZJWrapTestWidget({Key? key}) : super(key: key);
 
   @override
   State<ZJWrapTestWidget> createState() => _ZJWrapTestWidgetState();
@@ -15,8 +15,8 @@ class ZJWrapTestWidget extends StatefulWidget {
 
 class _ZJWrapTestWidgetState extends State<ZJWrapTestWidget> {
 
-  String value1;
-  String value2;
+  late String value1;
+  late String value2;
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +32,11 @@ class _ZJWrapTestWidgetState extends State<ZJWrapTestWidget> {
             ShowTestAuthorWidget(tapCallback: (String value){
               print("开始点击回调===$value");
               value1 = value;
-            }),
+            }, titles: [],),
             ShowTestAuthorWidget(tapCallback: (String value){
               print("开始点击回调===1111$value");
               value2 = value;
-            }),
+            }, titles: [],),
             Spacer(),
 
             Container(
@@ -64,16 +64,16 @@ typedef ShowTestAuthorCallBack = void Function(String title);
 
 class ShowTestAuthorWidget extends StatelessWidget {
   ShowTestAuthorWidget({
-    @required this.titles,
+    required this.titles,
     this.height,
     this.borderRadius,
     this.tapCallback,
   });
 
   final List<String> titles;
-  final double height;
-  final BorderRadius borderRadius;
-  final ShowTestAuthorCallBack tapCallback;
+  final double? height;
+  final BorderRadius? borderRadius;
+  final ShowTestAuthorCallBack? tapCallback;
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +88,7 @@ class ShowTestAuthorWidget extends StatelessWidget {
           runSpacing: -2,
           children:titles.map((e) => ActionChip(
                   label: Text(e,style: TextStyle(color: Colors.black),),
-                  onPressed:(){this.tapCallback(e);},
+                  onPressed:(){this.tapCallback!(e);},
                   backgroundColor: Colors.blue,
                   labelPadding: const EdgeInsets.symmetric(horizontal: 5))
           ).toList(),

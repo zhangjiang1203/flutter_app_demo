@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class AnimatedBuilderModel extends StatefulWidget {
-  AnimatedBuilderModel({Key key}) : super(key: key);
+  AnimatedBuilderModel({Key? key}) : super(key: key);
 
   @override
   _AnimatedBuilderModelState createState() => _AnimatedBuilderModelState();
@@ -15,8 +15,8 @@ class AnimatedBuilderModel extends StatefulWidget {
 
 class _AnimatedBuilderModelState extends State<AnimatedBuilderModel> with SingleTickerProviderStateMixin{
   
-  Animation<double> animation;
-  AnimationController animationController;
+  late Animation<double> animation;
+  late AnimationController animationController;
   
   @override
   void initState() {
@@ -72,10 +72,8 @@ class _AnimatedBuilderModelState extends State<AnimatedBuilderModel> with Single
 
 //包装AnimatedBuilder
 class GrowTransition extends StatelessWidget {
-  GrowTransition({Key key,@required this.animation, @required this.child,})
-      :assert(animation != null),
-       assert(child != null),
-        super(key:key);
+  GrowTransition({Key? key,required this.animation, required this.child,})
+      :super(key:key);
 
   final Animation<double> animation;
   final Widget child;
@@ -87,7 +85,7 @@ class GrowTransition extends StatelessWidget {
       child: AnimatedBuilder(
         child: child,
         animation: animation,
-        builder: (BuildContext context,Widget child){
+        builder: (BuildContext context,Widget? child){
           return Container(
             width: animation.value,
             height: animation.value,
@@ -104,14 +102,12 @@ class GrowTransition extends StatelessWidget {
 //内部会自动构建对应的animationController执行动画
 class CustomAninated extends AnimatedWidget {
   const CustomAninated({
-    Key key,
-    @required Animation<double> custom,
-    this.child
-  }):assert(custom != null),
-        assert(child != null),
-        super(key:key,listenable:custom);
+    Key? key,
+    required Animation<double> custom,
+    required this.child
+  }):super(key:key,listenable:custom);
 
-  Animation<double> get custom => listenable;
+  Animation<double> get custom => listenable as Animation<double>;
 
   final Widget child;
 

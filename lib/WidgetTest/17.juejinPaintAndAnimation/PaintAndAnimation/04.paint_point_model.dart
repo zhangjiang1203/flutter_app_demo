@@ -20,7 +20,7 @@ class PaintPointModel extends StatefulWidget {
 
 class _PaintPointModelState extends State<PaintPointModel> {
 
-  Timer _timer;
+  late Timer _timer;
   double offsetX = 0;
 
   @override

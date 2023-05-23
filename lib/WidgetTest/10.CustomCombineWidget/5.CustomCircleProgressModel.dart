@@ -9,7 +9,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class CustomCircleProgressModel extends StatefulWidget {
-  CustomCircleProgressModel({Key key}) : super(key: key);
+  CustomCircleProgressModel({Key? key}) : super(key: key);
 
   @override
   _CustomCircleProgressModel createState() => _CustomCircleProgressModel();
@@ -17,8 +17,8 @@ class CustomCircleProgressModel extends StatefulWidget {
 
 class _CustomCircleProgressModel extends State<CustomCircleProgressModel> with SingleTickerProviderStateMixin {
 
-  AnimationController controller;
-  Animation animation;
+  late AnimationController controller;
+  late Animation<double> animation;
 
   @override
   void initState() {
@@ -129,23 +129,23 @@ class _CustomCircleProgressModel extends State<CustomCircleProgressModel> with S
 class GradientCircularProgress extends StatelessWidget {
   GradientCircularProgress({
     this.strokeWidth = 2.0,
-    @required this.radius,
+    required this.radius,
     this.strokeCapRound = false,
     this.value,
     this.backgroundColor = const Color(0xffeeeeee),
     this.totalAngle = 2 * pi,
-    @required this.colors,
+    required this.colors,
     this.stops,
 });
 
   final double strokeWidth;//粗细
   final double radius;
   final bool strokeCapRound;//是否为两端圆角
-  final double value;//当前进度【0，1】
+  final double? value;//当前进度【0，1】
   final Color backgroundColor;//进度条背景色
   final double totalAngle;//进度条总弧度
   final List<Color> colors;
-  final List<double> stops;//渐变色的终止点
+  final List<double>? stops;//渐变色的终止点
 
 
   @override
@@ -182,30 +182,26 @@ class GradientCircularPainter extends CustomPainter {
 
   GradientCircularPainter({
     this.stokeWidth = 2.0,
-    @required this.radius,
+    required this.radius,
     this.strokeCapRound = false,
     this.value,
     this.backgroundColor = const Color(0xffeeeeee),
     this.totalAngle = 2 * pi,
-    @required this.colors,
+    required this.colors,
     this.stops,
 });
 
   final double stokeWidth;//粗细
   final double radius;
   final bool strokeCapRound;//是否为两端圆角
-  final double value;//当前进度【0，1】
+  final double? value;//当前进度【0，1】
   final Color backgroundColor;//进度条背景色
   final double totalAngle;//进度条总弧度
   final List<Color> colors;
-  final List<double> stops;//渐变色的终止点
+  final List<double>? stops;//渐变色的终止点
 
    @override
   void paint(Canvas canvas, Size size) {
-     if(radius != null){
-       size = Size.fromRadius(radius);
-     }
-
      double _offset = stokeWidth / 2.0;
      double _value = (value ?? 0);
      _value = _value.clamp(0.0, 1.0) * totalAngle;

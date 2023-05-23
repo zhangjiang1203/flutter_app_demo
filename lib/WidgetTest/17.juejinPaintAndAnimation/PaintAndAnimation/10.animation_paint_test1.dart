@@ -44,7 +44,7 @@ class _AnimationPaintTest1State extends State<AnimationPaintTest1> {
 
 
 class EatBeansPainter extends StatefulWidget {
-  EatBeansPainter({Key key,this.color = Colors.blue,this.angle = 30,this.isCustom = false}): super(key: key);
+  EatBeansPainter({Key? key,this.color = Colors.blue,this.angle = 30,this.isCustom = false}): super(key: key);
 
   final bool isCustom;
   final Color color;
@@ -55,7 +55,7 @@ class EatBeansPainter extends StatefulWidget {
 
 class _EatBeansPainterState extends State<EatBeansPainter> with SingleTickerProviderStateMixin{
 
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -86,7 +86,7 @@ class _EatBeansPainterState extends State<EatBeansPainter> with SingleTickerProv
 }
 class MyPainter11 extends CustomPainter {
 
-  MyPainter11({this.color = Colors.blue,this.angle}):super(repaint: angle);
+  MyPainter11({this.color = Colors.blue,required this.angle}):super(repaint: angle);
 
   final Color color;
   final Animation<double> angle;
@@ -118,7 +118,7 @@ class MyPainter11 extends CustomPainter {
 
 class MyPainter12 extends CustomPainter{
 
-  MyPainter12({@required this.progress}):super(repaint: progress);
+  MyPainter12({required this.progress}):super(repaint: progress);
 
   final Animation<double> progress;
   final ColorTween _colorTween = ColorTween(begin: Colors.blue,end: Colors.red);
@@ -130,7 +130,7 @@ class MyPainter12 extends CustomPainter{
     //绘制吃豆人
     var width = size.width;
     var height = size.height;
-    _paint..style = PaintingStyle.fill..color = _colorTween.evaluate(progress);
+    _paint..style = PaintingStyle.fill..color = _colorTween.evaluate(progress)!;
     canvas.translate(size.width*0.5, size.height*0.5);
     var a = _angleAnim.evaluate(progress) / 360.0 * pi;
     //绘制圆弧

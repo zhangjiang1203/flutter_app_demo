@@ -74,7 +74,7 @@ class _FlowLayoutState extends State<FlowLayoutDemo> {
 class FlowLayoutDelegate extends FlowDelegate {
   //设置代理的边界值
   EdgeInsets margin = EdgeInsets.zero;
-  FlowLayoutDelegate({this.margin});
+  FlowLayoutDelegate({required this.margin});
 
   @override
   Size getSize(BoxConstraints constraints) {
@@ -88,12 +88,13 @@ class FlowLayoutDelegate extends FlowDelegate {
     var y = margin.top;
     //计算每个控件的位置信息
     for(int i = 0;i < context.childCount;i++) {
-      var w = context.getChildSize(i).width + x + margin.right;
-      if (w >= context.size.width) {
+      var size = context.getChildSize(i)!;
+      var w = size.width + x + margin.right;
+      if (w >= size.width) {
         x = margin.left;
-        y += context.getChildSize(i).height + margin.top + margin.bottom;
+        y += size.height + margin.top + margin.bottom;
         context.paintChild(i,transform: new Matrix4.translationValues(x, y, 0.0));
-        x += context.getChildSize(i).width + margin.left + margin.right;
+        x += size.width + margin.left + margin.right;
       }else{
         //绘制控件
         context.paintChild(i,transform: new Matrix4.translationValues(x, y, 0.0));

@@ -17,7 +17,7 @@ class DecoratedBoxDemo extends StatelessWidget {
               decoration: BoxDecoration(
 //            color: Colors.red,
                 gradient: LinearGradient(
-                  colors: [Colors.red,Colors.orange[700]],
+                  colors: [Colors.red,Colors.orange[700]!],
 //              stops: [0.2,0.5],
 //              begin: Alignment(0.2,0.3),
 //              end: Alignment(0.9,-0.5),

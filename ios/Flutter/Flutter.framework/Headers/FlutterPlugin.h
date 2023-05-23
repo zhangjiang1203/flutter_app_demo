@@ -183,7 +183,7 @@ typedef void (*FlutterPluginRegistrantCallback)(NSObject<FlutterPluginRegistry>*
  * and register it to be called by other application components.
  */
 @protocol FlutterPlugin <NSObject, FlutterApplicationLifeCycleDelegate>
-@required
+required
 /**
  * Registers this plugin using the context information and callback registration
  * methods exposed by the given registrar.

@@ -135,7 +135,7 @@ class _CurveAnimationTestState extends State<CurveAnimationTest> {
 
 class CustomCurveAnimation extends StatefulWidget {
 
-  CustomCurveAnimation({Key key,this.curveType = Curves.bounceInOut}):super(key: key);
+  CustomCurveAnimation({Key? key,this.curveType = Curves.bounceInOut}):super(key: key);
 
   final Curve curveType;
 
@@ -145,8 +145,8 @@ class CustomCurveAnimation extends StatefulWidget {
 
 class _CustomCurveAnimationState extends State<CustomCurveAnimation> with SingleTickerProviderStateMixin{
 
-  AnimationController _controller;
-  Animation<double> _angleAnim;
+  late AnimationController _controller;
+  late Animation<double> _angleAnim;
 
   @override
   void initState() {
@@ -176,7 +176,7 @@ class _CustomCurveAnimationState extends State<CustomCurveAnimation> with Single
 
 class MyPainter14 extends CustomPainter {
 
-  MyPainter14({this.repaint,this.progress}):super(repaint: repaint);
+  MyPainter14({required this.repaint,required this.progress}):super(repaint: repaint);
 
   Paint _paint = Paint();
   final Animation<double> repaint;

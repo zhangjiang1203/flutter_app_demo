@@ -18,7 +18,7 @@ const double ChessLinePadding = (ChessBoardW - 30) / ChessCountLine;
 const double ChessRadius = ChessLinePadding/2 - 2;
 
 class CustomPaintTestModel extends StatefulWidget {
-  CustomPaintTestModel({Key key}) : super(key: key);
+  CustomPaintTestModel({Key? key}) : super(key: key);
 
   @override
   _CustomPaintTestModelState createState() => _CustomPaintTestModelState();
@@ -150,7 +150,7 @@ class CheckerBoardModel extends CustomPainter {
 //绘制棋子
 class ChessPiecesModel extends CustomPainter {
   ChessPiecesModel({
-      @required this.piecesList,
+      required this.piecesList,
   });
   //绘制棋盘的位置
   final List piecesList;

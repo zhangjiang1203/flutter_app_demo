@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class AnimatedWidgetModel extends StatefulWidget {
-  AnimatedWidgetModel({Key key}) : super(key: key);
+  AnimatedWidgetModel({Key? key}) : super(key: key);
 
   @override
   _AnimatedWidgetModelState createState() => _AnimatedWidgetModelState();
@@ -15,8 +15,8 @@ class AnimatedWidgetModel extends StatefulWidget {
 
 class _AnimatedWidgetModelState extends State<AnimatedWidgetModel> with SingleTickerProviderStateMixin{
 
-  Animation<double> animation ;
-  AnimationController animationController;
+  late Animation<double> animation ;
+  late AnimationController animationController;
 
   @override
   void initState() {
@@ -56,12 +56,12 @@ class _AnimatedWidgetModelState extends State<AnimatedWidgetModel> with SingleTi
 //使用animatedWidget构建对应的动画UI
 // 若果使用多组动画的话，要使用多个widget，在使用上不是很方便
 class AnimatedImage extends AnimatedWidget {
-  AnimatedImage({Key key,Animation<double> animation}) : super(key:key,listenable:animation);
+  AnimatedImage({Key? key,required Animation<double> animation}) : super(key:key,listenable:animation);
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    final Animation<double> animate = listenable;
+    final Animation<double> animate = listenable as Animation<double>;
     return Center(
       child: Image.asset('assets/images/goodnight.jpeg',width: animate.value,height: animate.value,),
     );

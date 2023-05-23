@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class GestureCompeteAndConflict extends StatefulWidget {
-  GestureCompeteAndConflict({Key key}) : super(key: key);
+  GestureCompeteAndConflict({Key? key}) : super(key: key);
 
   @override
   _GestureCompeteAndConflictState createState() =>

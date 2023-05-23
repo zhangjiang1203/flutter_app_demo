@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class TestPushAnimationModel extends StatefulWidget {
-  TestPushAnimationModel({Key key}) : super(key: key);
+  TestPushAnimationModel({Key? key}) : super(key: key);
 
   @override
   _TestPushAnimationModelState createState() => _TestPushAnimationModelState();

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 //创建一个带有自定义状态的checkbox，对于多个需要自己控制的组件来说，这个太不理想，每一个设置一个独立的widget不合适
 class CheckBoxDialogView extends StatefulWidget {
-  CheckBoxDialogView({Key key,this.value,this.onChanged}) : super(key:key);
+  CheckBoxDialogView({Key? key,required this.value,required this.onChanged}) : super(key:key);
 
   final ValueChanged<bool> onChanged;
   final bool value;
@@ -15,7 +15,7 @@ class CheckBoxDialogView extends StatefulWidget {
 
 class _CheckBoxDialogState extends State<CheckBoxDialogView> {
 
-  bool _withTree;
+  late bool _withTree;
 
   @override
   void initState() {
@@ -27,11 +27,12 @@ class _CheckBoxDialogState extends State<CheckBoxDialogView> {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+
     return Checkbox(
       value: _withTree,
-      onChanged: (bool change){
+      onChanged: (bool? change){
         //将发生的事件的值抛出去
-        widget.onChanged(change);
+        widget.onChanged(change!);
         setState(() {
           _withTree = change;
         });
@@ -46,7 +47,7 @@ class _CheckBoxDialogState extends State<CheckBoxDialogView> {
 //创建builder,统一在一个builder中的状态管理
 class StatefulBuilder extends StatefulWidget {
 
-  StatefulBuilder({Key key,this.builder}) : assert(builder != null),super(key:key);
+  StatefulBuilder({Key? key,required this.builder}) : super(key:key);
 
   final StatefulWidgetBuilder builder;
 

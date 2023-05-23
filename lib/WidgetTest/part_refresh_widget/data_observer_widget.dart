@@ -11,7 +11,7 @@ typedef DataBuildContext<T> = Widget Function(BuildContext context ,T data);
 
 class DataObserverWidget<T> extends StatefulWidget {
 
-  DataObserverWidget({Key key,this.initData,this.dataLine,this.builder}): super(key:key);
+  DataObserverWidget({Key? key,required this.initData,required this.dataLine,required this.builder}): super(key:key);
 
   final T initData;
   final SingleDataLine<T> dataLine;

@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class ScaleAnimationModel extends StatefulWidget {
-  ScaleAnimationModel({Key key}) : super(key: key);
+  ScaleAnimationModel({Key? key}) : super(key: key);
 
   @override
   _ScaleAnimationModelState createState() => _ScaleAnimationModelState();
@@ -16,8 +16,8 @@ class ScaleAnimationModel extends StatefulWidget {
 //需要继承TickerProvider，如果有多个AnimationController，则应该使用TickerProviderStateMixin。
 class _ScaleAnimationModelState extends State<ScaleAnimationModel> with SingleTickerProviderStateMixin {
 
-  Animation<double> scaleAnimation;
-  AnimationController animationController;
+  late Animation<double> scaleAnimation;
+  late AnimationController animationController;
 
   @override
   void initState() {

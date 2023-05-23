@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class GradientButtonModel extends StatefulWidget {
-  GradientButtonModel({Key key}) : super(key: key);
+  GradientButtonModel({Key? key}) : super(key: key);
 
   @override
   _GradientButtonModelState createState() => _GradientButtonModelState();
@@ -43,7 +43,7 @@ class _GradientButtonModelState extends State<GradientButtonModel> {
                 padding: EdgeInsets.symmetric(vertical: 10),
               ),
               GradientButton(
-                colors: [Colors.lightGreen, Colors.green[700]],
+                colors: [Colors.lightGreen, Colors.green],
                 height: 50,
                 width: MediaQuery.of(context).size.width - 40,
                 child: Text("我是测试一"),
@@ -76,15 +76,15 @@ class GradientButton extends StatelessWidget{
     this.height,
     this.borderRadius,
     this.tapCallback,
-    @required this.child,
+    required this.child,
 });
 
-  final List<Color> colors;
-  final double width;
-  final double height;
-  final BorderRadius borderRadius;
+  final List<Color>? colors;
+  final double? width;
+  final double? height;
+  final BorderRadius? borderRadius;
   final Widget child;
-  final GestureTapCallback tapCallback;
+  final GestureTapCallback? tapCallback;
 
 
   @override

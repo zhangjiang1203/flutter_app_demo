@@ -5,7 +5,7 @@
  ```
  Column和Row的实现都是一样的，只是初始值的时候有些变化
 Row({
-    Key key,
+    Key? key,
     //表示子组件在Row所占用的水平空间内对齐方式，如果mainAxisSize值为MainAxisSize.min，
     //则此属性无意义，因为子组件的宽度等于Row的宽度。
     //只有当mainAxisSize的值为MainAxisSize.max时，此属性才有意义
@@ -46,7 +46,7 @@ Flex组件可以沿着水平或垂直方向排列子组件，如果你知道主�
 
 Flex({
   ...
-  @required this.direction, //弹性布局的方向, Row默认为水平方向，Column默认为垂直方向
+  required this.direction, //弹性布局的方向, Row默认为水平方向，Column默认为垂直方向
   List<Widget> children = const <Widget>[],
 })
 设置方向是必须的
@@ -58,7 +58,7 @@ const Expanded({
   //即不会被扩伸占用的空间。如果大于0，
   //所有的Expanded按照其flex的比例来分割主轴的全部空闲空间。
   int flex = 1, 
-  @required Widget child,
+  required Widget child,
 })
 Flex和Expanded配合使用可以实现弹性布局，Expanded中设置flex对应的比例，expanded在flex中所占用的比例
 ```
@@ -117,14 +117,14 @@ Stack({
 })
 
 const Positioned({
-  Key key,
+  Key? key,
   this.left, 
   this.top,
   this.right,
   this.bottom,
   this.width,
   this.height,
-  @required Widget child,
+  required Widget child,
 })
 positioned的定位设置，同一方向的设置不能冲突
 
@@ -135,7 +135,7 @@ stack中使用fit=Stack.expand属性，没有定位的widget会遮盖上面的�
 
 ```
 Align({
-  Key key,
+  Key? key,
   
   this.alignment = Alignment.center,
   

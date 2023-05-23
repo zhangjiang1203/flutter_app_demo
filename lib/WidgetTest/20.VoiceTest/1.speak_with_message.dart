@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'tt_manager.dart';
 
 class ZJSpeakMessageWidget extends StatefulWidget {
-  ZJSpeakMessageWidget({Key key}) : super(key: key);
+  ZJSpeakMessageWidget({Key? key}) : super(key: key);
 
   @override
   State<ZJSpeakMessageWidget> createState() => _ZJSpeakMessageWidgetState();

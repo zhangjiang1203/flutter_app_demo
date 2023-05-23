@@ -15,7 +15,7 @@ class NewRoute extends StatelessWidget {
   /*
   “const TextButton({
   ...
-  @required this.onPressed, //按钮点击回调
+  required this.onPressed, //按钮点击回调
   this.textColor, //按钮文字颜色
   this.disabledTextColor, //按钮禁用时的文字颜色
   this.color, //按钮背景颜色
@@ -25,7 +25,7 @@ class NewRoute extends StatelessWidget {
   this.colorBrightness,//按钮主题，默认是浅色主题
   this.padding, //按钮的填充
   this.shape, //外形
-  @required this.child, //按钮的内容
+  required this.child, //按钮的内容
 })”
   * */
 
@@ -75,10 +75,10 @@ class NewRoute extends StatelessWidget {
             ),
             Builder(
               builder: (context){
-                RenderBox box = context.findRenderObject();
-                final Shader linearGradinet = LinearGradient(colors: [Colors.purple,Colors.blue]).createShader(
-                  Rect.fromLTWH(0, 0, box?.size?.width, box?.size?.height)
-                );
+                RenderObject? box = context.findRenderObject();
+                // final Shader linearGradinet = LinearGradient(colors: [Colors.purple,Colors.blue]).createShader(
+                //   Rect.fromLTWH(0, 0, box?.size?.width, box?.size?.height)
+                // );
                 return Container();
               },
             ),

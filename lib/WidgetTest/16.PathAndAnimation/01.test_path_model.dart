@@ -19,17 +19,17 @@ class TestPathLocalModel extends StatefulWidget {
 class _TestPathLocalModelState extends State<TestPathLocalModel> with TickerProviderStateMixin,MultDataLine {
 
   //设置五角星变换
-  AnimationController _polygonController;
-  Animation _polygonAnimation;
+  late AnimationController _polygonController;
+  late Animation _polygonAnimation;
 
-  AnimationController _bezierController;
-  Animation _bezierAnimation;
+  late AnimationController _bezierController;
+  late Animation _bezierAnimation;
 
-  AnimationController _quXianController;
-  Animation _quXianAnimation;
+  late AnimationController _quXianController;
+  late Animation _quXianAnimation;
 
   var offsetX = 0.0;
-  Timer timer;
+  late Timer timer;
 
   @override
   void initState() {
@@ -590,28 +590,28 @@ class QuXianPainter3 extends CustomPainter {
 
 
 abstract class BasePainter extends CustomPainter{
-  Animation<double> _xAnimation;
-  Animation<double> _yAnimation;
+  Animation<double>? _xAnimation;
+  Animation<double>? _yAnimation;
 
-  set XAnimation(Animation<double> value) {
+  set XAnimation(Animation<double>? value) {
     _xAnimation = value;
   }
 
-  set YAnimation(Animation<double> value) {
+  set YAnimation(Animation<double>? value) {
     _yAnimation = value;
   }
 
-  Animation<double> get YAnimation => _yAnimation;
+  Animation<double>? get YAnimation => _yAnimation;
 
-  Animation<double> get XAnimation => _xAnimation;
+  Animation<double>? get XAnimation => _xAnimation;
 
 }
 
 class WavePainter extends BasePainter {
   int waveCount;
   int crestCount;
-  double waveHeight;
-  List<Color> waveColors;
+  double? waveHeight;
+  List<Color>? waveColors;
   double circleWidth;
   Color circleColor;
   Color circleBackgroundColor;
@@ -643,7 +643,7 @@ class WavePainter extends BasePainter {
 
     if (waveHeight == null) {
       waveHeight = height / 10;
-      height = height + waveHeight;
+      height = height + (waveHeight ?? 0);
     }
 
     if (waveColors == null) {
@@ -654,10 +654,10 @@ class WavePainter extends BasePainter {
     }
 
     Offset center = new Offset(width / 2, height / 2);
-    double xMove = width * XAnimation.value;
+    double xMove = width * (XAnimation?.value ?? 0);
     double yAnimValue = 0.0;
     if (YAnimation != null) {
-      yAnimValue = YAnimation.value;
+      yAnimValue = (YAnimation?.value ?? 0);
     }
     double yMove = height * (1.0 - yAnimValue);
     Offset waveCenter = new Offset(xMove, yMove);
@@ -673,7 +673,7 @@ class WavePainter extends BasePainter {
     List<Path> wavePaths = [];
 
     for (int index = 0; index < waveCount; index++) {
-      double direction = pow(-1.0, index);
+      num direction = pow(-1.0, index);
       Path path = new Path()
         ..moveTo(waveCenter.dx - width, waveCenter.dy)
         ..lineTo(waveCenter.dx - width, center.dy + height / 2)
@@ -682,12 +682,12 @@ class WavePainter extends BasePainter {
 
       for (int i = 0; i < 2; i++) {
         for (int j = 0; j < crestCount; j++) {
-          double a = pow(-1.0, j);
+          num a = pow(-1.0, j);
           path
             ..quadraticBezierTo(
                 waveCenter.dx +
                     width * (1 - i - (1 + 2 * j) / (2 * crestCount)),
-                waveCenter.dy + waveHeight * a * direction,
+                waveCenter.dy + (waveHeight ?? 0) * a * direction,
                 waveCenter.dx +
                     width * (1 - i - (2 + 2 * j) / (2 * crestCount)),
                 waveCenter.dy);
@@ -715,10 +715,10 @@ class WavePainter extends BasePainter {
       ..maskFilter = MaskFilter.blur(BlurStyle.inner, 10.0);
 
     for (int i = 0; i < wavePaths.length; i++) {
-      if (waveColors.length >= wavePaths.length) {
-        paint.color = waveColors[i];
+      if ((waveColors?.length ?? 0) >= wavePaths.length) {
+        paint.color = waveColors![i];
       } else {
-        paint.color = waveColors[0];
+        paint.color = waveColors![0];
       }
       canvas.drawPath(wavePaths[i], paint);
     }
@@ -752,7 +752,7 @@ class WavePainterFactory extends BasePainterFactory {
     return WavePainter(
       waveCount: 1,
       waveColors: [
-        Colors.lightBlueAccent[200],
+        Colors.lightBlueAccent[200]!,
       ],
       textStyle:
       TextStyle(
@@ -778,13 +778,13 @@ class ProgressManager extends StatefulWidget {
 
 class _ProgressManagerState extends State<ProgressManager>
     with TickerProviderStateMixin {
-  AnimationController xController;
-  AnimationController yController;
-  Animation<double> xAnimation;
-  Animation<double> yAnimation;
+  late AnimationController xController;
+  late AnimationController yController;
+  late Animation<double> xAnimation;
+  late Animation<double> yAnimation;
   List<double> _progressList = [];
   double curProgress = 0;
-  BasePainterFactory _factory;
+  late BasePainterFactory _factory;
 
   set painter(BasePainterFactory factory) {
     _factory = factory;

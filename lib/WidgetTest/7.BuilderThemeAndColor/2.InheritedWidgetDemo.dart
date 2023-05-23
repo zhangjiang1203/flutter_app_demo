@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 //定义一个共享状态
 class ShareDataWidget extends InheritedWidget {
   ShareDataWidget({
-    @required this.data,
-    Widget child
+    required this.data,
+    required Widget child
     }):super(child:child);
 
   //子widget中需要的共享数据
   final int data;
 
   //定义一个静态方法，方便子树中的widget调取对象
-  static ShareDataWidget of(BuildContext context) {
+  static ShareDataWidget? of(BuildContext context) {
 
     return context.findAncestorWidgetOfExactType<ShareDataWidget>();
     // return context.inheritFromWidgetOfExactType(ShareDataWidget);
@@ -42,7 +42,7 @@ class ShareDataWidget extends InheritedWidget {
 
 //实现一个子widget
 class TextWidgetDemo extends StatefulWidget {
-  TextWidgetDemo({Key key}) : super(key:key);
+  TextWidgetDemo({Key? key}) : super(key:key);
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -57,7 +57,7 @@ class _TextWidgetState extends State<TextWidgetDemo> {
     // TODO: implement build
     print("开始刷新");
     return Text(
-      ShareDataWidget.of(context).data.toString()
+      ShareDataWidget.of(context)!.data.toString()
     );
   }
 
@@ -76,7 +76,7 @@ class _TextWidgetState extends State<TextWidgetDemo> {
 
 //主要界面展示
 class InheritedWidgetDemo extends StatefulWidget {
-  InheritedWidgetDemo({Key key}) : super(key:key);
+  InheritedWidgetDemo({Key? key}) : super(key:key);
 
   @override
   _InheritedWidgetState createState() => _InheritedWidgetState();

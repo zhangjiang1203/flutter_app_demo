@@ -4,7 +4,7 @@ import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 
 class BottomNavBarDemo extends StatefulWidget {
 
-  BottomNavBarDemo({Key key}): super(key:key);
+  BottomNavBarDemo({Key? key}): super(key:key);
 
   @override
   _BottomNavBarState createState() => new _BottomNavBarState();
@@ -64,10 +64,10 @@ class _BottomNavBarState extends State<BottomNavBarDemo>{
           //均分空间
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            IconButton(icon: Icon(Icons.home)),
+            IconButton(icon: Icon(Icons.home), onPressed: () {  },),
             //留出打洞的位置，可以根据下面floatingActionButton的位置设置这个SizedBox
             SizedBox(),
-            IconButton(icon: Icon(Icons.settings),)
+            IconButton(icon: Icon(Icons.settings), onPressed: () {  },)
           ],
         ),
       ),
@@ -117,7 +117,7 @@ class _BottomNavBarState extends State<BottomNavBarDemo>{
 //定义Drawer
 class MyDrawer extends StatelessWidget {
 
-  const MyDrawer({Key key}) : super(key:key);
+  const MyDrawer({Key? key}) : super(key:key);
 
   @override
   Widget build(BuildContext context) {

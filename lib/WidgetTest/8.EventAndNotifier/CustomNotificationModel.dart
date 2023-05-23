@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class CustomNotificationModel extends StatefulWidget {
-  CustomNotificationModel({Key key}) : super(key: key);
+  CustomNotificationModel({Key? key}) : super(key: key);
 
   @override
   _CustomNotificationModelState createState() =>

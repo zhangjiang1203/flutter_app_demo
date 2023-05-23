@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 
 class GestureDetectorModel extends StatefulWidget {
-  GestureDetectorModel({Key key,}) : super(key: key);
+  GestureDetectorModel({Key? key,}) : super(key: key);
 //  final String title;
 
   @override

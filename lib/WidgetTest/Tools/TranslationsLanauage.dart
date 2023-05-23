@@ -39,17 +39,17 @@ class TranslationsLanguage {
     _localizedValues = null;
   }
 
-  Locale locale;
-  static Map<dynamic,dynamic> _localizedValues;
+  late Locale locale;
+  static Map<dynamic,dynamic>? _localizedValues;
 
   //便利构造方法
   static TranslationsLanguage of(BuildContext context) {
-    return Localizations.of<TranslationsLanguage>(context,TranslationsLanguage);
+    return Localizations.of<TranslationsLanguage>(context,TranslationsLanguage)!;
   }
 
   String text(String key){
     try{
-      String value = _localizedValues[key];
+      String value = _localizedValues![key];
       if(value == null || value.isEmpty){
         return key;
       }else{
@@ -98,9 +98,9 @@ class TranslationsDelegate extends LocalizationsDelegate<TranslationsLanguage> {
 
 /// Delegate类的实现，每次选择一种新的语言时，强制初始化一个新的Translations类
 class SpecificLocalizationDelete extends LocalizationsDelegate<TranslationsLanguage> {
-  const SpecificLocalizationDelete(this.overriddenLocal);
+  const SpecificLocalizationDelete(Locale locale, {this.overriddenLocal});
   ///当前的语言
-  final Locale overriddenLocal;
+  final Locale? overriddenLocal;
   @override
   bool isSupported(Locale locale) {
     // TODO: implement isSupported
@@ -110,7 +110,7 @@ class SpecificLocalizationDelete extends LocalizationsDelegate<TranslationsLangu
   @override
   Future<TranslationsLanguage> load(Locale locale) {
     // TODO: implement load
-    return TranslationsLanguage.load(overriddenLocal);
+    return TranslationsLanguage.load(overriddenLocal!);
   }
 
   @override

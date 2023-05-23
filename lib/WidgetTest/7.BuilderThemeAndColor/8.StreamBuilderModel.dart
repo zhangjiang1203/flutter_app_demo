@@ -28,7 +28,7 @@ class StreamBuilderDemo extends StatelessWidget {
                 case ConnectionState.waiting:
                   return Text("请求中");
               }
-              return null;
+              return Text("执行");
         }),
       ),
     );

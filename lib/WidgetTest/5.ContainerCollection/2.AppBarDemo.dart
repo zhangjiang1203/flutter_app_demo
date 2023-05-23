@@ -4,7 +4,7 @@ import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 
 class AppBarDemo extends StatefulWidget {
 
-  AppBarDemo({Key key}): super(key:key);
+  AppBarDemo({Key? key}): super(key:key);
 
   @override
   _AppBarDemoState createState() => new _AppBarDemoState();
@@ -14,7 +14,7 @@ class _AppBarDemoState extends State<AppBarDemo> with SingleTickerProviderStateM
 
   int _selectedIndex = 0;
   //定义一个视图VC
-  TabController _tabVC;
+  late TabController _tabVC;
   List body = ["新闻","历史","图片"];
 
   @override

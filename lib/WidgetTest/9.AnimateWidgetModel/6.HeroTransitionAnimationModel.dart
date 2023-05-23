@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/WidgetTest/6.ScrollableDemo/4.SliverGridViewDemo.dart';
 
 class HeroTransitionAnimationModel extends StatefulWidget {
-  HeroTransitionAnimationModel({Key key}) : super(key: key);
+  HeroTransitionAnimationModel({Key? key}) : super(key: key);
 
   @override
   _HeroTransitionAnimationModelState createState() =>
@@ -37,7 +37,7 @@ class _HeroTransitionAnimationModelState
                   ),
                 ),
                 onTap: (){
-                  Navigator.push(context, PageRouteBuilder(pageBuilder: (BuildContext context,Animation animation,Animation secondaryAnimation){
+                  Navigator.push(context, PageRouteBuilder(pageBuilder: (BuildContext context,Animation<double> animation,Animation secondaryAnimation){
                     return new FadeTransition(
                       opacity: animation,
                       child: SliverGridViewDemo(),
@@ -54,7 +54,7 @@ class _HeroTransitionAnimationModelState
                   ),
                 ),
                 onTap: (){
-                  Navigator.push(context, PageRouteBuilder(pageBuilder: (BuildContext context,Animation animation,Animation secondaryAnimation){
+                  Navigator.push(context, PageRouteBuilder(pageBuilder: (BuildContext context,Animation<double> animation,Animation secondaryAnimation){
                     return new FadeTransition(
                       opacity: animation,
                       child: Scaffold(

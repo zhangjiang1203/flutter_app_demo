@@ -17,7 +17,7 @@ class PathPaintTest extends StatefulWidget {
 
 class _PathPaintTestState extends State<PathPaintTest> with SingleTickerProviderStateMixin {
 
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -48,7 +48,7 @@ class _PathPaintTestState extends State<PathPaintTest> with SingleTickerProvider
 }
 
 class MyPainter9 extends CustomPainter {
-  MyPainter9({this.process}):super(repaint: process);
+  MyPainter9({required this.process}):super(repaint: process);
 
   final Animation<double> process;
 
@@ -475,7 +475,7 @@ class MyPainter9 extends CustomPainter {
     // 下面通过pm.length * 0.5表示在路径长度50%的点的信息
     PathMetrics metric = path1.computeMetrics();
     metric.forEach((element) {
-      Tangent tangent = element.getTangentForOffset(element.length * process.value);
+      Tangent tangent = element.getTangentForOffset(element.length * process.value)!;
       canvas.drawCircle(tangent.position , 5, paint..color = Colors.red..style = PaintingStyle.fill);
       // print("当前的位置===${tangent.position}，速度==${tangent.vector},角度==${tangent.angle}");
     });

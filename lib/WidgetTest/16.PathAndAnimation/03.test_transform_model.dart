@@ -165,7 +165,7 @@ class _TestTransformModelState extends State<TestTransformModel> with MultDataLi
 }
 
 class FlipUpMultiDemo extends StatefulWidget {
-  FlipUpMultiDemo({Key key,this.children}):super(key: key);
+  FlipUpMultiDemo({Key? key,required this.children}):super(key: key);
 
   List<Widget> children;
 
@@ -175,15 +175,15 @@ class FlipUpMultiDemo extends StatefulWidget {
 
 class _FlipUpMultiDemoState extends State<FlipUpMultiDemo> with TickerProviderStateMixin{
 
-  AnimationController _animationController;
-  Animation _animation1;
-  Animation _animation2;
+  late AnimationController _animationController;
+  late Animation _animation1;
+  late Animation _animation2;
 
-  AnimationController _reverseAnimationController;
-  Animation _reverseAnimation1;
-  Animation _reverseAnimation2;
+  late AnimationController _reverseAnimationController;
+  late Animation _reverseAnimation1;
+  late Animation _reverseAnimation2;
 
-  Timer _timer;
+  late Timer _timer;
 
   double rotateX = 0;
   double reverseRotateX = - pi/2.0;

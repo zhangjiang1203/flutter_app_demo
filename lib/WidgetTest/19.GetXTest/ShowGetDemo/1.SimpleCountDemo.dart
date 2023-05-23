@@ -47,7 +47,7 @@ class CountController extends GetxController{
 }
 
 class SimpleCountDemo extends StatelessWidget {
-  const SimpleCountDemo({Key key}) : super(key: key);
+  const SimpleCountDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

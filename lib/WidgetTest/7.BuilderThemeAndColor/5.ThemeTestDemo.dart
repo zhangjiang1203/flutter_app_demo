@@ -12,7 +12,7 @@ class ThemeTestDemo extends StatefulWidget {
 
 class _ThemeTestState extends State<ThemeTestDemo> {
 
-  Color _themeColor = Colors.teal;
+  MaterialColor _themeColor = Colors.teal;
 
   @override
   Widget build(BuildContext context) {

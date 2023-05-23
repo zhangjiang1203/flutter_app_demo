@@ -23,7 +23,7 @@ class _TestGlobalKeyModelState extends State<TestGlobalKeyModel> {
   }
 
   void _tapOnContainer(GlobalKey key){
-    RenderBox _renderBox = key.currentContext.findRenderObject();
+    RenderBox _renderBox = key.currentContext?.findRenderObject() as RenderBox;
     Offset position = _renderBox.localToGlobal(Offset.zero);
     //获取当前的widget的大小
     print("当前的大小 ====${_renderBox.size},position=$position");// _renderBox.size;

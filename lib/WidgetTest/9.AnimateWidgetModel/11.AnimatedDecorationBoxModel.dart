@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class AnimatedDecorationBoxModel extends StatefulWidget {
-  AnimatedDecorationBoxModel({Key key}):super(key:key);
+  AnimatedDecorationBoxModel({Key? key}):super(key:key);
   
   @override
   _AnimatedDecorationBoxState createState()=> _AnimatedDecorationBoxState();
@@ -50,9 +50,9 @@ class _AnimatedDecorationBoxState extends State<AnimatedDecorationBoxModel> {
 //自定义过渡组件
 class CustomAnimatedSwitcherBox extends StatefulWidget {
   CustomAnimatedSwitcherBox({
-    Key key,
-    @required this.decoration,
-    @required this.duration,
+    Key? key,
+    required this.decoration,
+    required this.duration,
     this.reverseDuration,
     this.curve = Curves.linear,
     this.child,
@@ -60,9 +60,9 @@ class CustomAnimatedSwitcherBox extends StatefulWidget {
 
   //添加对应的属性
   final Duration duration;
-  final Duration reverseDuration;
+  final Duration? reverseDuration;
   final Curve curve;
-  final Widget child;
+  final Widget? child;
   final BoxDecoration decoration;
 
   @override
@@ -75,12 +75,12 @@ class _CustomAnimatedSwitcherBoxState
 
   @protected
   AnimationController get controller => _controller;
-  AnimationController _controller;
+  late AnimationController _controller;
 
   Animation<double> get animation => _animation;
-  Animation<double> _animation;
+  late Animation<double> _animation;
 
-  DecorationTween _decorationTween;
+  late DecorationTween _decorationTween;
 
 
   @override
@@ -95,14 +95,8 @@ class _CustomAnimatedSwitcherBoxState
 
   //更对对应的widget
   void _updateCurve(){
-    if (widget.curve != null){
-      _animation = CurvedAnimation(parent: _controller,curve: widget.curve);
-    }else{
-      _animation = _controller;
-    }
+    _animation = CurvedAnimation(parent: _controller,curve: widget.curve);
   }
-
-
 
   @override
   void didUpdateWidget(CustomAnimatedSwitcherBox oldWidget) {
@@ -110,7 +104,7 @@ class _CustomAnimatedSwitcherBoxState
     super.didUpdateWidget(oldWidget);
     print("开始执行");
     //检查新旧child是否发生变化(key或类型同时相等则返回true，认为没变化)
-    if (Widget.canUpdate(widget.child, oldWidget.child)) {
+    if (Widget.canUpdate(widget.child!, oldWidget.child!)) {
       print("widget发生变化");
       //开始执行动画
       _updateCurve();
@@ -142,7 +136,7 @@ class _CustomAnimatedSwitcherBoxState
     return AnimatedBuilder(
       animation: _animation,
       child: widget.child,
-      builder: (BuildContext context, Widget child){
+      builder: (BuildContext context, Widget? child){
         return DecoratedBox(
           decoration: _decorationTween.animate(_animation).value,
           child: child,

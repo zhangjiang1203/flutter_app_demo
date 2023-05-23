@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class TextFocusModel extends StatefulWidget {
 
-  TextFocusModel({Key key}) : super(key:key);
+  TextFocusModel({Key? key}) : super(key:key);
 
   @override
   _TextFocusState createState() => new _TextFocusState();
@@ -14,7 +14,7 @@ class _TextFocusState extends State<TextFocusModel> {
   FocusNode node1 = new FocusNode();
   FocusNode node2 = new FocusNode();
   FocusNode node3 = new FocusNode();
-  FocusScopeNode scopeNode ;
+  late FocusScopeNode scopeNode ;
   //是否在编辑
   bool isEditing = false;
 
@@ -126,7 +126,7 @@ class _TextFocusState extends State<TextFocusModel> {
               decoration: BoxDecoration(
                 border: Border(
                   //设置一个border 宽度1像素
-                  bottom: BorderSide(color: isEditing ? Colors.blue : Colors.grey[200],width: 1)
+                  bottom: BorderSide(color: isEditing ? Colors.blue : Colors.grey[200]!,width: 1)
                 ),
 
               ),

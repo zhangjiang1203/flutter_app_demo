@@ -10,7 +10,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 class HttpClientModelTest extends StatefulWidget {
-  HttpClientModelTest({Key key}) : super(key: key);
+  HttpClientModelTest({Key? key}) : super(key: key);
 
   @override
   _HttpClientModelTest createState() => _HttpClientModelTest();

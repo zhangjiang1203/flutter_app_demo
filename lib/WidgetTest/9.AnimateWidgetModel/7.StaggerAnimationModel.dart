@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class StaggerAnimationModel extends StatefulWidget {
-  StaggerAnimationModel({Key key}) : super(key: key);
+  StaggerAnimationModel({Key? key}) : super(key: key);
 
   @override
   _StaggerAnimationModelState createState() => _StaggerAnimationModelState();
@@ -15,7 +15,7 @@ class StaggerAnimationModel extends StatefulWidget {
 
 class _StaggerAnimationModelState extends State<StaggerAnimationModel> with TickerProviderStateMixin {
 
-  AnimationController animationController;
+  late AnimationController animationController;
 
   @override
   void initState() {
@@ -72,7 +72,7 @@ class _StaggerAnimationModelState extends State<StaggerAnimationModel> with Tick
 
 //定义对应的交织动画
 class StaggerAnimatedTest extends StatelessWidget {
-  StaggerAnimatedTest({Key key,@required this.controller}):super(key:key){
+  StaggerAnimatedTest({Key? key,required this.controller}):super(key:key){
     heightAnimation = Tween(begin: 0.0,end: 300.0).animate(CurvedAnimation(
       parent: controller,
       //间隔，前60%的动画
@@ -96,11 +96,11 @@ class StaggerAnimatedTest extends StatelessWidget {
   }
 
   final AnimationController controller;
-  Animation<double> heightAnimation;
-  Animation<Color> colorAnimation;
-  Animation<EdgeInsets> insetAnimation;
+  late Animation<double?> heightAnimation;
+  late Animation<Color?> colorAnimation;
+  late Animation<EdgeInsets?> insetAnimation;
 
-  Widget _buildAnimation(BuildContext context,Widget child) {
+  Widget _buildAnimation(BuildContext context,Widget? child) {
     return Container(
       child: Container(
         height: heightAnimation.value,

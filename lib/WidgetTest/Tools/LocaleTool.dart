@@ -14,10 +14,10 @@ class LocaleTool  {
   Iterable<Locale> supportLocales() => supportLangs.map<Locale>((lang)=> new Locale(lang,''));
 
   //改变语言时的回调
-  LocaleChangeCallBack onLocaleChangeed;
+  late LocaleChangeCallBack onLocaleChangeed;
 
-  Locale locale;
-  String languageCode;
+  late Locale locale;
+  late String languageCode;
 
   static final LocaleTool _localTool = new LocaleTool._internal();
 
@@ -40,7 +40,7 @@ class LocaleTool  {
   Future<String> getCurrentUserLanguage() async {
     print('我的语言');
     SharedPreferences preferences = await SharedPreferences.getInstance();
-    return preferences.getString("user_current_language");
+    return preferences.getString("user_current_language")!;
   }
 
   void saveUserLanguage(String language) async{

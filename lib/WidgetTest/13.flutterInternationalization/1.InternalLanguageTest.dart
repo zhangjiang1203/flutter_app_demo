@@ -9,7 +9,7 @@ import 'package:flutter_app_demo/WidgetTest/Tools/LocaleTool.dart';
 import '../Tools/TranslationsLanauage.dart';
 
 class InternalLanguageTest extends StatefulWidget {
-  InternalLanguageTest({Key key}) : super(key: key);
+  InternalLanguageTest({Key? key}) : super(key: key);
 
   @override
   _InternalLanguageTest createState() => _InternalLanguageTest();

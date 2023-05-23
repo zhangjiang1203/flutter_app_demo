@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class ScrollTableModel extends StatefulWidget {
-  ScrollTableModel({Key key}) : super(key: key);
+  ScrollTableModel({Key? key}) : super(key: key);
   @override
   _ScrollTableModel createState() => _ScrollTableModel();
 }

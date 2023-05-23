@@ -11,7 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:web_socket_channel/io.dart';
 
 class WebSocketConnectModel extends StatefulWidget {
-  WebSocketConnectModel({Key key}) : super(key: key);
+  WebSocketConnectModel({Key? key}) : super(key: key);
 
   @override
   _WebSocketConnectModel createState() => _WebSocketConnectModel();
@@ -19,7 +19,7 @@ class WebSocketConnectModel extends StatefulWidget {
 
 class _WebSocketConnectModel extends State<WebSocketConnectModel> {
   TextEditingController editingController = new TextEditingController();
-  IOWebSocketChannel channel;
+  late IOWebSocketChannel channel;
   String _text = "";
   String _response = "";
 
@@ -53,7 +53,7 @@ class _WebSocketConnectModel extends State<WebSocketConnectModel> {
                     if(snapshot.hasError){
                       _text = "网络不通";
                     }else if (snapshot.hasData){
-                      _text = 'echo:' + snapshot.data;
+                      _text = 'echo:' + (snapshot.data! as String);
                     }
                     return Padding(
                       padding: EdgeInsets.symmetric(vertical: 10),
@@ -83,7 +83,7 @@ class _WebSocketConnectModel extends State<WebSocketConnectModel> {
   void _sendMessage() {
     if(editingController.text.isNotEmpty) {
       //发送数据到服务器
-      // channel.sink.add(editingController.text);
+      channel.sink.add(editingController.text);
     }
   }
 

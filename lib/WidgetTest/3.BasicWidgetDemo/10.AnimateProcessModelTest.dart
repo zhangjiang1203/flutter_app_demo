@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 class AnimateProcessModelTest extends StatefulWidget {
-  AnimateProcessModelTest({Key key}) : super(key:key);
+  AnimateProcessModelTest({Key? key}) : super(key:key);
 
   @override
   _AnimateProcessModelState createState() => new _AnimateProcessModelState();
@@ -12,7 +12,7 @@ class AnimateProcessModelTest extends StatefulWidget {
 //这个class中添加了 SingleTickerProviderStateMixin这个协议
 class _AnimateProcessModelState extends State<AnimateProcessModelTest> with SingleTickerProviderStateMixin{
 
-  AnimationController _animationController;
+  late AnimationController _animationController;
 
   @override
   void initState() {

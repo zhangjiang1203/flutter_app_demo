@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 
 class ProcessModelTest extends StatefulWidget {
-  ProcessModelTest({Key key}) : super(key:key);
+  ProcessModelTest({Key? key}) : super(key:key);
 
   @override
   _ProcessModelState createState() => new _ProcessModelState();

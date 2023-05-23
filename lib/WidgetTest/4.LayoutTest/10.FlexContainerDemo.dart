@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 
 class FlexContainerDemo extends StatefulWidget{
 
-  FlexContainerDemo({Key key}):super(key:key);
+  FlexContainerDemo({Key? key}):super(key:key);
 
   @override
   _FlexContainerState createState() => _FlexContainerState();

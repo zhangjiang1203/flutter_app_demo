@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 /*
-* 按照惯例，widget的构造函数参数应使用命名参数，命名参数中的必要参数要添加@required标注，
+* 按照惯例，widget的构造函数参数应使用命名参数，命名参数中的必要参数要添加required标注，
 * 这样有利于静态代码分析器进行检查。另外，在继承widget时，第一个参数通常应该是Key，
 * 另外，如果Widget需要接收子Widget，
 * 那么child或children参数通常应被放在参数列表的最后。
@@ -10,8 +10,8 @@ import 'package:flutter/material.dart';
 
 class Echo extends StatelessWidget {
   const Echo({
-    Key key,
-    @required this.text,
+    Key? key,
+    required this.text,
     this.backgroundColor:Colors.blue,
 
   }) : super (key:key);
@@ -39,7 +39,7 @@ class Echo extends StatelessWidget {
 
 class ZJCounterWidget extends StatefulWidget {
   const ZJCounterWidget({
-   Key key,
+   Key? key,
    this.initValue = 0,
 });
 
@@ -50,7 +50,7 @@ class ZJCounterWidget extends StatefulWidget {
 }
 
 class _ZJCounterWidgetState extends State<ZJCounterWidget> {
-  int _counter;
+  late int _counter;
   @override
   void initState() {
     // TODO: implement initState

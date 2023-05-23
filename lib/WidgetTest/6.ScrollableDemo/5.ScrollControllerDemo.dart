@@ -4,7 +4,7 @@ import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 
 class ScrollControllerDemo extends StatefulWidget {
 
-  ScrollControllerDemo({Key key}):super(key:key);
+  ScrollControllerDemo({Key? key}):super(key:key);
 
   @override
   State<StatefulWidget> createState() {

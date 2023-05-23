@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class AdvanceAnimatedModel extends StatefulWidget {
-  AdvanceAnimatedModel({Key key}) : super(key: key);
+  AdvanceAnimatedModel({Key? key}) : super(key: key);
   @override
   _AdvanceAnimatedModelState createState() => _AdvanceAnimatedModelState();
 }
@@ -111,12 +111,12 @@ class _AdvanceAnimatedModelState extends State<AdvanceAnimatedModel> {
 class MySlideTransition extends AnimatedWidget {
 
   MySlideTransition({
-    Key key,
+    Key? key,
     this.child,
-    @required Animation<double> position,
+    required Animation<double> position,
     this.transformHitTests = true,
     this.direction = AxisDirection.down
-  }):assert(position != null),super(key:key,listenable:position){
+  }):super(key:key,listenable:position){
     switch(direction){
       case AxisDirection.down:
         tween = Tween(begin: Offset(0,-1),end: Offset(0,0));
@@ -133,12 +133,12 @@ class MySlideTransition extends AnimatedWidget {
     }
   }
 
-  Animation<double> get position => listenable;
+  Animation<double> get position => listenable as Animation<double>;
   final bool transformHitTests;
-  final Widget child;
+  final Widget? child;
   final AxisDirection direction;
   //内部处理tween
-  Tween<Offset> tween;
+  late Tween<Offset> tween;
 
   @override
   Widget build(BuildContext context) {

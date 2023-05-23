@@ -41,7 +41,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AvoidContextDemo extends StatelessWidget {
-  const AvoidContextDemo({Key key}) : super(key: key);
+  const AvoidContextDemo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

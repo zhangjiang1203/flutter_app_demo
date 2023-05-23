@@ -9,7 +9,7 @@ import 'package:flutter_app_demo/WidgetTest/9.AnimateWidgetModel/11.AnimatedDeco
 import 'package:flutter_app_demo/WidgetTest/9.AnimateWidgetModel/12.CustomImpcilityAnimationModel.dart';
 
 class PresetAnimationModel extends StatefulWidget {
-  PresetAnimationModel({Key key}) : super(key: key);
+  PresetAnimationModel({Key? key}) : super(key: key);
 
   @override
   _PresetAnimationModelState createState() => _PresetAnimationModelState();

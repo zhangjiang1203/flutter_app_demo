@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
 //await必须用在async函数中，Future函数的返回值都是Future类型，使用链式函数进行调用，then方法防治进入回调地狱
 
 class TestModel extends StatefulWidget {
-  TestModel({Key key,this.title}) : super(key:key);
+  TestModel({Key? key,required this.title}) : super(key:key);
 
   final String title;
   //创建状态

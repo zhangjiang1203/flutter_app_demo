@@ -3,7 +3,7 @@ import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 import 'package:flutter_app_demo/WidgetTest/Tools/ZJColorsTool.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 class GridViewDemo extends StatefulWidget {
-  GridViewDemo({Key key}) : super(key:key);
+  GridViewDemo({Key? key}) : super(key:key);
 
   @override
   _GridViewState createState() => _GridViewState();

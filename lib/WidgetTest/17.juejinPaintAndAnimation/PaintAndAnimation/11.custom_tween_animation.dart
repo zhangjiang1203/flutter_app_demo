@@ -15,7 +15,7 @@ class CustomTweenAnimationWidget extends StatefulWidget {
 
 class _CustomTweenAnimationWidgetState extends State<CustomTweenAnimationWidget> with SingleTickerProviderStateMixin {
 
-  AnimationController _controller;
+  late AnimationController _controller;
 
   @override
   void initState() {
@@ -61,7 +61,7 @@ class MyPainter13 extends CustomPainter{
   final Animation<double> progress;
   // final ColorTween _colorTween = ColorTween(begin: Colors.blue,end: Colors.red);
   // final Tween<double> _angleAnim = Tween(begin: 10.0,end: 50.0);
-  final ColorDoubleTween colorDoubleTween = ColorDoubleTween(begin:ColorDouble(color: Colors.blue,value: 10),end:ColorDouble(color: Colors.red,value: 45));
+  final ColorDoubleTween colorDoubleTween = ColorDoubleTween(ColorDouble(color: Colors.blue,value: 10),ColorDouble(color: Colors.red,value: 45));
   Paint _paint = Paint();
 
   @override
@@ -88,7 +88,7 @@ class MyPainter13 extends CustomPainter{
 //定义一个动画变换的对象
 class ColorDouble {
   final Color color;
-  final double value;
+  final num value;
 
   ColorDouble({this.color = Colors.blue, this.value = 0});
 }
@@ -101,12 +101,12 @@ class ColorDouble {
 //自定义tween
 class ColorDoubleTween extends Tween<ColorDouble> {
 
-  ColorDoubleTween({ColorDouble begin,ColorDouble end}):super(begin: begin,end:end);
+  ColorDoubleTween(ColorDouble begin,ColorDouble end):super(begin: begin,end:end);
 
   @override
   ColorDouble lerp(double t) {
     // TODO: implement lerp
-    return ColorDouble(color: Color.lerp(begin.color, end.color, t),value: begin.value + (end.value - begin.value) *t);
+    return ColorDouble(color: Color.lerp(begin?.color, end?.color, t)!,value: (begin?.value ?? 0 + ((end!.value ?? 0) - (begin!.value ?? 0) * t)));
   }
 
 }

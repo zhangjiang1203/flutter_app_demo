@@ -7,7 +7,7 @@
 import 'package:flutter/material.dart';
 
 class CustomImpcilityAnimationModel extends StatefulWidget {
-  CustomImpcilityAnimationModel({Key key}) : super(key: key);
+  CustomImpcilityAnimationModel({Key? key}) : super(key: key);
 
   @override
   _CustomImpcilityAnimationModelState createState() =>
@@ -49,12 +49,12 @@ class _CustomImpcilityAnimationModelState
 class ShowAnimationDecorationBox extends ImplicitlyAnimatedWidget {
 
   ShowAnimationDecorationBox({
-    Key key,
-    @required this.decoration,
-    this.child,
+    Key? key,
+    required this.decoration,
+    required this.child,
     Curve curve = Curves.linear,
-    @required Duration duration,
-    Duration reverseDuration,
+    required Duration duration,
+    Duration? reverseDuration,
   }):super(key:key,duration:duration,curve:curve);
 
   final Widget child;
@@ -68,7 +68,7 @@ class ShowAnimationDecorationBox extends ImplicitlyAnimatedWidget {
 class _ShowAnimationDecorationState extends AnimatedWidgetBaseState<ShowAnimationDecorationBox> {
 
   //定义一个decoration
-  DecorationTween _decorationTween ;
+  late DecorationTween _decorationTween ;
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -81,6 +81,6 @@ class _ShowAnimationDecorationState extends AnimatedWidgetBaseState<ShowAnimatio
   @override
   void forEachTween(visitor) {
     //每一帧都会重新刷新
-    _decorationTween = visitor(_decorationTween,widget.decoration,(value)=> DecorationTween(begin: value));
+    _decorationTween = visitor(_decorationTween,widget.decoration,(value)=> DecorationTween(begin: value)) as DecorationTween;
   }
 }

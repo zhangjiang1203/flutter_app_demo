@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 
 class FileBasicOperationModel extends StatefulWidget {
-  FileBasicOperationModel({Key key, this.title}) : super(key: key);
+  FileBasicOperationModel({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -18,13 +18,13 @@ class FileBasicOperationModel extends StatefulWidget {
 }
 
 class _FileBasicOperationModel extends State<FileBasicOperationModel> {
-  Future<Directory> _tempDirectory;
-  Future<Directory> _appSupportDirectory;
-  Future<Directory> _appLibraryDirectory;
-  Future<Directory> _appDocumentsDirectory;
-  Future<Directory> _externalDocumentsDirectory;
-  Future<List<Directory>> _externalStorageDirectories;
-  Future<List<Directory>> _externalCacheDirectories;
+  late Future<Directory> _tempDirectory;
+  late Future<Directory> _appSupportDirectory;
+  late Future<Directory> _appLibraryDirectory;
+  late Future<Directory> _appDocumentsDirectory;
+  late Future<Directory> _externalDocumentsDirectory;
+  late Future<List<Directory>> _externalStorageDirectories;
+  late Future<List<Directory>> _externalCacheDirectories;
 
   void _requestTempDirectory() {
     setState(() {
@@ -39,7 +39,7 @@ class _FileBasicOperationModel extends State<FileBasicOperationModel> {
       if (snapshot.hasError) {
         text = Text('Error: ${snapshot.error}');
       } else if (snapshot.hasData) {
-        text = Text('path: ${snapshot.data.path}');
+        text = Text('path: ${snapshot.data?.path}');
       } else {
         text = const Text('path unavailable');
       }
@@ -55,7 +55,7 @@ class _FileBasicOperationModel extends State<FileBasicOperationModel> {
         text = Text('Error: ${snapshot.error}');
       } else if (snapshot.hasData) {
         final String combined =
-        snapshot.data.map((Directory d) => d.path).join(', ');
+        snapshot.data!.map((Directory d) => d.path).join(', ');
         text = Text('paths: $combined');
       } else {
         text = const Text('path unavailable');
@@ -84,7 +84,7 @@ class _FileBasicOperationModel extends State<FileBasicOperationModel> {
 
   void _requestExternalStorageDirectory() {
     setState(() {
-      _externalDocumentsDirectory = getExternalStorageDirectory();
+      _externalDocumentsDirectory = getExternalStorageDirectory() as Future<Directory> ;
     });
   }
 
@@ -179,6 +179,7 @@ class _FileBasicOperationModel extends State<FileBasicOperationModel> {
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: TextButton(
+                  onPressed: () {  },
                   child: Text(
                       '${Platform.isIOS ? "External directories are unavailable " "on iOS" : "Get External Cache Directories"}'),
 //                  onPressed:

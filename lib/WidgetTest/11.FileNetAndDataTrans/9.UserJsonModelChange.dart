@@ -19,9 +19,9 @@ class User{
 
   String name;
   String email;
-  int age;
-  String address;
-  double height;
+  int? age;
+  String? address;
+  double? height;
 
   factory User.fromJson(Map<String,dynamic> json) => _$UserFromJson(json);
 

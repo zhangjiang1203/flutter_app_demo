@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_demo/WidgetTest/Tools/ZJTextStyleTool.dart';
 
 class SliverGridViewDemo extends StatefulWidget {
-  SliverGridViewDemo({Key key}):super(key:key);
+  SliverGridViewDemo({Key? key}):super(key:key);
 
   _SliverGridState createState() => new _SliverGridState();
 }

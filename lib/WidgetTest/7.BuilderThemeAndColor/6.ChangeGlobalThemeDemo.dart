@@ -5,7 +5,20 @@ import 'package:provider/provider.dart';
 class AppInfoProvider with ChangeNotifier {
   Color _themeColor = Colors.teal;
 
-  Color get themeColor => _themeColor;
+  MaterialColor get themeColor{
+    return MaterialColor(_themeColor.value,{
+      50: Color(0xFFE3F2FD),
+      100: Color(0xFFBBDEFB),
+      200: Color(0xFF90CAF9),
+      300: Color(0xFF64B5F6),
+      400: Color(0xFF42A5F5),
+      500: Color(0xFF2196F3),
+      600: Color(0xFF1E88E5),
+      700: Color(0xFF1976D2),
+      800: Color(0xFF1565C0),
+      900: Color(0xFF0D47A1),
+    });
+  }
 
   setTheme(Color themeColor) {
     _themeColor = themeColor;
@@ -16,25 +29,39 @@ class AppInfoProvider with ChangeNotifier {
 //使用定义的迷你Provider
 class ZJThemeModel extends ChangeNotifier {
 
-  ZJThemeModel({Key key}) ;
+  ZJThemeModel({Key? key}) ;
 
   Color _themeColor = Colors.teal;
 
-  Color get themeColor => _themeColor == null ? Colors.teal : _themeColor;
+  MaterialColor get themeColor{
+    // String value = _themeColor.value.toRadixString(16).padLeft(8, '0');
+
+    return MaterialColor(_themeColor.value,{
+    50: Color(0xFFE3F2FD),
+    100: Color(0xFFBBDEFB),
+    200: Color(0xFF90CAF9),
+    300: Color(0xFF64B5F6),
+    400: Color(0xFF42A5F5),
+    500: Color(0xFF2196F3),
+    600: Color(0xFF1E88E5),
+    700: Color(0xFF1976D2),
+    800: Color(0xFF1565C0),
+    900: Color(0xFF0D47A1),
+    });
+  }
 
   //修改对应的theme
   void changeTheme(Color theme) {
     _themeColor = theme;
     notifyListeners();
   }
-
 }
 
 
 
 //修改theme的具体实现
 class ChangeGlobalThemeDemo extends StatefulWidget {
-  ChangeGlobalThemeDemo({Key key}) : super(key:key);
+  ChangeGlobalThemeDemo({Key? key}) : super(key:key);
 
   @override
   _ChangeGlobalThemeState createState()=> _ChangeGlobalThemeState();
@@ -44,7 +71,7 @@ class ChangeGlobalThemeDemo extends StatefulWidget {
 class _ChangeGlobalThemeState extends State<ChangeGlobalThemeDemo> {
 
   //定义主题颜色
-  Map<String, Color> _themeColors;
+  late Map<String, Color> _themeColors;
 
   @override
   void initState() {
@@ -96,8 +123,9 @@ class _ChangeGlobalThemeState extends State<ChangeGlobalThemeDemo> {
                         onPressed: (){
                           //修改展示的字体
                           //TODO:保存修改的主题
-                          Provider.of<AppInfoProvider>(context).setTheme(_themeColors[keyStr]);
-                        }
+                          Provider.of<AppInfoProvider>(context).setTheme(_themeColors[keyStr]!);
+                        },
+                      child: Text("测试展示的数据"),
                     ),
                   ],
                 ),

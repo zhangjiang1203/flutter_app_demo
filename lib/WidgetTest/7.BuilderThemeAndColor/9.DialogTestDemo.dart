@@ -18,7 +18,7 @@ class _DialogTestModel extends State<DialogTestModel> {
   final _scaffoldkey = GlobalKey<ScaffoldState>();
 
   /// alertDialog示例
-  Future<int> ShowMyDialogOne() {
+  Future<int?> ShowMyDialogOne() {
     //showDialog()是Material组件库提供的一个用于弹出Material风格对话框的方法
     //该方法返回一个Future，它正是用于接收对话框的返回值：
     return  showDialog(
@@ -48,7 +48,7 @@ class _DialogTestModel extends State<DialogTestModel> {
 
 
   ///simpleDialog示例
-  Future<int> showSimpleDialogView() async {
+  Future<int?> showSimpleDialogView() async {
     return showDialog(
       context: context,
       builder: (context){
@@ -85,7 +85,7 @@ class _DialogTestModel extends State<DialogTestModel> {
   }
 
   /// dialog示例
-  Future<int> ShowDialogView() {
+  Future<int?> ShowDialogView() {
     return showDialog(
       context: context,
       builder: (context){
@@ -117,7 +117,7 @@ class _DialogTestModel extends State<DialogTestModel> {
   }
 
   //自定义的dialog
-  Future<int> showUnconstrainedBoxView() {
+  Future<int?> showUnconstrainedBoxView() {
     return showDialog(
       context: context,
       builder: (context){
@@ -159,10 +159,10 @@ class _DialogTestModel extends State<DialogTestModel> {
   }
 
   //自定义的widget和动画
-  Future<T> showCustomDialogView<T>({
-    @required BuildContext context,
+  Future<T?> showCustomDialogView<T>({
+    required BuildContext context,
     bool barrierDismissible = true,
-    WidgetBuilder builder,
+    required WidgetBuilder builder,
     }) {
     final ThemeData theme = Theme.of(context);
     return showGeneralDialog(
@@ -196,7 +196,7 @@ class _DialogTestModel extends State<DialogTestModel> {
   //设置动画
   Widget _buildMaterialDialogAnimation(
       BuildContext context,
-      Animation animation,
+      Animation<double> animation,
       Animation secondaryAnimation,
       Widget child
       ){
@@ -210,10 +210,10 @@ class _DialogTestModel extends State<DialogTestModel> {
 
   }
 
-  Future<T> showCheckBoxDialogView<T>({
-      @required BuildContext context,
+  Future<T?> showCheckBoxDialogView<T>({
+      required BuildContext context,
       bool barrierDismissible = true,
-      WidgetBuilder builder,}
+      required WidgetBuilder builder,}
       ){
     withTree = false;
     final ThemeData theme = Theme.of(context);
@@ -278,7 +278,7 @@ class _DialogTestModel extends State<DialogTestModel> {
   
   
   //底部弹出dialog
-  Future<T> showBottomDialogView<T>() {
+  Future<T?> showBottomDialogView<T>() {
     return showModalBottomSheet<T>(context: context, builder: (BuildContext context){
       return Column(
         children: <Widget>[
@@ -320,7 +320,7 @@ class _DialogTestModel extends State<DialogTestModel> {
 
   void showFullScreenDialog() {
 
-    _scaffoldkey.currentState.showBottomSheet((context){
+    _scaffoldkey.currentState?.showBottomSheet((context){
         return Column(
           children: <Widget>[
             SizedBox(
@@ -360,7 +360,7 @@ class _DialogTestModel extends State<DialogTestModel> {
       .closed
       .whenComplete((){
         if(mounted){
-          _scaffoldkey.currentState.showBottomSheet((context) => SnackBar(content: Text("我就是选中的数据")));
+          _scaffoldkey.currentState?.showBottomSheet((context) => SnackBar(content: Text("我就是选中的数据")));
         }
       });
   }
@@ -413,7 +413,7 @@ class _DialogTestModel extends State<DialogTestModel> {
 
 
   //日历选择器
-  Future<DateTime> showDatePickerDialogView<T>() {
+  Future<DateTime?> showDatePickerDialogView<T>() {
 
     var time = DateTime.now();
     return showDatePicker(
@@ -425,7 +425,7 @@ class _DialogTestModel extends State<DialogTestModel> {
         lastDate: time.add(Duration(days: 30)));
   }
 
-  Future<DateTime> showiOSDatePickerDialogView() {
+  Future<DateTime?> showiOSDatePickerDialogView() {
     //iOS风格日期选择器
     var date = DateTime.now();
     return showCupertinoModalPopup(
@@ -466,7 +466,7 @@ class _DialogTestModel extends State<DialogTestModel> {
             TextButton(
               child: Text("AlertDialog"),
               onPressed:  () async {
-                int delete = await ShowMyDialogOne();
+                int? delete = await ShowMyDialogOne();
                 if (delete == 1) {
                   print("点击的取消");
                 }else if (delete == 2) {
@@ -477,7 +477,7 @@ class _DialogTestModel extends State<DialogTestModel> {
             TextButton(
               child: Text("SimpleDialog"),
               onPressed: () async{
-                int index = await showSimpleDialogView();
+                int? index = await showSimpleDialogView();
                 if(index != null){
                   switch (index){
                     case 1:
@@ -498,7 +498,7 @@ class _DialogTestModel extends State<DialogTestModel> {
             TextButton(
               child: Text("有边界对话框"),
               onPressed: () async {
-                int index = await ShowDialogView();
+                int? index = await ShowDialogView();
                 print("当前点击的顺序$index");
 
               },
@@ -506,14 +506,14 @@ class _DialogTestModel extends State<DialogTestModel> {
             TextButton(
               child: Text("无边界对话框"),
               onPressed: () async{
-                int index = await showUnconstrainedBoxView();
+                int? index = await showUnconstrainedBoxView();
                 print("当前点击的顺序$index");
               },
             ),
             TextButton(
               child: Text("自定义弹出对话框"),
               onPressed: () async{
-                int index = await showCustomDialogView<int>(
+                int? index = await showCustomDialogView<int>(
                     context: context,
                     builder: (context){
                       return AlertDialog(
@@ -541,7 +541,7 @@ class _DialogTestModel extends State<DialogTestModel> {
               child: Text('不能选中的复选框对话框'),
               onPressed: () async{
                 //修改点击的位置信息，复选框不能选中
-                bool index = await showCheckBoxDialogView<bool>(context: context,builder: (context){
+                bool? index = await showCheckBoxDialogView<bool>(context: context,builder: (context){
                   return AlertDialog(
                     title: Text("提示删除"),
                     content: Column(
@@ -554,9 +554,9 @@ class _DialogTestModel extends State<DialogTestModel> {
                             Text("同时删除子文件夹吗?"),
                             Checkbox(
                               value: withTree,
-                              onChanged: (bool change){
+                              onChanged: (bool? change){
                                 setState(() {
-                                  withTree = change;
+                                  withTree = change!;
                                 });
                               },
                             ),
@@ -588,7 +588,7 @@ class _DialogTestModel extends State<DialogTestModel> {
               child: Text("可以选中的复选框"),
               onPressed: () async{
                 //修改点击的位置信息，复选框可以选中
-                bool index = await showCheckBoxDialogView<bool>(context: context,builder: (context){
+                bool? index = await showCheckBoxDialogView<bool>(context: context,builder: (context){
                   return AlertDialog(
                     title: Text("提示删除"),
                     content: Column(
@@ -636,7 +636,7 @@ class _DialogTestModel extends State<DialogTestModel> {
               child: Text("使用stateBuilder设置的可选框"),
               onPressed: () async{
                 //修改点击的位置信息，复选框可以选中
-                bool index = await showCheckBoxDialogView<bool>(context: context,builder: (context){
+                bool? index = await showCheckBoxDialogView<bool>(context: context,builder: (context){
                   return AlertDialog(
                     title: Text("提示删除"),
                     content: Column(
@@ -689,7 +689,7 @@ class _DialogTestModel extends State<DialogTestModel> {
               child: Text('element设置可选框可选'),
               onPressed: () async{
                 //修改点击的位置信息，复选框不能选中
-                bool index = await showCheckBoxDialogView<bool>(context: context,builder: (context){
+                bool? index = await showCheckBoxDialogView<bool>(context: context,builder: (context){
                   return AlertDialog(
                     title: Text("提示删除"),
                     content: Column(
@@ -702,7 +702,7 @@ class _DialogTestModel extends State<DialogTestModel> {
                             Text("同时删除子文件夹吗?"),
                             Checkbox(
                               value: withTree,
-                              onChanged: (bool change){
+                              onChanged: (bool? change){
                                 //转为Element,需要重新build，此时的context为对话框的根element
                                 //直接将根element对应的widget标记为dirty
                                 (context as Element).markNeedsBuild();
@@ -739,7 +739,7 @@ class _DialogTestModel extends State<DialogTestModel> {
               child: Text('builder设置范围可选框'),
               onPressed: () async{
                 //修改点击的位置信息，复选框不能选中
-                bool index = await showCheckBoxDialogView<bool>(context: context,builder: (context){
+                bool? index = await showCheckBoxDialogView<bool>(context: context,builder: (context){
                   return AlertDialog(
                     title: Text("提示删除"),
                     content: Column(
@@ -756,7 +756,7 @@ class _DialogTestModel extends State<DialogTestModel> {
                                 builder: (context){
                                   return Checkbox(
                                     value: withTree,
-                                    onChanged: (bool change){
+                                    onChanged: (bool? change){
                                       //转为Element,需要重新build，此时的context为对话框的根element
                                       //直接将根element对应的widget标记为dirty
                                       (context as Element).markNeedsBuild();
@@ -796,7 +796,7 @@ class _DialogTestModel extends State<DialogTestModel> {
               child: Text('底部dialog'),
               onPressed: () async{
                 //修改点击的位置信息，复选框不能选中
-                int index = await showBottomDialogView<int>();
+                int? index = await showBottomDialogView<int>();
                 print("当前选中$index");
 
               },
@@ -831,14 +831,14 @@ class _DialogTestModel extends State<DialogTestModel> {
             TextButton(
               child: Text("日历选择器)"),
               onPressed: () async{
-                DateTime time = await showDatePickerDialogView();
+                DateTime? time = await showDatePickerDialogView();
                 print("选中的时间$time");
               },
             ),
             TextButton(
               child: Text("iOS日历选择器)"),
               onPressed: () async{
-                DateTime time = await showiOSDatePickerDialogView();
+                DateTime? time = await showiOSDatePickerDialogView();
                 print("选中的时间$time");
               },
             ),

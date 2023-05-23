@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 class CommonInheritedProvider<T> extends InheritedWidget {
 
   CommonInheritedProvider({
-    @required this.data,
-    Widget child
+    required this.data,
+    required Widget child
   }):super(child:child);
 
   final T data;
@@ -25,9 +25,9 @@ Type _typeOf<T>() => T;
 //添加notificationProvider
 class ChangeNotifierProvider<T extends ChangeNotifier> extends StatefulWidget {
 
-  ChangeNotifierProvider({Key key,
-                          this.data,
-                          this.child}) : super(key:key);
+  ChangeNotifierProvider({Key? key,
+                          required this.data,
+                          required this.child}) : super(key:key);
 
   final Widget child;
   final T data;
@@ -37,7 +37,7 @@ class ChangeNotifierProvider<T extends ChangeNotifier> extends StatefulWidget {
     print("widget====值==$listener");
     final type = _typeOf<CommonInheritedProvider<T>>();
     final provider = listener ? context.findAncestorWidgetOfExactType() as CommonInheritedProvider<T>
-        : context.getElementForInheritedWidgetOfExactType().widget as CommonInheritedProvider<T>;
+        : context.getElementForInheritedWidgetOfExactType()?.widget as CommonInheritedProvider<T>;
     return provider.data;
 
   }
