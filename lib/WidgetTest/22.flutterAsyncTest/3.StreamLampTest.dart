@@ -13,7 +13,12 @@ class StreamLampNameTest extends StatefulWidget {
 
 class _StreamLampNameTestState extends State<StreamLampNameTest> {
   /// 设置streamController
-  final StreamController<SignalState> streamController = StreamController();
+  final StreamController<SignalState> streamController = StreamController(
+    onListen: () => print("onListen"),
+    onPause: () => print("onPause"),
+    onResume: () => print("onResume"),
+    onCancel: () => print("onCancel"),
+  );
   SignalState _signalState = SignalState(count: _kDenialMaxCount, type: SignalType.denial);
   late StreamSubscription<SignalState> _subscription;
   
