@@ -115,6 +115,8 @@ import 'WidgetTest/19.GetXTest/1.getTestController.dart';
 
 import 'WidgetTest/20.VoiceTest/1.speak_with_message.dart';
 
+import 'WidgetTest/22.flutterAsyncTest/3.StreamLampTest.dart';
+
 //设置多语言支持
 import 'WidgetTest/Tools/LocaleTool.dart';
 import 'WidgetTest/Tools/TranslationsLanauage.dart';
@@ -291,6 +293,8 @@ class _MyAppState extends State<MyApp> {
       "get_test_main_page":(context) => GetTestController(),
       // 20
       "show_speak_message":(context) => ZJSpeakMessageWidget(),
+      // 22
+      "show_red_green_light":(context) => StreamLampNameTest(),
     };
   }
 

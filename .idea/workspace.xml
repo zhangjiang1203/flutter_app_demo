@@ -31,7 +31,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78be66c3-06c0-4329-b003-2592bbc27233" name="Default Changelist" comment="修改手势识别展示的当前数据类型和设置，配置不同的behavior和evnet">
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/22.flutterAsyncTest/1.futterTest.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/22.flutterAsyncTest/2.streamTest.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/WidgetTest/22.flutterAsyncTest/3.StreamLampTest.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/.symlinks/plugins/connectivity" beforeDir="false" afterPath="$PROJECT_DIR$/ios/.symlinks/plugins/connectivity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/.symlinks/plugins/flutter_tts" beforeDir="false" afterPath="$PROJECT_DIR$/ios/.symlinks/plugins/flutter_tts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/.symlinks/plugins/path_provider_ios" beforeDir="false" afterPath="$PROJECT_DIR$/ios/.symlinks/plugins/path_provider_ios" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/.symlinks/plugins/shared_preferences_ios" beforeDir="false" afterPath="$PROJECT_DIR$/ios/.symlinks/plugins/shared_preferences_ios" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Flutter/Flutter.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Flutter/Flutter.podspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Local Podspecs/Flutter.podspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Local Podspecs/Flutter.podspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Manifest.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Manifest.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Pods/Pods.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
